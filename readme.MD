@@ -2,6 +2,7 @@
 
 <ul>
 <li>Ayush Bhaiya</li>
+    <li>Devansh Juwar</li>
     <li>Swarangi Mukwane</li>
     <li>Sameer Chore</li>
     <li>Sanket Kokate</li>
