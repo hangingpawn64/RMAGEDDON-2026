@@ -5,8 +5,12 @@ body {
 /* Cursor container */
 .crosshair {
     position: fixed;
-    width: 28px;
-    height: 28px;
+    width: 32px;
+    height: 32px;
+    background-image: url('/crosshair.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     transform: translate(-50%, -50%) scale(1);
     pointer-events: none;
     z-index: 9999;

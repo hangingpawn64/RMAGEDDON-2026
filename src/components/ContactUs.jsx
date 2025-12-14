@@ -2,7 +2,6 @@ import React from 'react'
 import './ContactUs.css'
 import Card3D from './Cards'
 import teamData from '../data/teamData.json'
-import CrosshairCursor from "./Crosshair";
 // Helper function to dynamically import images
 const getImagePath = (path) => {
   if (!path) return null;
@@ -19,7 +18,6 @@ const getImagePath = (path) => {
 const ContactUs = () => {
   return (
     <div className='contact-us'>
-            <CrosshairCursor />
       <div className='contact-content'>
         <h1 className='contact-heading'>CONTACT US</h1>
         <div className='cards-container'>

@@ -1,9 +1,10 @@
-*{
+* {
     font-family: "Saira Semi Condensed", sans-serif;
 }
 
 .contact-us {
-    cursor: url('/crosshair.svg') 16 16, crosshair; /* Image + fallback */
+
+    /* Image + fallback */
     background-image: url("../assets/mapbg.png");
     background-size: cover;
     background-position: center;

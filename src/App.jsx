@@ -1,16 +1,17 @@
 import './App.css'
 import ContactUs from './components/ContactUs'
-
+import Footer from './components/Footer'
+import CrosshairCursor from "./components/Crosshair";
 
 function App() {
 
 
   return (
     <>
-
-    <div className="navbar"></div>
-    <ContactUs />
-
+      <CrosshairCursor />
+      <div className="navbar"></div>
+      <ContactUs />
+      <Footer />
     </>
   )
 }
