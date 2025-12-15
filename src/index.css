@@ -6,3 +6,7 @@
     --font-gta: "Saira Stencil One", sans-serif;
     --cursor-my-crosshair: url("/crosshair.svg"), auto;
 }
+
+body{
+    background-color: #000;
+}
