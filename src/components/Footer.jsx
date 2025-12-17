@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import './Footer.css';
 import footerBg from '../assets/FOOTER 71.png';
 import Socials from './Socials';
 import EnquiryForm from './EnquiryForm';
@@ -40,8 +39,8 @@ const Footer = () => {
             </div>
 
             {/* Logo */}
-            <div className="flex-1 flex justify-center w-full sm:w-auto order-first sm:order-none mb-4 sm:mb-0">
-              <h1 className="text-3xl sm:text-4xl md:text-[48px] font-gta tracking-[0.1em] drop-shadow-[2px_2px_10px_rgba(0,0,0,0.5)] text-center">
+            <div className="flex-1 flex justify-center w-full sm:w-auto order-first sm:order-0 mb-4 sm:mb-0">
+              <h1 className="text-3xl sm:text-4xl md:text-[48px] font-gta tracking-widest[0.1em] drop-shadow-[2px_2px_10px_rgba(0,0,0,0.5)] text-center">
                 RNXG
               </h1>
             </div>
@@ -57,7 +56,7 @@ const Footer = () => {
 
             {/* Description */}
             <div className="text-center max-w-xl lg:max-w-2xl z-10">
-              <p className="text-[16px] sm:text-[18px] md:text-[20px] leading-relaxed text-white/95 drop-shadow-[1px_1px_5px_rgba(0,0,0,0.5)] font-normal">
+              <p className="text-[16px] sm:text-[18px] md:text-[20px] leading-relaxed text-white/95 drop-shadow-[1px_1px_5px_rgba(0,0,0,0.5)] font-normal font-saira">
                 Robotics for Next Generation provides the best<br className="hidden sm:block" />
                 platform to work on different problem statements and<br className="hidden sm:block" />
                 to create the best solutions for them.
@@ -72,7 +71,7 @@ const Footer = () => {
           </div>
 
           {/* Bottom Section */}
-          <div className="flex flex-col sm:flex-row justify-between items-center gap-2 font-bold sm:gap-4 px-4 sm:px-8 py-3 sm:py-4 border-t border-white/20 text-[14px] sm:text-[16px] md:text-[18px] text-white/80">
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-2 font-bold sm:gap-4 px-4 sm:px-8 py-3 sm:py-4 border-t border-white/20 text-[14px] sm:text-[16px] md:text-[18px] text-white/80 font-saira">
             <div className="flex-1 text-center sm:text-left">
               <p className="m-0">Copyright © 2025 RNXG. All Rights Reserved</p>
             </div>
