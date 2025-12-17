@@ -28,7 +28,7 @@ export default function HomePage() {
                     <Navbar />
                 </div>
             </section>
-            <Footer/>
+             <Footer/>
         </>
     );
 }
