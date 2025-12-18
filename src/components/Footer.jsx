@@ -40,7 +40,7 @@ const Footer = () => {
 
             {/* Logo */}
             <div className="flex-1 flex justify-center w-full sm:w-auto order-first sm:order-0 mb-4 sm:mb-0">
-              <h1 className="text-3xl sm:text-4xl md:text-[48px] font-gta tracking-widest[0.1em] drop-shadow-[2px_2px_10px_rgba(0,0,0,0.5)] text-center">
+              <h1 className="text-3xl sm:text-4xl md:text-[48px] font-ethnocentric tracking-widest[0.1em] drop-shadow-[2px_2px_10px_rgba(0,0,0,0.5)] text-center">
                 RNXG
               </h1>
             </div>
@@ -56,7 +56,7 @@ const Footer = () => {
 
             {/* Description */}
             <div className="text-center max-w-xl lg:max-w-2xl z-10">
-              <p className="text-[16px] sm:text-[18px] md:text-[20px] leading-relaxed text-white/95 drop-shadow-[1px_1px_5px_rgba(0,0,0,0.5)] font-normal font-saira">
+              <p className="text-[16px] sm:text-[18px] md:text-[20px] leading-relaxed text-white drop-shadow-[1px_1px_5px_rgba(0,0,0,0.5)] font-normal font-saira">
                 Robotics for Next Generation provides the best<br className="hidden sm:block" />
                 platform to work on different problem statements and<br className="hidden sm:block" />
                 to create the best solutions for them.
@@ -93,4 +93,3 @@ const Footer = () => {
 export default Footer;
 
 
-import React from 'react';

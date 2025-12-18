@@ -7,30 +7,44 @@ import Footer from './Footer';
 // need to use Date.now() for proper timer.
 export default function HomePage() {
     const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
-    const [timeLeft, setTimeLeft] = useState({
-        days: 1,
-        hours: 24,
-        minutes: 30,
-        seconds: 50
-    });
+    // Set your target date here (YYYY-MM-DDTHH:mm:ss)
+    const TARGET_DATE = new Date('2026-02-27T00:00:00').getTime();
+
+    const calculateTimeLeft = () => {
+        const now = Date.now();
+        const difference = TARGET_DATE - now;
+
+        if (difference <= 0) {
+            return { days: 0, hours: 0, minutes: 0, seconds: 0 };
+        }
+
+        return {
+            days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+            hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+            minutes: Math.floor((difference / 1000 / 60) % 60),
+            seconds: Math.floor((difference / 1000) % 60)
+        };
+    };
+
+    const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 
     useEffect(() => {
         const timer = setInterval(() => {
-            setTimeLeft(prev => {
-                if (prev.seconds > 0) return { ...prev, seconds: prev.seconds - 1 };
-                if (prev.minutes > 0) return { ...prev, minutes: prev.minutes - 1, seconds: 59 };
-                if (prev.hours > 0) return { ...prev, hours: prev.hours - 1, minutes: 59, seconds: 59 };
-                if (prev.days > 0) return { ...prev, days: prev.days - 1, hours: 23, minutes: 59, seconds: 59 };
-                return prev;
-            });
+            const updatedTime = calculateTimeLeft();
+            setTimeLeft(updatedTime);
+
+            if (updatedTime.days === 0 && updatedTime.hours === 0 &&
+                updatedTime.minutes === 0 && updatedTime.seconds === 0) {
+                clearInterval(timer);
+            }
         }, 1000);
         return () => clearInterval(timer);
     }, []);
 
     const handleMouseMove = (e) => {
         const { clientX, clientY } = e;
-        const moveX = (clientX - window.innerWidth / 2) / 50;
-        const moveY = (clientY - window.innerHeight / 2) / 50;
+        const moveX = (clientX - window.innerWidth / 2) / 100;
+        const moveY = (clientY - window.innerHeight / 2) / 100;
         setMousePos({ x: moveX, y: moveY });
     };
 
@@ -42,7 +56,7 @@ export default function HomePage() {
             >
                 {/* Background Video */}
                 <video
-                    className="absolute inset-0 h-full w-full object-cover opacity-90"
+                    className="absolute inset-0 h-full w-full object-cover opacity-95"
                     autoPlay
                     muted
                     loop
@@ -61,21 +75,32 @@ export default function HomePage() {
                     <Navbar />
                 </div>
 
+                {/* Character - Positioned at bottom */}
+                <img
+                    src="/character.png"
+                    alt="character"
+                    className="character-img"
+                    style={{
+                        transform: `translate(${-mousePos.x}px, ${-mousePos.y}px)`
+                    }}
+                />
+
                 {/* Content Wrapper */}
-                <div className="relative z-10 min-h-screen flex flex-col items-center justify-between py-20 px-10">
+                <div className="content-wrapper relative z-10 min-h-screen flex flex-col items-center justify-start py-4 px-10 gap-y-2">
 
                     {/* Heading */}
                     <h1 className='heading'>RMAGEDDON 2026</h1>
 
                     {/* Main Content Grid */}
-                    <div className="w-full flex flex-col lg:flex-row justify-between items-center max-w-7xl gap-12 lg:gap-0">
+                    <div className="w-full flex flex-col lg:flex-row justify-center items-center max-w-full gap-8 lg:gap-16">
+
 
                         {/* Left: Countdown */}
                         <div className="countdown-container glass-panel">
                             <h3 className="panel-title">TIME REMAINING</h3>
                             <div className="timer-grid">
                                 <div className="time-unit">
-                                    <div className="time-value">{String(timeLeft.days).padStart(2, '0')}</div>
+                                    <div className="time-value"><span>{String(timeLeft.days).padStart(2, '0')}</span></div>
                                     <div className="time-label">DAYS</div>
                                 </div>
                                 <div className="time-separator">
@@ -83,7 +108,7 @@ export default function HomePage() {
                                     <span>.</span>
                                 </div>
                                 <div className="time-unit">
-                                    <div className="time-value">{String(timeLeft.hours).padStart(2, '0')}</div>
+                                    <div className="time-value"><span>{String(timeLeft.hours).padStart(2, '0')}</span></div>
                                     <div className="time-label">HOURS</div>
                                 </div>
                                 <div className="time-separator">
@@ -91,7 +116,7 @@ export default function HomePage() {
                                     <span>.</span>
                                 </div>
                                 <div className="time-unit">
-                                    <div className="time-value">{String(timeLeft.minutes).padStart(2, '0')}</div>
+                                    <div className="time-value"><span>{String(timeLeft.minutes).padStart(2, '0')}</span></div>
                                     <div className="time-label">MINUTES</div>
                                 </div>
                                 <div className="time-separator">
@@ -99,25 +124,14 @@ export default function HomePage() {
                                     <span>.</span>
                                 </div>
                                 <div className="time-unit">
-                                    <div className="time-value">{String(timeLeft.seconds).padStart(2, '0')}</div>
+                                    <div className="time-value"><span>{String(timeLeft.seconds).padStart(2, '0')}</span></div>
                                     <div className="time-label">SECONDS</div>
                                 </div>
                             </div>
                         </div>
-
                         {/* Center: Logo & Character */}
                         <div className="center-content relative">
-                            <img
-                                src="/character.png"
-                                alt="character"
-                                className="character-img"
-                                style={{
-                                    transform: `translate(${mousePos.x}px, ${mousePos.y}px)`
-                                }}
-                            />
-                            <a href="https://maps.app.goo.gl/t1SdmXCSgqNS2Fjf9">
                             <img src="/logo.png" alt="logo" className="center-logo" />
-                            </a>
                         </div>
 
                         {/* Right: Info Box */}
@@ -135,13 +149,16 @@ export default function HomePage() {
                                 <span className="info-value text-cyan">Rs. 2,00,000</span>
                             </div>
                         </div>
+
                     </div>
 
                     {/* Bottom Section */}
-                    <div className="w-full flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-0">
+                    <div className="w-full flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12">
                         {/* Map */}
                         <div className="map-wrapper">
-                            <img src="/map.png" alt="map" className="map-img" />
+                            <a href="https://maps.app.goo.gl/t1SdmXCSgqNS2Fjf9" target="_blank" rel="noopener noreferrer">
+                                <img src="/map.png" alt="map" className="map-img" />
+                            </a>
                         </div>
                         {/* Mission Text */}
                         <div className="mission-container">

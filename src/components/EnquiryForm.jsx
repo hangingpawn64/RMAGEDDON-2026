@@ -32,12 +32,12 @@ const EnquiryForm = ({ isOpen, onClose }) => {
                     </svg>
                 </button>
 
-                <h2 className="text-2xl font-bold text-white mb-6 font-saira tracking-wide">Contact Us</h2>
+                <h2 className="text-2xl font-bold font-ethnocentric text-white mb-6 tracking-wide">Contact Us</h2>
 
                 <form className="space-y-5 font-saira" onSubmit={(e) => e.preventDefault()}>
                     {/* Name Input */}
                     <div className="space-y-1.5">
-                        <label className="text-sm font-medium text-zinc-400">Name</label>
+                        <label className="text-sm font-medium font-ethnocentric text-zinc-400">Name</label>
                         <input
                             type="text"
                             placeholder="John Doe"
@@ -47,7 +47,7 @@ const EnquiryForm = ({ isOpen, onClose }) => {
 
                     {/* Email Input */}
                     <div className="space-y-1.5">
-                        <label className="text-sm font-medium text-zinc-400">Email</label>
+                        <label className="text-sm font-medium font-ethnocentric text-zinc-400">Email</label>
                         <input
                             type="email"
                             placeholder="john@example.com"
@@ -57,7 +57,7 @@ const EnquiryForm = ({ isOpen, onClose }) => {
 
                     {/* Subject Input */}
                     <div className="space-y-1.5">
-                        <label className="text-sm font-medium text-zinc-400">Subject</label>
+                        <label className="text-sm font-medium font-ethnocentric text-zinc-400">Subject</label>
                         <input
                             type="text"
                             placeholder="Inquiry"
@@ -67,7 +67,7 @@ const EnquiryForm = ({ isOpen, onClose }) => {
 
                     {/* Message Input */}
                     <div className="space-y-1.5">
-                        <label className="text-sm font-medium text-zinc-400">Message</label>
+                        <label className="text-sm font-medium font-ethnocentric text-zinc-400">Message</label>
                         <textarea
                             rows="4"
                             placeholder="How can we help you?"
@@ -78,7 +78,7 @@ const EnquiryForm = ({ isOpen, onClose }) => {
                     {/* Submit Button */}
                     <button
                         type="submit"
-                        className="w-full mt-2 bg-white text-black font-semibold py-2.5 rounded-md hover:bg-zinc-200 transition-colors duration-200 text-sm uppercase tracking-wider"
+                        className="w-full mt-2 bg-white text-black font-semibold font-ethnocentric py-2.5 rounded-md hover:bg-zinc-200 transition-colors duration-200 text-sm uppercase tracking-wider"
                     >
                         Send Message
                     </button>
