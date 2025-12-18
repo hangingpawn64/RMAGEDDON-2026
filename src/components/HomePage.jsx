@@ -115,7 +115,9 @@ export default function HomePage() {
                                     transform: `translate(${mousePos.x}px, ${mousePos.y}px)`
                                 }}
                             />
+                            <a href="https://maps.app.goo.gl/t1SdmXCSgqNS2Fjf9">
                             <img src="/logo.png" alt="logo" className="center-logo" />
+                            </a>
                         </div>
 
                         {/* Right: Info Box */}
