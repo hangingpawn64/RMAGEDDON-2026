@@ -35,6 +35,7 @@ export default function Hero() {
         left: "auto",
         top: "auto",
         transform: "none",
+        display:"none",
       });
 
       gsap.set(contentRef.current, {
