@@ -3,8 +3,13 @@ import "./Hero.css";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import StepCard from "./Stepcard.jsx";
-import { steps } from "./StepsData.jsx";
+// import leftHUD from "../assets/Group1.svg";
+// import rightHUD from "../assets/Group2.svg";
+// import driftCar from "../assets/drift-car3.png";
+// import driftSmoke from "../assets/smoke.png";
+
+import StepCard from "./StepCard";
+import { steps } from "./StepsData";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -18,6 +23,7 @@ export default function Hero() {
   useEffect(() => {
     const width = window.innerWidth;
 
+    
     /* 📱 MOBILE + iPAD — STATIC ONLY */
     if (width <= 1024) {
       gsap.set(driftCarRef.current, { display: "none" });
@@ -145,21 +151,21 @@ export default function Hero() {
   return (
     <section
       ref={heroRef}
-      className="hero-section-container"
-      style={{ backgroundImage: "url(/Images/bg-2.png)" }}
+      className="hero"
+      style={{ backgroundImage: "url(./Images/bg-2.png)" }}
     >
       {/* DRIFT LAYER (DESKTOP ONLY) */}
-      <div className="hero-drift-layer">
+      <div className="drift-layer">
         <img
           ref={driftCarRef}
-          src="/Images/drift-car3.png"
-          className="hero-drift-car"
+          src={"/Images/drift-car3.png"}
+          className="drift-car"
           alt="drift car"
         />
         <img
           ref={smokeRef}
-          src="/Images/smoke.png"
-          className="hero-drift-smoke"
+          src={"/Images/smoke.png"}
+          className="drift-smoke"
           alt="drift smoke"
         />
       </div>
@@ -167,29 +173,29 @@ export default function Hero() {
       {/* STATIC CAR (ALL DEVICES) */}
       <img
         ref={staticCarRef}
-        src="/Images/drift-car3.png"
-        className="hero-static-car"
+        src={"/Images/drift-car3.png"}
+        className="hero-car-static"
         alt="RMAGEDDON car"
       />
 
       {/* CONTENT */}
-      <div ref={contentRef} className="hero-content-wrapper">
-        <div className="hero-hud-container">
-          <img src="/Images/Group1.svg" className="hero-hud-svg hero-hud-svg-left" alt="" />
-          <h1 className="hero-hud-title">
-            <span className="hero-hud-line-1">
+      <div ref={contentRef} className="hero-content">
+        <div className="hud-container">
+          <img src={"https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766329420/Group1_govmkw.png"} className="hud-svg hud-svg-left" alt="" />
+          <h1 className="hud-title">
+            <span className="hud-line-1">
               Steps to confirm your seat in
             </span>
-            <span className="hero-hud-line-2">
+            <span className="hud-line-2">
               RMAGEDDON 2026
             </span>
           </h1>
-          <img src="/Images/Group2.svg" className="hero-hud-svg hero-hud-svg-right" alt="" />
+          <img src={"https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766329420/Group2_mxivzu.png"} className="hud-svg hud-svg-right" alt="" />
         </div>
 
-        <div className="hero-overlay">
-          <div className="hero-left">
-            <div className="hero-cards">
+        <div className="hero__overlay">
+          <div className="hero__left">
+            <div className="hero__cards">
               {steps.map(step => (
                 <StepCard key={step.title} {...step} />
               ))}
