@@ -139,7 +139,7 @@ text-align: center;
 }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 993px) {
  
 .card {
   scale: 0.9;
@@ -168,6 +168,7 @@ text-align: center;
   filter: drop-shadow(rgb(26, 234, 249) 0px 0px 10px);
   font-family: "Jost", sans-serif;
 }
+
 }
 
 @media (max-width: 425px) {
