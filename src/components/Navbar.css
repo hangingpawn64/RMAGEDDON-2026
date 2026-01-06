@@ -2,12 +2,6 @@
    GLOBAL
 ================================ */
 
-body {
-  margin: 0;
-  background: #000;
-  overflow-x: hidden;
-}
-
 /* ===============================
    NAVBAR
 ================================ */
@@ -18,29 +12,32 @@ body {
   height: 96px;
   overflow: hidden;
 }
+
 .mobile-menu {
-  z-index: 20;          /* MUST be higher than navbar-content */
-  pointer-events: auto; /* ENSURE clicks work */
+  z-index: 20;
+  /* MUST be higher than navbar-content */
+  pointer-events: auto;
+  /* ENSURE clicks work */
 }
 
 /* LEFT / RIGHT */
 .nav-left,
 .nav-right {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 
 }
 
 .nav-left {
-    gap: clamp(80px, 10vw, 150px);
-    justify-content: flex-start;
-    padding-left: clamp(20px, 5vw, 80px);
+  gap: clamp(80px, 10vw, 150px);
+  justify-content: flex-start;
+  padding-left: clamp(20px, 5vw, 80px);
 }
 
 .nav-right {
-    justify-content: flex-end;
-    padding-right: 20px;
-    gap: clamp(40px, 6vw, 100px);
+  justify-content: flex-end;
+  padding-right: 20px;
+  gap: clamp(40px, 6vw, 100px);
 }
 
 /* ===============================
@@ -74,12 +71,12 @@ body {
   background-image: url("/src/assets/eventnav.svg");
 }
 
-.visible {
+.nav-visible {
   opacity: 1;
   transform: translateX(-50%) scale(1);
 }
 
-.hidden {
+.nav-hidden {
   opacity: 0;
   transform: translateX(-50%) scale(1.03);
 }
@@ -175,39 +172,28 @@ body {
   right: 24px;
   z-index: 6;
 }
+
 .hamburger-wrapper {
   pointer-events: auto;
 }
 
 
 /* ===============================
-   MOBILE MENU — GLASS EFFECT
+   MOBILE MENU
 ================================ */
 .mobile-menu {
-  position: fixed;
+  position: absolute;
   top: 96px;
-  left: 0;
   width: 100%;
-  height: calc(100vh - 48px);
-
-  /* GLASS EFFECT */
-  background: rgba(0, 0, 0, 0.55); /* translucent */
-  backdrop-filter: blur(14px) saturate(120%);
-  -webkit-backdrop-filter: blur(14px) saturate(120%);
-
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(6px);
   padding: 36px 0;
   text-align: center;
-
   opacity: 0;
-  transform: translateY(-20px) scale(0.98);
+  transform: translateY(-20px) scaleY(0.95);
   transform-origin: top;
-
   pointer-events: none;
-  transition:
-    opacity 0.35s ease,
-    transform 0.4s ease;
-
-  z-index: 999;
+  transition: opacity 0.35s ease, transform 0.4s ease;
 }
 
 .mobile-menu.show {

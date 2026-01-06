@@ -17,14 +17,12 @@ const Navbar = () => {
         {/* SVG BACKGROUNDS */}
         <div className="navbar-svg-wrapper">
           <div
-            className={`navbar-svg default-svg ${
-              isEventsPage ? "hidden" : "visible"
-            }`}
+            className={`navbar-svg default-svg ${isEventsPage ? "nav-hidden" : "nav-visible"
+              }`}
           />
           <div
-            className={`navbar-svg events-svg ${
-              isEventsPage ? "visible" : "hidden"
-            }`}
+            className={`navbar-svg events-svg ${isEventsPage ? "nav-visible" : "nav-hidden"
+              }`}
           />
         </div>
 
@@ -32,7 +30,7 @@ const Navbar = () => {
         <div className="navbar-content">
           {/* LEFT LOGO (FIXED) */}
           <img
-            src="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766329420/LeftLogo_v7tgve.png"
+            src="/src/assets/LeftLogo.png"
             className="left-logo"
             alt="logo"
           />
@@ -46,12 +44,12 @@ const Navbar = () => {
                 </NavLink>
               </li>
               <li>
-              <NavLink
-  to="/events"
-  className={({ isActive }) => (isActive ? "active" : "")}
->
-  EVENTS
-</NavLink>
+                <NavLink
+                  to="/events"
+                  className={({ isActive }) => (isActive ? "active" : "")}
+                >
+                  EVENTS
+                </NavLink>
 
               </li>
             </ul>
@@ -69,7 +67,7 @@ const Navbar = () => {
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/contact" onClick={closeMenu}>
+                <NavLink to="/contact-us" onClick={closeMenu}>
                   CONTACT
                 </NavLink>
               </li>
@@ -91,48 +89,48 @@ const Navbar = () => {
       </nav>
 
       {/* MOBILE MENU */}
-     <ul className={`mobile-menu ${menuOpen ? "show" : ""}`}>
-  <li>
-    <NavLink
-      to="/"
-      end
-      className={({ isActive }) => (isActive ? "active" : "")}
-      onClick={closeMenu}
-    >
-      HOME
-    </NavLink>
-  </li>
+      <ul className={`mobile-menu ${menuOpen ? "show" : ""}`}>
+        <li>
+          <NavLink
+            to="/"
+            end
+            className={({ isActive }) => (isActive ? "active" : "")}
+            onClick={closeMenu}
+          >
+            HOME
+          </NavLink>
+        </li>
 
-  <li>
-    <NavLink
-      to="/events"
-      className={({ isActive }) => (isActive ? "active" : "")}
-      onClick={closeMenu}
-    >
-      EVENTS
-    </NavLink>
-  </li>
+        <li>
+          <NavLink
+            to="/events"
+            className={({ isActive }) => (isActive ? "active" : "")}
+            onClick={closeMenu}
+          >
+            EVENTS
+          </NavLink>
+        </li>
 
-  <li>
-    <NavLink
-      to="/accommodation"
-      className={({ isActive }) => (isActive ? "active" : "")}
-      onClick={closeMenu}
-    >
-      ACCOMODATION
-    </NavLink>
-  </li>
+        <li>
+          <NavLink
+            to="/accommodation"
+            className={({ isActive }) => (isActive ? "active" : "")}
+            onClick={closeMenu}
+          >
+            ACCOMODATION
+          </NavLink>
+        </li>
 
-  <li>
-    <NavLink
-      to="/contact"
-      className={({ isActive }) => (isActive ? "active" : "")}
-      onClick={closeMenu}
-    >
-      CONTACT
-    </NavLink>
-  </li>
-</ul>
+        <li>
+          <NavLink
+            to="/contact-us"
+            className={({ isActive }) => (isActive ? "active" : "")}
+            onClick={closeMenu}
+          >
+            CONTACT
+          </NavLink>
+        </li>
+      </ul>
 
     </>
   );
