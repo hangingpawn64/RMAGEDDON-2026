@@ -3,8 +3,13 @@ import "./Hero.css";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import StepCard from "./Stepcard.jsx";
-import { steps } from "./StepsData.jsx";
+// import leftHUD from "../assets/Group1.svg";
+// import rightHUD from "../assets/Group2.svg";
+// import driftCar from "../assets/drift-car3.png";
+// import driftSmoke from "../assets/smoke.png";
+
+import StepCard from "./StepCard";
+import { steps } from "./StepsData";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -64,56 +69,55 @@ export default function Hero() {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: hero,
-          start: "top 70%",
+          start: "bottom bottom",
           once: true,
         },
       });
 
       tl
         /* 🚗 DRIFT */
-        .to(driftCar, {
-          x: END_X,
-          rotation: -14,
-          duration: 1.6,
-          ease: "power3.out",
-        })
-        .to(
-          smoke,
-          {
-            x: END_X,
-            opacity: 0.6,
-            duration: 1.6,
-            ease: "power3.out",
-          },
-          "<"
-        )
+       /* 🚗 DRIFT */
+.to(driftCar, {
+  x: END_X,
+  rotation: -14,
+  duration: 2.6,
+  ease: "power3.out",
+})
+.to(
+  smoke,
+  {
+    x: END_X,
+    opacity: 0.6,
+    duration: 2.6,
+    ease: "power3.out",
+  },
+  "<"
+)
 
-        /* 💨 REMOVE SMOKE BEFORE STOP */
-        .to(
-          smoke,
-          {
-            opacity: 0,
-            duration: 0.25,
-            ease: "power2.out",
-          },
-          "-=0.4"
-        )
+/* 🛑 BRAKE / SETTLE */
+.to(driftCar, {
+  x: END_X + 12,
+  rotation: -4,
+  duration: 0.18,
+  ease: "power2.out",
+})
+.to(driftCar, {
+  x: END_X,
+  rotation: 0,
+  duration: 0.22,
+  ease: "power2.inOut",
+})
 
-        .to(driftCar, {
-          x: END_X + 12,
-          rotation: -4,
-          duration: 0.18,
-          ease: "power2.out",
-        })
-        .to(driftCar, {
-          x: END_X,
-          rotation: 0,
-          duration: 0.22,
-          ease: "power2.inOut",
-        })
+/* 💨 NOW fade smoke AFTER drift is fully complete */
+.to(smoke, {
+  opacity: 0,
+  duration: 0.8,   // 👈 smooth disappear
+  ease: "power2.out",
+})
+
 
         /* ⏸ REST */
-        .to({}, { duration: 0.5 })
+        .to({}, { duration: 0.0 })
 
         /* 📌 PLACE STATIC CAR */
         .add(() => {
@@ -135,7 +139,7 @@ export default function Hero() {
         .to(contentRef.current, {
           opacity: 1,
           y: 0,
-          duration: 0.6,
+          duration: 0.3,
           ease: "power2.out",
         });
     }, heroRef);
@@ -188,7 +192,7 @@ export default function Hero() {
           <img src={"https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766329420/Group2_mxivzu.png"} className="hud-svg hud-svg-right" alt="" />
         </div>
 
-        <div className="hero__overlay">
+        <div className="hero__overlay1">
           <div className="hero__left">
             <div className="hero__cards">
               {steps.map(step => (
