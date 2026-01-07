@@ -69,7 +69,7 @@ export default function Hero() {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: hero,
-          start: "top 70%",
+          start: "top 80%",
           once: true,
         },
       });
@@ -80,7 +80,7 @@ export default function Hero() {
 .to(driftCar, {
   x: END_X,
   rotation: -14,
-  duration: 2.6,
+  duration: 2.0,
   ease: "power3.out",
 })
 .to(
@@ -88,7 +88,7 @@ export default function Hero() {
   {
     x: END_X,
     opacity: 0.6,
-    duration: 2.6,
+    duration: 2.0,
     ease: "power3.out",
   },
   "<"
@@ -139,7 +139,7 @@ export default function Hero() {
         .to(contentRef.current, {
           opacity: 1,
           y: 0,
-          duration: 0.6,
+          duration: 0.1,
           ease: "power2.out",
         });
     }, heroRef);

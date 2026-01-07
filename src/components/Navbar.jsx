@@ -8,31 +8,19 @@ const Navbar = () => {
   const location = useLocation();
 
   const isEventsPage = location.pathname === "/events";
+
   const closeMenu = () => setMenuOpen(false);
 
-  /* ✅ CLOSE MENU ON ROUTE CHANGE (IMPORTANT) */
+  /* ✅ CLOSE MENU ON ROUTE CHANGE */
   useEffect(() => {
     setMenuOpen(false);
   }, [location.pathname]);
 
-  /* 🔒 SCROLL LOCK — SAFE & REVERSIBLE */
+  /* ✅ SCROLL LOCK WHEN MENU OPEN */
   useEffect(() => {
-  if (menuOpen) {
-    document.body.classList.add("nav-scroll-locked");
-  } else {
-    document.body.classList.remove("nav-scroll-locked");
-  }
-
-  return () => {
-    document.body.classList.remove("nav-scroll-locked");
-  };
-}, [menuOpen]);
-
-// 🔥 FORCE MENU CLOSE ON ROUTE CHANGE
-useEffect(() => {
-  setMenuOpen(false);
-}, [location.pathname]);
-
+    document.body.classList.toggle("nav-scroll-locked", menuOpen);
+    return () => document.body.classList.remove("nav-scroll-locked");
+  }, [menuOpen]);
 
   return (
     <>
@@ -45,7 +33,7 @@ useEffect(() => {
             }`}
           />
           <div
-            className={`navbar-svg events-svg ${
+            className={`navbar-svg events1-svg ${
               isEventsPage ? "visible" : "hidden"
             }`}
           />
@@ -61,14 +49,8 @@ useEffect(() => {
 
           <div className="nav-left">
             <ul className="nav-links">
-              <li>
-                <NavLink to="/" end>
-                  HOME
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="/events">EVENTS</NavLink>
-              </li>
+              <li><NavLink to="/" end>HOME</NavLink></li>
+              <li><NavLink to="/events">EVENTS</NavLink></li>
             </ul>
           </div>
 
@@ -76,12 +58,8 @@ useEffect(() => {
 
           <div className="nav-right">
             <ul className="nav-links">
-              <li>
-                <NavLink to="/accommodation">ACCOMODATION</NavLink>
-              </li>
-              <li>
-                <NavLink to="/contact">CONTACT</NavLink>
-              </li>
+              <li><NavLink to="/accommodation">ACCOMODATION</NavLink></li>
+              <li><NavLink to="/contact">CONTACT</NavLink></li>
             </ul>
           </div>
 
@@ -106,7 +84,6 @@ useEffect(() => {
             className="mobile-menu show"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* ❌ CLOSE BUTTON */}
             <button
               className="mobile-menu-close"
               onClick={closeMenu}

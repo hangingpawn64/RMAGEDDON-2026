@@ -77,7 +77,7 @@ export default function PageLoader({ onComplete }) {
 
   {/* Bar 3 (DOUBLE WIDTH) */}
   <div className="bar bar-double">
-    <img src="/Images/middle2.png" alt="" />
+    <img src="/Images/5.jpg" alt="" />
   </div>
 
   {/* Bar 4 */}
