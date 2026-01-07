@@ -182,7 +182,7 @@
 }
 
 .social-icons-front {
-    display: none;
+    display: flex;
     justify-content: center;
     margin-top: 15px;
 }
@@ -249,7 +249,5 @@
         height: 20px;
     }
 
-    .social-icons-front {
-        display: flex;
-    }
+
 }

@@ -61,7 +61,7 @@ function App() {
         { path: "/", element: <HomeWithLoader /> },
         { path: "/events", element: <Events /> },
         { path: "/accommodation", element: <Accommodation /> },
-        { path: "/contact-us", element: <ContactUs /> },
+        { path: "/contact", element: <ContactUs /> },
       ],
     },
   ]);
