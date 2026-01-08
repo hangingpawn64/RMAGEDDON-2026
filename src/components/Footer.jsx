@@ -39,7 +39,7 @@ const Footer = () => {
             </div>
 
             {/* Logo */}
-            <div className="flex-1 flex justify-center w-full lg:w-auto order-first lg:order-0 mb-4 lg:mb-0">
+            <div className="flex-1 flex justify-center w-full lg:w-auto order-first lg:order-0 lg:mb-0">
               <h1 className="text-3xl sm:text-4xl md:text-[48px] font-ethnocentric tracking-widest[0.1em] drop-shadow-[2px_2px_10px_rgba(0,0,0,0.5)] text-center">
                 RNXG
               </h1>

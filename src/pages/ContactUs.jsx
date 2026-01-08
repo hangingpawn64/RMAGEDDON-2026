@@ -4,6 +4,7 @@ import Card3D from '../components/Cards'
 import teamData from '../data/teamData.json'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+
 // Helper function to dynamically import images
 const getImagePath = (path) => {
   if (!path) return null;
