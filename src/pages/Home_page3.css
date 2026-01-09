@@ -37,13 +37,24 @@
   inset: 0;
   background: rgba(0, 0, 0, 0.6);
   padding: 20px;
-}
+} 
+ .home3-title {
+    width: 100%;
+    height: 93px;
+    text-align: center;
+    font-family: 'Ethnocentric', sans-serif;
+    font-size: 3rem;
+    color: #51D4FF;
+    text-shadow: 2px 2px 4px #000;
+    line-height: 1.1;
 
-subtext {
+  }
+
+.subtext {
   margin-top: 0px;
 }
 
-subtext cash {
+.subtext {
   margin-top: 0px;
 }
 
@@ -54,8 +65,9 @@ subtext cash {
   padding: 20px 5px 0px;
   display: flex;
   gap: 30px;
-  min-height: 87vh;
+  min-height: auto;
   justify-content: space-evenly;
+  align-items: center;
 }
 
 .home3-right-text p {
@@ -63,45 +75,34 @@ subtext cash {
 }
 
 
-/* ===================== TITLE ===================== */
-.home3-title {
-  width: 100%;
-  height: 93px;
-  text-align: center;
-  font-family: 'Ethnocentric', sans-serif;
-  font-size: 50px;
-  color: #51D4FF;
-  text-shadow: 2px 2px 4px #000;
-  line-height: 1.1;
-  /* margin-bottom: 30px; */
-}
-
 /* ===================== LEFT SIDE ===================== */
 .home3-leftimg {
-  position: absolute;
-  top: 43vh;
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;
   z-index: 5;
   pointer-events: none;
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 
 .home3-leftside {
-  position: relative;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* justify-content: flex-start; */
-  height: 85vh;
-  padding-top: 80px;
+position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 73vh;
+    /* padding-top: 40px; */
+    gap: 7vh;
+    /* padding-bottom: 122px;*/
 }
 
 /* TEXT BG */
 .home3-textbg {
-  /* width: 100%;
-  max-width: 570px; */
+  width: 100%;
+  max-width: 570px;
   position: relative;
 }
 
@@ -144,30 +145,22 @@ subtext cash {
 
 
 /* ===================== RIGHT SIDE ===================== */
-.home3-rightside,
-.home3-rightside * {
-  box-sizing: border-box;
-}
-
 .home3-rightside {
   flex: 0.8;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
-  justify-content: space-evenly;
-  min-height: 71vh;
-
+  gap: 30px;
+  justify-content: center;
+  min-height: auto;
+  padding: 30px 0;
 }
 
 .home3-right-up img {
   width: 100%;
   max-width: 322px;
   height: auto;
-  transform: translateY(-40px);
-  /* 🔥 move UP */
-  transform: scale(1.1);
-  /* 🔥 increase size */
+  transform: translateY(-40px) scale(1.1);
   transform-origin: center;
 }
 
@@ -284,39 +277,50 @@ subtext cash {
 
 /* ===================== LAPTOP (≤1024px) ===================== */
 @media (max-width: 1024px) {
+
+  .home3-title {
+    width: 100%;
+    height: 93px;
+    text-align: center;
+    font-family: 'Ethnocentric', sans-serif;
+    font-size: px;
+    color: #51D4FF;
+    text-shadow: 2px 2px 4px #000;
+    line-height: 1.1;
+
+  }
+    .home3-textbg img {
+        height: 41vh;
+        width: 65vh;
+    }
   .home3-container {
     gap: 0px;
     padding: 30px 0px;
     min-height: 90%;
   }
-
-  .home3-textbg img {
-    height: 40vh;
-    width: 55vh;
-  }
-
-  .home3-textbg .home3-content {
-    position: absolute;
-    inset: 0;
-    padding: 02px;
-    display: flex;
-    align-items: center;
-    font-family: 'Aldrich', sans-serif;
-    font-size: 15px;
-    color: #fff;
-    line-height: 1.9;
-    text-shadow: 2px 2px 3px #000;
-    width: 52vh;
-  }
+    .home3-textbg img {
+        height: 40vh;
+        width: 58vh;
+    }
+    .home3-textbg .home3-content {
+        position: absolute;
+        inset: 0;
+        padding: 22px;
+        display: flex;
+        align-items: center;
+        font-family: 'Aldrich', sans-serif;
+        font-size: 15.5px;
+        color: #fff;
+        line-height: 1.5;
+        text-shadow: 2px 2px 3px #000;
+        width: 63.3vh;
+    }
 
   .home3-rightside {
-
     flex: 0.7;
-    height: auto;
-    /* ✅ allow content to grow */
-    max-height: 78vh;
-    /* ✅ keeps structure */
-    justify-content: center;
+    /* height: auto;
+    min-height: auto;
+    justify-content: center; */
   }
 
 
@@ -324,30 +328,28 @@ subtext cash {
     width: 40vh;
     max-width: 100%;
   }
-
-  .home3-leftside {
+.home3-leftside {
+    position: relative;
     flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    /* ✅ prevents stretch cut */
-    height: 10vh;
-    /* padding-bottom: 40px; */
-  }
-
+    height: auto;
+    padding-top: 27px;
+    padding-bottom: 20px;
+}
   .home3-rightimg1 img,
   .home3-rightimg2 img {
     max-width: 60vh;
   }
 
   .home3-leftimg {
-    margin-top: auto;
+    position: relative;
+    margin-top: 30px;
     width: 100%;
     display: flex;
     justify-content: center;
     overflow: visible;
-    /* ✅ critical */
   }
 
   .home3-leftimg img {
@@ -427,11 +429,9 @@ subtext cash {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
-    /* ✅ key fix */
+    justify-content: flex-start;
     gap: 25px;
-    /* ✅ consistent spacing */
-    min-height: 90vh;
+    min-height: auto;
     padding: 20px;
   }
 
@@ -440,11 +440,9 @@ subtext cash {
     flex: unset;
     height: auto;
   }
-
-  .home3-rightside {
-
-    min-height: 57vh;
-  }
+    .home3-rightside {
+        min-height: 34vh;
+    }
 
   .home3-leftimg,
   .home3-right-up {
@@ -498,8 +496,9 @@ subtext cash {
     padding: 12px;
     gap: 0px;
     display: flex;
-    justify-content: space-around;
-    min-height: 87vh;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: auto;
   }
 
   .home3-title {
@@ -566,8 +565,8 @@ subtext cash {
   }
 
   .home3-rightside {
-    /* justify-content: space-evenly; */
-    min-height: 63vh;
+    min-height: auto;
+    padding: 20px 0;
   }
 }
 
@@ -576,8 +575,9 @@ subtext cash {
     padding: 0px;
     gap: 0px;
     display: flex;
-    justify-content: space-around;
-    min-height: 87vh;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: auto;
   }
 
   .home3-textbg img {
@@ -585,8 +585,8 @@ subtext cash {
   }
 
   .home3-rightside {
-    /* justify-content: space-evenly; */
-    min-height: 41vh;
+    min-height: auto;
+    padding: 20px 0;
   }
 
   .home3-textbg .home3-content {
