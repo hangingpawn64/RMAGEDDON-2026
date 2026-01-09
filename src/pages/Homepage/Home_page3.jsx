@@ -76,7 +76,7 @@ export default function Home_page3() {
                   alt=""
                 />
                 <div className="home3-right-text">
-                  <div className="home3-innertext2"><p>CERTIFICATE OF PARTICIPATION</p></div>
+                  <div className="home3-innertext2"><p>Event Participation</p></div>
                   <div className="home3-subtext cash">
                     <p>Certificate to all participants</p>
                   </div>
