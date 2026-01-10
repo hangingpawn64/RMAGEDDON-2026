@@ -329,6 +329,10 @@
     .home-map-wrapper{
         display: none;
     }
+        .home-content-wrapper {
+        padding-top: 3.75rem;
+        gap: 2.85rem;
+    }
 }
 
 @media (max-width: 900px) {
