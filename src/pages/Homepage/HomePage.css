@@ -8,7 +8,7 @@
     font-size: clamp(2rem, 5vw, 4.5rem);
     font-weight: 800;
     text-align: center;
-    margin: 6rem 0 -2.5rem 0;
+    margin: 5.5rem 0 -2.5rem 0;
     color: #51D4FF;
     letter-spacing: 4px;
     text-shadow: 0 5px 10px rgba(8, 72, 94, 0.5);
@@ -102,7 +102,7 @@
 
     .home-content-wrapper {
         padding-top: 3.75rem;
-        gap: 1.2rem;
+        gap: 2rem;
     }
 
 .home-time-value::after {
@@ -182,9 +182,9 @@
 
 .home-character-img {
     position: absolute;
-    bottom: 0;
+    bottom: 0px;
     left: 0;
-    right: 0;
+    right: 5.5%;
     margin: 0 auto;
     width: auto;
     max-width: 100%;
@@ -306,15 +306,13 @@
         display: none;
     }
 
-    .home-content-wrapper {
+     .home-content-wrapper {
         padding-top: 3.75rem;
-        gap: 1.25rem;
+        gap: 2.25rem;
     }
     .home-character-img {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
+ 
     margin: 0 auto;
     width: auto;
     max-width: 100%;
@@ -333,6 +331,17 @@
         padding-top: 3.75rem;
         gap: 2.85rem;
     }
+        .home-heading {
+        font-size: clamp(2.25rem, 5vw, 3.75rem);
+        margin-bottom: 0rem;
+        margin-top: 4.7rem;
+        padding-top: 0;
+    }
+    .home-mission-container {
+    flex: 1;
+    align-items: center;
+    margin-right: 0%;
+}
 }
 
 @media (max-width: 900px) {
@@ -348,12 +357,11 @@
     }
 
     .home-heading {
-        font-size: clamp(1.5rem, 5vw, 2.5rem);
+        font-size: clamp(2.5rem, 6vw, 5.5rem);
         margin-top: 35px;
-        margin-bottom: -2rem;
+        margin-bottom: 0rem;
         order: 1;
     }
-
     .home-main-content-grid,
     .home-bottom-section-grid {
         display: contents;
@@ -389,7 +397,7 @@
 
     .home-content-wrapper {
         padding: 6.25rem 1.5rem 2.5rem;
-        gap: 2.5rem;
+        gap: 2.3rem;
     }
 
     .home-countdown-container,
@@ -437,10 +445,16 @@
 
 @media (max-width: 425px)  {
         .home-heading {
-        margin-top: 1rem;
+        margin-top: 2rem;
     }
+
         .home-content-wrapper {
         padding: 3.85rem 0.8rem 2.5rem;
-        gap: 2.5rem;
+        gap: 1.5rem;
+    }
+        .home-mission-desc {
+        font-size: clamp(1rem, 2vw, 24px);
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
+        margin-bottom: 7px;
     }
 }
