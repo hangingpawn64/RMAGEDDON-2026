@@ -95,7 +95,7 @@ export default function HomePage() {
                     <h1 className='home-heading'>RMAGEDDON 2026</h1>
 
                     {/* Main Content Grid */}
-                    <div className="home-main-content-grid w-full flex flex-col lg:flex-row justify-center items-center max-w-full gap-6 lg:gap-10">
+                    <div className="home-main-content-grid w-full flex flex-row lg:flex-row justify-center items-center max-w-full gap-6 lg:gap-10">
 
                         {/* Left: Countdown */}
                         <div className="home-countdown-container home-glass-panel">

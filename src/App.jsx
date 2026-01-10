@@ -38,9 +38,6 @@ const Layout = () => {
   );
 };
 
-/* ===============================
-   HOME WRAPPER (LOADER ONLY HERE)
-================================ */
 // Track if loader has run this session (resets on refresh)
 let hasAppLoaded = false;
 
