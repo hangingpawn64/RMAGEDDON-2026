@@ -116,9 +116,10 @@
 
 .sponsor-section-desc p {
   font-family: 'Aldrich', sans-serif;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.9;
   color: white;
+
 }
 
 
@@ -205,7 +206,7 @@
   }
 
   .sponsor-section-rnxg-underline {
-    width: 214pxpx;
+    width: 214px;
   }
 
   .sponsor-section-spon-underline {
@@ -214,7 +215,7 @@
   }
 
   .sponsor-section-desc p {
-    font-size: 13.6px;
+    font-size: 1.1rem;
   }
 
   .sponsor-section-exploreBtn img {
@@ -252,7 +253,11 @@
   }
 
   .sponsor-section-vector-line {
-    display: none;
+    display: none !important;
+  }
+
+  .sponsor-section-vector-line img {
+    display: none !important;
   }
 
   .sponsor-section-left,
@@ -324,7 +329,7 @@
   }
 
   .sponsor-section-desc p {
-    font-size: 13px;
+    font-size: 1rem;
     line-height: 1.7;
     text-align: left;
   }
@@ -392,9 +397,10 @@
   }
 
   .sponsor-section-desc p {
-    font-size: 13px;
+    /* font-size: 15px; */
     line-height: 1.4;
     text-align: left;
+      /* text-align: justify; */
   }
 
   .sponsor-section-left-down,
@@ -413,6 +419,7 @@
   .sponsor-section-spon-underline {
     width: 19;
   }
+
 }
 
 /* ----- <= 360px ----- */
@@ -427,8 +434,8 @@
   }
 
   .sponsor-section-desc p {
-    font-size: 10.5px;
-    line-height: 1.2;
+    /* font-size: 10.5px; */
+    /* line-height: 1.2; */
   }
 
   .sponsor-section-rnxg-underline {
@@ -466,7 +473,7 @@
   }
 
   .sponsor-section-desc p {
-    font-size: 10px;
+    /* font-size: 10px; */
     line-height: 18px;
     font-weight: 300;
   }
@@ -524,6 +531,7 @@
   }
 
 
+
 }
 
 /* ================= GLOBAL NARROW-SCREEN SAFETY ================= */
@@ -575,7 +583,7 @@
   }
 
   .sponsor-section-desc p {
-    font-size: 9.5px;
+    /* font-size: 9.5px; */
     line-height: 1.2;
 
   }
