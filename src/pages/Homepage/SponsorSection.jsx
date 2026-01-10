@@ -15,7 +15,7 @@ const SponsorSection = () => {
               <span className="sponsor-section-rnxg-underline"></span>
             </div>
 
-            <a href="#explore" className="sponsor-section-exploreBtn">
+            <a href="https://rnxg.co.in" className="sponsor-section-exploreBtn" rel="noopener noreferrer" target="_blank">
               <img
                 src="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766182828/Group_514617140_1_e6ri5g.png"
                 alt="Explore"
