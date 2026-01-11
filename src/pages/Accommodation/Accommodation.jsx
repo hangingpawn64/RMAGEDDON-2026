@@ -16,7 +16,7 @@ const Accommodation = () => {
   return (
     <div>
       <div className="accom-bg">
-        <div className="absolute top-0 left-0 w-full z-50 flex justify-center">
+        <div className="absolute top-0 left-0 w-full z-50 flex justify-center" data-aos="fade-down" data-aos-delay="0">
           <Navbar />
         </div>
         <div className="accom-overlay"></div>

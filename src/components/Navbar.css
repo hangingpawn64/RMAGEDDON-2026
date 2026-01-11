@@ -23,10 +23,10 @@ body.navbar-scroll-locked {
   --navbar-height-mobile: 64px;
   --navbar-height-xs: 56px;
 
-  --logo-size-desktop: 52px;
-  --logo-size-tablet: 44px;
-  --logo-size-mobile: 36px;
-  --logo-size-xs: 30px;
+  --logo-size-desktop: 64px;
+  --logo-size-tablet: 52px;
+  --logo-size-mobile: 48px;
+  --logo-size-xs: 42px;
 
   --logo-left-gap-desktop: 32px;
   --logo-left-gap-mobile: 16px;
