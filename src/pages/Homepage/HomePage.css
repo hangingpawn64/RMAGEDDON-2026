@@ -195,12 +195,35 @@
     pointer-events: none;
 }
 
+.home-logo-float-wrapper {
+    animation: logo-float 6s ease-in-out infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .home-center-logo {
     position: relative;
     z-index: 2;
     width: 16rem;
     height: auto;
-    filter: drop-shadow(0 0 30px rgba(31, 106, 131, 0.4));
+    /* Multi-layered shadows for 3D depth and cyan glow */
+    filter:
+      drop-shadow(0 4px 8px rgba(0, 0, 0, 0.8)) drop-shadow(0 0 4px rgba(81, 212, 255, 0.7)) drop-shadow(0 0 8px rgba(81, 212, 255, 0.3));
+    transition: filter 0.4s ease-out;
+    transform-style: preserve-3d;
+}
+
+@keyframes logo-float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
 }
 
 /* Info Box */

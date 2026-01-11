@@ -77,6 +77,7 @@ export default function HomePage() {
 
             setMapRotation(angleDeg);
         }
+
     };
 
     return (
@@ -155,8 +156,16 @@ export default function HomePage() {
                             </div>
                         </div>
                         {/* Center: Logo & Character */}
-                        <div className="home-center-content relative">
-                            <img src="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1767861627/logo_opd1mq.png" alt="logo" className="home-center-logo" data-aos="zoom-in" data-aos-delay="2000" />
+                        <div className="home-center-content relative" style={{ perspective: '1000px' }}>
+                            <div className="home-logo-float-wrapper">
+                                <img
+                                    src="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1767861627/logo_opd1mq.png"
+                                    alt="logo"
+                                    className="home-center-logo"
+                                    data-aos="zoom-in"
+                                    data-aos-delay="2000"
+                                />
+                            </div>
                         </div>
 
                         {/* Right: Info Box */}
