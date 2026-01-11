@@ -1,0 +1,48 @@
+/* Page Transition Wrapper */
+.page-transition-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-transition-content {
+  width: 100%;
+  min-height: 100vh;
+  animation: none;
+}
+
+/* Fade and Slide Out Animation (Exit) - 0.8s */
+.transition-exit .page-transition-content {
+  animation: pageExit 0.8s ease-in forwards;
+}
+
+/* Fade and Slide In Animation (Enter) - 1.2s */
+.transition-enter .page-transition-content {
+  animation: pageEnter 1.2s ease-out forwards;
+}
+
+/* Exit Animation - Quick fade out and slide up */
+@keyframes pageExit {
+  from {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+
+/* Enter Animation - Quick fade in and slide down */
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+

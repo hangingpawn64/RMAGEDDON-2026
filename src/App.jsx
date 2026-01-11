@@ -3,11 +3,12 @@ import "./App.css";
 
 import CrosshairCursor from "./components/Crosshair";
 import PageLoader from "./components/PageLoader";
+import { PageTransition } from "./components/PageTransition";
 
 import {
   createBrowserRouter,
   RouterProvider,
-  Outlet,
+  useOutlet,
 } from "react-router-dom";
 
 import HomePage from "./pages/Homepage/HomePage";
@@ -19,21 +20,19 @@ import ContactUs from "./pages/Contact/ContactUs";
    LAYOUT (SAFE, NO LOADER)
 ================================ */
 const Layout = () => {
+  const currentOutlet = useOutlet();
+
   useEffect(() => {
     document.body.style.overflow = "auto";
     document.body.style.pointerEvents = "auto";
-
-    // document
-    //   .querySelectorAll(
-    //     ".overlay, .loader-root, .loader-overlay, .counter"
-    //   )
-    //   .forEach((el) => el.remove());
   });
 
   return (
     <>
       <CrosshairCursor />
-      <Outlet />
+      <PageTransition>
+        {currentOutlet}
+      </PageTransition>
     </>
   );
 };
