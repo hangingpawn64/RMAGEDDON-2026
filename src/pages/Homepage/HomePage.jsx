@@ -37,8 +37,9 @@ export default function HomePage() {
     useEffect(() => {
         AOS.init({
             duration: 1000,
-            once: true,
-            easing: 'ease-in-out'
+            once: false,
+            easing: 'ease-in-out',
+            mirror: true
         });
     }, []);
 

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import footerBg from '../assets/FOOTER 71.png';
 import Socials from './Socials';
 import EnquiryForm from './EnquiryForm';
+import EnquiryButton from './EnquiryButton';
 
 const Footer = () => {
   const [isEnquiryOpen, setIsEnquiryOpen] = useState(false);
@@ -30,12 +31,7 @@ const Footer = () => {
           <div className="flex flex-col lg:flex-row justify-between items-center gap-6 lg:gap-0 px-2 sm:px-4 w-full">
             {/* Enquiry Button */}
             <div className="flex-1 flex justify-center lg:justify-start w-full lg:w-auto">
-              <button
-                onClick={() => setIsEnquiryOpen(true)}
-                className="bg-white/5 backdrop-blur-md border-2 border-white/30 text-white px-6 sm:px-7 md:px-8 py-2 sm:py-2.5 text-sm sm:text-base rounded-md hover:bg-white/15 hover:border-white/50 hover:-translate-y-0.5 hover:shadow-[0_5px_15px_rgba(255,255,255,0.2)] transition-all duration-300 font-bold"
-              >
-                Enquiry
-              </button>
+              <EnquiryButton onClick={() => setIsEnquiryOpen(true)} />
             </div>
 
             {/* Logo */}
@@ -56,7 +52,7 @@ const Footer = () => {
 
             {/* Description */}
             <div className="text-center max-w-xl lg:max-w-2xl z-10">
-              <p className="text-[16px] sm:text-[18px] md:text-[20px] leading-relaxed text-white drop-shadow-[1px_1px_5px_rgba(0,0,0,0.5)] font-normal font-saira">
+              <p className="text-[16px] sm:text-[18px] md:text-[20px] leading-relaxed text-white drop-shadow-[1px_1px_5px_rgba(0,0,0)] font-normal font-saira">
                 Robotics for Next Generation provides the best<br className="hidden sm:block" />
                 platform to work on different problem statements and<br className="hidden sm:block" />
                 to create the best solutions for them.
@@ -79,7 +75,7 @@ const Footer = () => {
               <p className="m-0">Designed and Developed by Team RNXG.</p>
             </div>
             <div className="flex-1 text-center lg:text-right">
-              <a href="mailto:info@rmageddon2026.tech" className="text-white/90 underline hover:text-white hover:drop-shadow-[0_0_10px_rgba(255,255,255,0.5)] transition-all duration-300">
+              <a href="mailto:info@rmageddon2026.tech" className="text-white/90 underline hover:text-white/80 hover:drop-shadow-[0_0_10px_rgba(255,255,255)] transition-all duration-300">
                 info@rmageddon2026.tech
               </a>
             </div>
