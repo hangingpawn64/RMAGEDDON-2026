@@ -35,7 +35,7 @@
     inset: 0;
     padding: 3px;
     /* border thickness */
-    border-radius: 2.5rem;
+    border-radius: 2rem;
     background: linear-gradient(135deg,
             #2ea7cf 0%,
             #1ba6ad 20%,
@@ -429,6 +429,9 @@
         padding: 0.625rem 1.56rem;
         border-radius: 1.875rem;
         ;
+    }
+    .home-glass-panel::before{
+        border-radius: 1.875rem;
     }
 
     .home-map-wrapper {

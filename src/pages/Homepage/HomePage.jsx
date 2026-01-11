@@ -95,6 +95,8 @@ export default function HomePage() {
                     style={{
                         transform: `translate(${-mousePos.x}px, ${-mousePos.y}px)`
                     }}
+                    data-aos="fade-up"
+                    data-aos-delay="2300"
                 />
 
                 {/* Content Wrapper */}
