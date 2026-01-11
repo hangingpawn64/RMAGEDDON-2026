@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 // import bgVideo from '../../assets/videos/bgvideo.mp4';
 import bgVideo from '/homeBG.jpeg';
 import "./HomePage.css";
@@ -13,6 +13,8 @@ import 'aos/dist/aos.css';
 // need to use Date.now() for proper timer.
 export default function HomePage() {
     const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+    const [mapRotation, setMapRotation] = useState(0);
+    const mapRef = useRef(null);
     // Set your target date here (YYYY-MM-DDTHH:mm:ss)
     const TARGET_DATE = new Date('2026-02-27T00:00:00').getTime();
 
@@ -63,6 +65,18 @@ export default function HomePage() {
         const moveX = (clientX - window.innerWidth / 2) / 60;
         const moveY = (clientY - window.innerHeight / 2) / 60;
         setMousePos({ x: moveX, y: moveY });
+
+        if (mapRef.current) {
+            const rect = mapRef.current.getBoundingClientRect();
+            const centerX = rect.left + rect.width / 2;
+            const centerY = rect.top + rect.height / 2;
+
+            // Calculate rotation to point at cursor
+            const angleRad = Math.atan2(clientY - centerY, clientX - centerX);
+            const angleDeg = (angleRad * 180) / Math.PI + 90; // +90 to align the "top" of the image to the cursor
+
+            setMapRotation(angleDeg);
+        }
     };
 
     return (
@@ -95,8 +109,6 @@ export default function HomePage() {
                     style={{
                         transform: `translate(${-mousePos.x}px, ${-mousePos.y}px)`
                     }}
-                    data-aos="fade-up"
-                    data-aos-delay="2300"
                 />
 
                 {/* Content Wrapper */}
@@ -168,10 +180,17 @@ export default function HomePage() {
                     {/* Bottom Section */}
                     <div className="home-bottom-section-grid w-full flex flex-col lg:flex-row items-center justify-center gap-6 lg:gap-10">
                         {/* Map */}
-                        <div className="home-map-wrapper" data-aos="fade-right" data-aos-delay="1500">
-                            <a href="https://maps.app.goo.gl/t1SdmXCSgqNS2Fjf9" target="_blank" rel="noopener noreferrer">
-                                <img src="/map.png" alt="map" className="home-map-img" />
-                            </a>
+                        <div className="home-map-wrapper" data-aos="fade-right" data-aos-delay="1500" ref={mapRef}>
+                            <div
+                                className="home-map-tilt-container"
+                                style={{
+                                    transform: `rotate(${mapRotation}deg)`
+                                }}
+                            >
+                                <a href="https://maps.app.goo.gl/t1SdmXCSgqNS2Fjf9" target="_blank" rel="noopener noreferrer">
+                                    <img src="/map.png" alt="map" className="home-map-img" />
+                                </a>
+                            </div>
                         </div>
                         {/* Mission Text */}
                         <div className="home-mission-container" data-aos="fade-up" data-aos-delay="1500">

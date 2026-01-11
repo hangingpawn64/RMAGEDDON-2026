@@ -259,11 +259,21 @@
     flex-shrink: 0;
 }
 
+.home-map-tilt-container {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.2s ease-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .home-map-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     filter: drop-shadow(0 0 30px rgba(31, 106, 131, 0.4));
+    border-radius: 50%;
 }
 
 .home-mission-container {
@@ -430,7 +440,8 @@
         border-radius: 1.875rem;
         ;
     }
-    .home-glass-panel::before{
+
+    .home-glass-panel::before {
         border-radius: 1.875rem;
     }
 
