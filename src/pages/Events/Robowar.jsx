@@ -1,5 +1,7 @@
 import { useEffect } from "react";
 import "./Robowar.css";
+import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
 import WarCarousel from "../../components/WarCarousel.jsx"
 import GameCard from "../../components/Cards/GameCard";
 import AnimatedButton from "../../components/AnimatedButton";
@@ -29,37 +31,44 @@ const Robowar = () => {
 
   return (
     <>
+      {/* NAVBAR */}
+      <div className="top-0 left-0 w-full z-50 flex justify-center events-navbar-wrapper">
+        <Navbar />
+      </div>
+
       {/* ================= ROBOWAR SECTION ================= */}
       <section className="robowar-container">
         <div className="robowar-left">
-          <div className="robowar-header">
-            <p className="robowar-title">ROBOWAR</p>
-            <img
-              src="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1768074254/Group_514617166_ohluoe.png"
-              alt="Robowar Title"
-            />
-          </div>
-
-          <div className="robowar-content">
-            <div className="robowar-content-top">
-              <p>
-                Enter the world of Robo Wars, where power meets precision,
-                strategy, and innovation rules the battlefield
-              </p>
+          <div className="robowar-left-content">
+            <div className="robowar-header">
+              <p className="robowar-title">ROBOWAR</p>
+              <img
+                src="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1768074254/Group_514617166_ohluoe.png"
+                alt="Robowar Title"
+              />
             </div>
 
-            <div className="robowar-content-bottom">
-              <p>
-                Last year, RoboWars made history as Marathwada's first RoboWars
-                event. This year, the battlefield opens again your chance to test
-                your robot, prove your skills, and make your mark.
-              </p>
-            </div>
-          </div>
+            <div className="robowar-content">
+              <div className="robowar-content-top">
+                <p>
+                  Enter the world of Robo Wars, where power meets precision,
+                  strategy, and innovation rules the battlefield
+                </p>
+              </div>
 
-          <div className="robowar-buttons">
-            <AnimatedButton text="R E G I S T E R" onClick={handleRegister} />
-            <AnimatedButton text="R U L E  B O O K" onClick={handleRuleBook} />
+              <div className="robowar-content-bottom">
+                <p>
+                  Last year, RoboWars made history as Marathwada's first RoboWars
+                  event. This year, the battlefield opens again your chance to test
+                  your robot, prove your skills, and make your mark.
+                </p>
+              </div>
+            </div>
+
+            <div className="robowar-buttons">
+              <AnimatedButton text="REGISER" onClick={handleRegister} />
+              <AnimatedButton text="RULE  BOOK" onClick={handleRuleBook} />
+            </div>
           </div>
         </div>
 
@@ -120,6 +129,8 @@ const Robowar = () => {
         </div>
       </section>
 
+      {/* FOOTER */}
+      <Footer />
     </>
   );
 };

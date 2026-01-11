@@ -302,7 +302,16 @@ body.navbar-scroll-locked {
     background: transparent;
   }
 }
+@media (max-width: 500px) {
+  
+  .navbar-container:not(.navbar-events-mode) {
+    background: url("https://res.cloudinary.com/dmbmdfmhl/image/upload/v1768055125/mainnav_mobile_kxscnh.png") center/cover no-repeat;
+  }
 
+  .navbar-container.navbar-events-mode {
+    background: url("https://res.cloudinary.com/dmbmdfmhl/image/upload/v1768055125/eventnav_mobile_apfimm.png") center/cover no-repeat;
+  }
+}
 /* ======================================================
    MOBILE (≤425px)
 ====================================================== */
@@ -325,13 +334,6 @@ body.navbar-scroll-locked {
     display: none;
   }
 
-  .navbar-container:not(.navbar-events-mode) {
-    background: url("https://res.cloudinary.com/dmbmdfmhl/image/upload/v1768055125/mainnav_mobile_kxscnh.png") center/cover no-repeat;
-  }
-
-  .navbar-container.navbar-events-mode {
-    background: url("https://res.cloudinary.com/dmbmdfmhl/image/upload/v1768055125/eventnav_mobile_apfimm.png") center/cover no-repeat;
-  }
 }
 
 /* ======================================================
