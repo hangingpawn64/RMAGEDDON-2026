@@ -6,8 +6,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* remove small fixed max-width to avoid clipping other swipers */
+  border: 4px solid rgba(20, 18, 18, 0.844);
+
+ 
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.05);
+
+  overflow: visible;
+
 }
+
 
 /* main swiper */
 .war-carousel-horizontal-swiper {
@@ -35,9 +43,13 @@
   max-width: 100%;
   object-fit: cover;
   overflow: hidden;
-  opacity: 0.85;
+  /* opacity: 0.85; */
   transition: transform 0.35s ease, box-shadow 0.35s ease, opacity 0.35s ease;
   border: 2px solid white;
+  box-sizing: border-box;
+  /* border-radius: 5vh; */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  
 }
 
 /* active effect */
@@ -61,6 +73,12 @@
 }
 
 /* responsive tweaks */
+@media (max-width: 768px) {
+  .war-carousel-images-slider {
+    padding: 10px;
+  }
+}
+
 @media (max-width: 400px) {
   .war-carousel-slide img {
     width: 240px;
@@ -70,14 +88,26 @@
 
 @media (max-width: 425px) {
   .war-carousel-images-slider {
-    max-width: 361px;
-    height: 207px;
+    max-width: 320px;
+    height: auto;
+    padding: 8px;
+  }
+
+  .war-carousel-slide img {
+    width: 220px;
+    height: 140px;
   }
 }
 
 @media (max-width: 375px) {
   .war-carousel-images-slider {
-    max-width: 294px !important;
-    max-height: 185px;
+    max-width: 280px !important;
+    height: auto;
+    padding: 5px;
+  }
+
+  .war-carousel-slide img {
+    width: 200px;
+    height: 120px;
   }
 }

@@ -80,13 +80,19 @@
   text-align: center;
 }
 
+
+
 .card-item-button-shadow {
-  filter: drop-shadow(rgba(255, 75, 51, 0.767) 0px 0px 5px);
-  transition: all 0.2s ease-in;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px;
+    filter: drop-shadow(rgba(255, 75, 51, 0.767) 0px 0px 5px);
+    transition: all 0.2s ease-in;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 10px;
+    flex-direction: row;
+    width: 15rem;
+    height: 3rem;
+    margin-bottom: 10px;
 }
 
 .card-item-button-shadow:hover {
@@ -95,14 +101,17 @@
 
 .card-item-button {
   position: relative;
-  display: inline-block;
-  padding: 10px 20px;
-  margin: 10px 5px;
+  display: flex;
+  justify-content: center;
+align-items: center;
+  gap: 10px;
+  flex-direction: row;
+  padding: 10px ;
+  /* margin: 5px; */
   color: #FF4B33;
   text-decoration: none;
   text-transform: uppercase;
   transition: 0.5s;
-  letter-spacing: 2px;
   overflow: hidden;
   background: transparent;
   font-weight: 600;
