@@ -307,6 +307,7 @@ body.navbar-scroll-locked {
    MOBILE (≤425px)
 ====================================================== */
 @media (max-width: 425px) {
+
   .navbar-container {
     height: var(--navbar-height-mobile);
   }
@@ -318,6 +319,18 @@ body.navbar-scroll-locked {
 
   .navbar-hamburger-wrapper {
     right: var(--hamburger-right-mobile);
+  }
+
+  .navbar-svg-wrapper {
+    display: none;
+  }
+
+  .navbar-container:not(.navbar-events-mode) {
+    background: url("https://res.cloudinary.com/dmbmdfmhl/image/upload/v1768055125/mainnav_mobile_kxscnh.png") center/cover no-repeat;
+  }
+
+  .navbar-container.navbar-events-mode {
+    background: url("https://res.cloudinary.com/dmbmdfmhl/image/upload/v1768055125/eventnav_mobile_apfimm.png") center/cover no-repeat;
   }
 }
 
