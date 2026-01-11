@@ -39,6 +39,8 @@ const Robowar = () => {
       {/* ================= ROBOWAR SECTION ================= */}
       <section className="robowar-container">
         <div className="robowar-left">
+          <div className="robowar-left-content">
+        
           <div className="robowar-header" data-aos="zoom-in" data-aos-delay="500">
             <p className="robowar-title">ROBOWAR</p>
             <img
@@ -65,8 +67,10 @@ const Robowar = () => {
           </div>
 
           <div className="robowar-buttons" data-aos="zoom-in" data-aos-delay="2000">
-            <AnimatedButton text="R E G I S T E R" onClick={handleRegister} />
-            <AnimatedButton text="R U L E  B O O K" onClick={handleRuleBook} />
+            <AnimatedButton text="REGISTER" onClick={handleRegister} />
+            <AnimatedButton text="RULE BOOK" onClick={handleRuleBook} />
+          </div>
+              
           </div>
         </div>
 
