@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import bgVideo from '../../assets/videos/bgvideo.mp4';
+// import bgVideo from '../../assets/videos/bgvideo.mp4';
+import bgVideo from '/homeBG.jpeg';
 import "./HomePage.css";
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
@@ -70,18 +71,13 @@ export default function HomePage() {
                 className="relative min-h-screen w-full home-hero-section"
                 onMouseMove={handleMouseMove}
             >
-                {/* Background Video */}
-                <video
-                    className="absolute inset-0 h-full w-full object-cover opacity-95"
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                    preload="metadata"
+                {/* Background Image */}
+                <img
+                    src={bgVideo}
+                    alt="Background"
+                    className="home-bg-image absolute inset-0 h-full w-full object-cover opacity-95"
                     aria-hidden="true"
-                >
-                    <source src={bgVideo} type="video/mp4" />
-                </video>
+                />
 
                 {/* Dark Overlay */}
                 <div className="absolute inset-0 bg-black/40" />
