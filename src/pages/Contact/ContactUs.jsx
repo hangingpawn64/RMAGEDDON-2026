@@ -26,9 +26,11 @@ const ContactUs = () => {
       useEffect(() => {
           AOS.init({
               duration: 1000,
-              once: true,
+              once: false,
+              mirror: true,
               easing: 'ease-in-out'
           });
+          AOS.refresh();
       }, []);
 return (
     <>

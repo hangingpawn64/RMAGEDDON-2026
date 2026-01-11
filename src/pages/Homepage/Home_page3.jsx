@@ -8,9 +8,11 @@ export default function Home_page3() {
         useEffect(() => {
             AOS.init({
                 duration: 1000,
-                once: true,
+                once: false,
+                mirror: true,
                 easing: 'ease-in-out'
             });
+            AOS.refresh();
         }, []);
   return (
     <div className="home3-bg">
