@@ -1,5 +1,7 @@
 import { useEffect } from "react";
 import "./Robowar.css";
+import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
 import WarCarousel from "../../components/WarCarousel.jsx"
 import GameCard from "../../components/Cards/GameCard";
 import AnimatedButton from "../../components/AnimatedButton";
@@ -29,6 +31,11 @@ const Robowar = () => {
 
   return (
     <>
+      {/* NAVBAR */}
+      <div className="top-0 left-0 w-full z-50 flex justify-center events-navbar-wrapper">
+        <Navbar />
+      </div>
+
       {/* ================= ROBOWAR SECTION ================= */}
       <section className="robowar-container">
         <div className="robowar-left">
@@ -120,6 +127,8 @@ const Robowar = () => {
         </div>
       </section>
 
+      {/* FOOTER */}
+      <Footer />
     </>
   );
 };

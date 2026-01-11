@@ -11,7 +11,7 @@ import {
 } from "react-router-dom";
 
 import HomePage from "./pages/Homepage/HomePage";
-import Events from "./pages/Events/Events";
+import Robowar from "./pages/Events/Robowar";
 import Accommodation from "./pages/Accommodation/Accommodation";
 import ContactUs from "./pages/Contact/ContactUs";
 
@@ -64,7 +64,7 @@ function App() {
       element: <Layout />,
       children: [
         { path: "/", element: <HomeWithLoader /> },
-        { path: "/events", element: <Events /> },
+        { path: "/events", element: <Robowar /> },
         { path: "/accommodation", element: <Accommodation /> },
         { path: "/contact", element: <ContactUs /> },
       ],

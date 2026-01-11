@@ -22,7 +22,7 @@
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     padding: 0px 40px;
     color: #ffffff;
     overflow: hidden;
@@ -34,13 +34,22 @@
     flex-wrap: wrap;
 }
 .robowar-left {
-    height: 61vh;
-    flex: 1.7;
+    min-height: 100vh;
+    flex: 1.6;
+    display: flex;
+    flex-direction: column;
+    /* gap: 70px; */
+    align-items: center;
+    /* margin-top: 9rem; */
+    justify-content: center;
+}
+.robowar-left-content {
     display: flex;
     flex-direction: column;
     gap: 70px;
     align-items: center;
-    margin-top: 0rem;
+    margin-top: 4.5rem;
+    justify-content: center;
 }
 .robowar-header {
   position: relative;
@@ -110,13 +119,13 @@
   filter: brightness(1.2);
 }
 
-/* ================= RIGHT SECTION ================= */
 .robowar-right {
-  flex: 1.2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 70vh;
+    justify-content: center;
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
 }
 
 
@@ -145,22 +154,26 @@
 
 /* ================= RESPONSIVE ================= */
 @media (max-width: 1024px) {
-  .robowar-right {
-    flex: 1.2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 69vh;
-  }
 
+      .robowar-right {
+        flex: 1.2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 46vh;
+    }
   .robowar-container {
     padding: 96px 20px 0px 20px;
+    flex-direction: column;
+  
 
   }
 
   .robowar-left {
     gap: 3.2rem;
-    /* height: 57vh; */
+    height: 30vh;
+    justify-content: flex-start;
+    min-height: 50vh;
   }
 
   .robowar-content {
@@ -168,6 +181,14 @@
     gap: 40px;
   }
 
+ .robowar-left-content {
+    display: flex;
+    flex-direction: column;
+    gap: 47px;
+    align-items: center;
+    margin-top: 2rem;
+    justify-content: center;
+}
   .robowar-buttons {
     justify-content: center;
     gap: 3rem;
@@ -186,15 +207,10 @@
     font-size: 34px;
   }
 
-  .robowar-character img {
-    margin-top: 30px;
-    width: 227px;
-    max-width: 100%;
-    filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.8));
-  }
+
 
   .robowar-character {
-    height: 19rem;
+  display: none;
   }
 
   .robowar-carousel {
@@ -212,14 +228,14 @@
   .robowar-container {
     flex-direction: column;
     /* padding: 20px 10px; */
-    gap: 60px;
-    min-height: 100vh;
+    /* gap: 60px; */
+    /* min-height: 100vh; */
   }
 
 
   .robowar-left {
     margin-top: 2rem;
-    gap: 2.9rem;
+    /* gap: 2.9rem; */
   }
 
      .robowar-right {
@@ -227,11 +243,11 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin: 2rem;
-        width: 100%;
+        /* margin: 2rem; */
+        /* width: 100%; */
     }
   .robowar-header img {
-    width: 34rem;
+    width: 31rem;
     max-width: 100%;
     display: block;
   }
@@ -274,23 +290,30 @@
 
 @media(max-width:555px) {
 
+
+      .animated-btn {
+        width: 15.7em;
+        height: 4.8em;
+        padding: 0.7em 0.9em;
+        letter-spacing: 1.2px;
+    }
     .robowar-container {
         flex-direction: column;
         padding: 24px 10px 20px 10px;
-        gap: 39px;
-        min-height: 106vh;
+        gap: 0px;
+        min-height: 100vh;
     }
 
-      .robowar-left {
+    .robowar-left {
         flex: 0.1;
-        margin-top: 2rem;
+        margin-top: 5rem;
         gap: 2.8rem;
         padding: 0px 38px;
-    }
+    } 
 
 
   .robowar-right {
-    margin-bottom: 5rem;
+    /* margin-bottom: 5rem; */
     flex: 0.1;
   }
 
@@ -317,7 +340,7 @@
 }
 
 
-@media(max-width:440px) {
+@media(max-width:455px) {
   .robowar-event-section {
     min-height: auto;
     /* padding: 100px 10px 80px; */
@@ -350,7 +373,7 @@
 
   .robowar-left {
     flex: 0.1;
-    margin-top: 3rem;
+    margin-top: 4rem;
     gap: 2.8rem;
     /* padding: 0px 6px; */
   }
@@ -361,7 +384,7 @@
     flex-direction: column;
     align-items: center;
     margin-top: 0rem;
-    margin-bottom: 2.5rem;
+    margin-bottom: 0rem;
   }
 
   .robowar-content {
@@ -385,7 +408,7 @@
   }
 
   .robowar-buttons {
-    gap: 1.5rem;
+    gap: 2.5rem;
     flex-wrap: wrap;
   }
 
@@ -404,11 +427,34 @@
 
 
 }
+@media(max-width:425px) {
+    .robowar-left-content {
+        display: flex;
+        flex-direction: column;
+        gap: 47px;
+        align-items: center;
+        margin-top: 1rem;
+        justify-content: center;
+    }
+        .robowar-left {
+        flex: 0.1;
+        margin-top: 3rem;
+        gap: 2.8rem;
+        padding: 0px 21px;
+    }
+    .robowar-right{
+      min-height: 33vh;
+    }
+        .robowar-container {
+        min-height: 93vh;
+    }
+  }
 
 @media(max-width:375px) {
   .robowar-left {
     /* margin-top: 0.5rem; */
     gap: 1.8rem;
+    padding: 0px 5px;
   }
 
   .robowar-container {
