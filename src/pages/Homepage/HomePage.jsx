@@ -98,7 +98,7 @@ export default function HomePage() {
                 <div className="absolute inset-0 bg-black/40" />
 
                 {/* Navbar Overlay */}
-                <div className="absolute top-0 left-0 w-full z-50 flex justify-center" data-aos="fade-down" data-aos-delay="0">
+                <div className="absolute top-0 left-0 w-full z-50 flex justify-center" data-aos="fade-down" data-aos-delay="200">
                     <Navbar />
                 </div>
 
@@ -163,7 +163,7 @@ export default function HomePage() {
                                     alt="logo"
                                     className="home-center-logo"
                                     data-aos="zoom-in"
-                                    data-aos-delay="2000"
+                                    data-aos-delay="0"
                                 />
                             </div>
                         </div>
