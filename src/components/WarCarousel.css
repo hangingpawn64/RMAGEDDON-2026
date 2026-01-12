@@ -1,0 +1,113 @@
+/* WarCarousel.css - namespaced to avoid collisions */
+
+/* container */
+.war-carousel-images-slider {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 4px solid rgba(20, 18, 18, 0.844);
+
+ 
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.05);
+
+  overflow: visible;
+
+}
+
+
+/* main swiper */
+.war-carousel-horizontal-swiper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* slide wrapper */
+.war-carousel-slide {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+/* image */
+.war-carousel-slide img {
+  width: 279px;
+  height: 194px;
+  max-width: 100%;
+  object-fit: cover;
+  overflow: hidden;
+  /* opacity: 0.85; */
+  transition: transform 0.35s ease, box-shadow 0.35s ease, opacity 0.35s ease;
+  border: 2px solid white;
+  box-sizing: border-box;
+  /* border-radius: 5vh; */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  
+}
+
+/* active effect */
+.war-carousel-slide.war-carousel-active img {
+  transform: scale(1.12);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+  opacity: 1;
+}
+
+/* pagination bullets (still generic class names required by Swiper, scoped to container) */
+.war-carousel-horizontal-swiper .swiper-pagination-bullet {
+  background-color: #ccc;
+  width: 10px;
+  height: 10px;
+  opacity: 0.7;
+}
+
+.war-carousel-horizontal-swiper .swiper-pagination-bullet-active {
+  background-color: #ffd700;
+  opacity: 1;
+}
+
+/* responsive tweaks */
+@media (max-width: 768px) {
+  .war-carousel-images-slider {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .war-carousel-slide img {
+    width: 240px;
+    height: 140px;
+  }
+}
+
+@media (max-width: 425px) {
+  .war-carousel-images-slider {
+    max-width: 320px;
+    height: auto;
+    padding: 8px;
+  }
+
+  .war-carousel-slide img {
+    width: 220px;
+    height: 140px;
+  }
+}
+
+@media (max-width: 375px) {
+  .war-carousel-images-slider {
+    max-width: 280px !important;
+    height: auto;
+    padding: 5px;
+  }
+
+  .war-carousel-slide img {
+    width: 200px;
+    height: 120px;
+  }
+}

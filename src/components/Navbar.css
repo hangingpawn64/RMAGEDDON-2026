@@ -1,0 +1,416 @@
+
+/* new change */
+.navbar-mobile-close {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  z-index: 1100;
+
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 32px;
+  cursor: pointer;
+}
+/* ======================================================
+   GLOBAL & RESET
+====================================================== */
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  /* Prevent horizontal scroll 'shrinking' issues */
+}
+
+body.navbar-scroll-locked {
+  overflow: hidden !important;
+  height: 100vh;
+  touch-action: none;
+}
+
+/* ======================================================
+   NAVBAR VARIABLES (🔥 EDIT ONLY THESE)
+====================================================== */
+:root {
+  --navbar-height-desktop: 96px;
+  --navbar-height-mobile: 64px;
+  --navbar-height-xs: 56px;
+
+  --logo-size-desktop: 64px;
+  --logo-size-tablet: 52px;
+  --logo-size-mobile: 48px;
+  --logo-size-xs: 42px;
+
+  --logo-left-gap-desktop: 32px;
+  --logo-left-gap-mobile: 16px;
+
+  --hamburger-right-desktop: 32px;
+  --hamburger-right-tablet: 28px;
+  --hamburger-right-mobile: 16px;
+}
+
+/* ======================================================
+   NAVBAR BASE
+====================================================== */
+.navbar-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--navbar-height-desktop);
+  z-index: 50;
+  background: transparent;
+  overflow: hidden;
+}
+
+/* ======================================================
+   SVG BACKGROUNDS (DESKTOP ONLY)
+====================================================== */
+.navbar-svg-wrapper {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.navbar-bg-svg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100%;
+  min-width: 1440px;
+  height: var(--navbar-height-desktop);
+  transform: translateX(-50%);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.navbar-default-bg {
+  background-image: url("https://res.cloudinary.com/dmbmdfmhl/image/upload/v1768055126/mainnav_dfhkly.png");
+}
+
+.navbar-events-bg {
+  background-image: url("https://res.cloudinary.com/dmbmdfmhl/image/upload/v1768055126/eventnav1_bcqtvu.png");
+}
+
+.navbar-visible {
+  opacity: 1;
+}
+
+.navbar-hidden {
+  opacity: 0;
+}
+
+/* ======================================================
+   NAVBAR CONTENT (REFERENCE FRAME)
+====================================================== */
+.navbar-content-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+
+/* ======================================================
+   LEFT LOGO (HARD-LOCKED)
+====================================================== */
+.navbar-logo {
+  position: absolute;
+  left: var(--logo-left-gap-desktop);
+  top: 50%;
+  transform: translateY(-50%);
+  width: var(--logo-size-desktop);
+  z-index: 20;
+}
+
+.navbar-links-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: clamp(30px, 4vw, 90px);
+  margin: 0;
+  padding: 0;
+  transition: gap 0.3s ease;
+}
+
+/* Section Containers for Links */
+.navbar-links-left,
+.navbar-links-right {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  /* Take equal space to keep the middle centered */
+  transition: all 0.3s ease;
+}
+
+/* Ensure equal space behavior */
+.navbar-links-left {
+  justify-content: flex-end;
+  /* Adjust this to push links toward or away from the center */
+  padding-right: clamp(20px, 3vw, 60px);
+}
+
+.navbar-links-right {
+  justify-content: flex-start;
+  /* Adjust this to push links toward or away from the center */
+  padding-left: clamp(20px, 3vw, 60px);
+}
+
+/* Spacer for the central background logo/area */
+.navbar-center {
+  width: clamp(120px, 12vw, 200px);
+  flex-shrink: 0;
+  display: block;
+  /* Ensure it occupies space */
+}
+
+.navbar-links-list a {
+  position: relative;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 19px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  padding: 6px 0;
+  transition: color 0.3s ease;
+}
+
+
+
+.navbar-links-list a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  width: 120%;
+  height: 4px;
+  background: #51d4ff;
+
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  opacity: 0;
+
+  transition:
+    transform 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.3s ease;
+}
+
+/* ACTIVE */
+.navbar-links-list a.active::after {
+  transform: translateX(-50%) scaleX(1);
+  opacity: 1;
+}
+
+/* EVENTS PAGE COLOR */
+.navbar-container.navbar-events-mode .navbar-links-list a.active::after {
+  background: #ff2d2d;
+}
+
+body.navbar-scroll-locked .navbar-hamburger-wrapper {
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+/* ======================================================
+   HAMBURGER (HARD-LOCKED RIGHT)
+====================================================== */
+.navbar-hamburger-wrapper {
+  position: absolute;
+  right: var(--hamburger-right-desktop);
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 30;
+}
+
+.navbar-mobile-close {
+  z-index: 1100;
+}
+/* ================= MOBILE MENU OVERLAY ================= */
+.navbar-mobile-menu {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  backdrop-filter: blur(14px);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* 🔥 CONTROL VERTICAL POSITION HERE */
+  justify-content: flex-start;
+  padding-top: 140px;  /* ⬅️ MOVE MENU UP/DOWN */
+
+  opacity: 0;
+  transform: translateY(-20px);
+  pointer-events: none;
+
+  transition:
+    opacity 0.35s ease,
+    transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+
+  z-index: 2000;
+}
+
+
+.navbar-mobile-menu.navbar-show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+
+/* OPEN STATE */
+.navbar-mobile-menu.navbar-show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+/* MENU LINKS */
+.navbar-mobile-menu li {
+  list-style: none;
+   margin: 12px 0;   /* ⬅️ spacing */
+
+  text-align: center;
+}
+
+.navbar-mobile-menu a {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* ================= CLOSE BUTTON ================= */
+
+
+
+
+/* ======================================================
+   TABLET & MOBILE (≤1024px)
+====================================================== */
+@media (max-width: 1024px) {
+
+  .navbar-links-left,
+  .navbar-links-right,
+  .navbar-center {
+    display: none !important;
+  }
+
+  .navbar-hamburger-wrapper {
+    display: flex;
+    right: var(--hamburger-right-tablet);
+  }
+
+  .navbar-logo {
+    width: var(--logo-size-tablet);
+  }
+
+  .navbar-svg-wrapper {
+    display: block;
+    overflow: hidden;
+  }
+
+  .navbar-bg-svg {
+    min-width: 100vw;
+
+    background-size: auto 100%;
+ 
+    background-position: center;
+  }
+
+  /* Remove previous mobile background overrides */
+  .navbar-container:not(.navbar-events-mode) {
+    background: transparent;
+  }
+
+  .navbar-container.navbar-events-mode {
+    background: transparent;
+  }
+}
+@media (max-width: 500px) {
+  
+  .navbar-container:not(.navbar-events-mode) {
+    background: url("https://res.cloudinary.com/dmbmdfmhl/image/upload/v1768055125/mainnav_mobile_kxscnh.png") center/cover no-repeat;
+  }
+
+  .navbar-container.navbar-events-mode {
+    background: url("https://res.cloudinary.com/dmbmdfmhl/image/upload/v1768055125/eventnav_mobile_apfimm.png") center/cover no-repeat;
+  }
+}
+/* ======================================================
+   MOBILE (≤425px)
+====================================================== */
+@media (max-width: 500px) {
+
+  .navbar-container {
+    height: var(--navbar-height-mobile);
+  }
+
+  .navbar-logo {
+    left: var(--logo-left-gap-mobile);
+    width: var(--logo-size-mobile);
+  }
+
+  .navbar-hamburger-wrapper {
+    right: var(--hamburger-right-mobile);
+  }
+
+  .navbar-svg-wrapper {
+    display: none;
+  }
+
+}
+
+/* ======================================================
+   ULTRA SMALL (≤320px)
+====================================================== */
+@media (max-width: 320px) {
+
+  .navbar-container {
+    height: var(--navbar-height-xs);
+  }
+
+  .navbar-logo {
+    width: var(--logo-size-xs);
+  }
+}
+/* ================= FIX HAMBURGER MENU ================= */
+
+/* Disable navbar interaction when menu open */
+/* body.navbar-scroll-locked .navbar-container {
+  pointer-events: none;
+} */
+
+/* Hide hamburger when menu open */
+/* body.navbar-scroll-locked .navbar-hamburger-wrapper {
+  opacity: 0;
+  pointer-events: none;
+} */
+
+/* Fix mobile menu positioning */
+.navbar-mobile-menu {
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding-top: calc(var(--navbar-height-mobile) + 24px);
+}
+
+/* Ensure close button is always clickable */
+.navbar-mobile-close {
+  z-index: 1100;
+}

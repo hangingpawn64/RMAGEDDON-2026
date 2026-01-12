@@ -1,0 +1,132 @@
+/* ================= CONTAINER ================= */
+.vertical-slider-container {
+  width: 100%;
+  height: 647px;
+  /* Increased height to preventing cutting off */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* ================= SWIPER ================= */
+.vertical-slider-swiper {
+  width: 100%;
+  height: 100%;
+  /* Removed aggressive scaling for a cleaner look */
+}
+
+
+/* ================= SLIDE ================= */
+.vertical-slider-item {
+  height: auto;
+  /* Let Swiper control height based on slidesPerView */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.6;
+  /* Lower opacity for non-active items */
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  padding: 10px 0;
+}
+
+
+/* ================= TEXT ================= */
+.vertical-slider-text {
+  margin-top: 8px;
+  font-size: 14px;
+  /* Slight increase */
+  color: white;
+  text-align: center;
+  letter-spacing: 1px;
+  font-family: 'Aldrich', sans-serif;
+}
+
+/* ================= ACTIVE SLIDE ================= */
+.vertical-slider-item.vertical-slider-active {
+  opacity: 1;
+  transform: scale(1.3);
+  /* Bigger scale as requested */
+  z-index: 10;
+}
+
+
+/* ================= IMAGE ================= */
+.vertical-slider-item img {
+  width: 180px;
+  /* Increased size */
+  height: 180px;
+  object-fit: contain;
+  border: 2px solid white;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+
+
+@media (max-width: 1024px) {
+
+  /* .vertical-slider-item img {
+  width: 120px; 
+  height: 140px;
+  object-fit: contain;
+}
+  .vertical-slider-container {
+    height: 500px;
+  }
+
+  .vertical-slider-item {
+    height: 120px;
+  }
+
+  .vertical-slider-item.vertical-slider-active {
+    transform: scale(1);
+  }
+ */
+
+
+  .vertical-slider-swiper {
+    width: 100%;
+    height: 100%;
+    transform: scale(1);
+    /* 🔥 overall scale */
+    transform-origin: center;
+  }
+
+  /* ACTIVE SLIDE – increase width */
+  /* .vertical-slider-item.vertical-slider-active {
+  opacity: 1;
+  transform: scale(1.25, 1.15);
+  z-index: 10;
+} */
+
+}
+
+@media (max-width: 900px) {
+  .vertical-slider-container {
+    height: 380px;
+  }
+
+  .vertical-slider-item {
+    height: 120px;
+  }
+
+  .vertical-slider-item.vertical-slider-active {
+    transform: scale(1);
+  }
+
+  .vertical-slider-item img {
+    width: 110px;
+  }
+
+
+  /* ACTIVE SLIDE – increase width */
+  .vertical-slider-item.vertical-slider-active {
+    opacity: 1;
+    transform: scale(1.25, 1.15);
+    /* 🔥 width , height */
+    z-index: 10;
+  }
+
+}
