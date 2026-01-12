@@ -1,5 +1,6 @@
 import { useEffect, useState, useRef } from "react"
 import { useLocation } from "react-router-dom"
+import "./PageTransition.css"
 
 // Map paths to titles and colors
 const pageConfig = {
@@ -35,16 +36,16 @@ export function PageTransition({ children }) {
     // Sequence of animations
     const fadeOutTimer = setTimeout(() => {
       setIsLoading(true)
-    }, 200)
+    }, 100)
 
     const contentTimer = setTimeout(() => {
       setDisplayChildren(children)
-    }, 1000)
+    }, 500)
 
     const fadeInTimer = setTimeout(() => {
       setIsLoading(false)
       setIsTransitioning(false)
-    }, 1400)
+    }, 800)
 
     return () => {
       clearTimeout(fadeOutTimer)
@@ -56,7 +57,7 @@ export function PageTransition({ children }) {
   return (
     <>
       {isLoading && (
-        <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-zinc-900 animate-in fade-in duration-500 ease-in-out">
+        <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-zinc-900 animate-in fade-in duration-300 ease-in-out font-ethnocentric">
           {/* Animated Background Shape */}
           <div className="relative flex w-full items-center justify-center overflow-hidden" style={{ height: "250px" }}>
             <div
@@ -74,15 +75,15 @@ export function PageTransition({ children }) {
           </div>
 
           {/* Loading Spinner */}
-          <div className="mt-12 animate-in fade-in duration-1000 ease-out delay-200">
-            <div className="h-8 w-8 animate-spin rounded-full border-[5px] border-white border-t-transparent" />
+          <div className="mt-4 animate-in fade-in duration-500 ease-out delay-200">
+            <div className="h-8 w-8 animate-spin rounded-full border-[7px] border-white border-t-transparent" />
           </div>
         </div>
       )}
 
       {/* Main Content Fade Logic */}
       <div
-        className={`transition-all duration-500 ease-in-out ${isTransitioning || isLoading ? "opacity-0" : "opacity-100"
+        className={`transition-all duration-300 ease-in-out ${isTransitioning || isLoading ? "opacity-0" : "opacity-100"
           }`}
       >
         {displayChildren}
