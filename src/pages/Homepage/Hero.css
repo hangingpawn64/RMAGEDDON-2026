@@ -1,0 +1,284 @@
+/* ========================================= */
+/* 🔥 GLOBAL DRIFT CONTROLS (EDIT ONLY THIS) */
+/* ========================================= */
+
+:root {
+  --car-width: clamp(300px, 30vw, 500px);
+  --smoke-width: clamp(820px, 60vw, 1100px);
+  --road-level: 10vh;
+  --car-right-gap: 6vw;
+
+  --neon-cyan: #32ffff;
+  --neon-pink: #ff3fd8;
+}
+
+/* ========================================= */
+/* HERO BASE */
+/* ========================================= */
+
+.hero-section {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  padding-top: 70px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center,
+      rgba(0, 0, 0, 0.25) 30%,
+      rgba(0, 0, 0, 0.9) 95%);
+  z-index: 0;
+}
+
+/* ========================================= */
+/* DRIFT LAYER (DESKTOP ONLY) */
+/* ========================================= */
+
+.hero-drift-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 20;
+}
+
+/* ========================================= */
+/* DRIFT UNIT */
+/* ========================================= */
+
+.hero-drift-car {
+  position: absolute;
+  bottom: var(--road-level);
+  left: 0;
+  width: var(--car-width);
+  z-index: 20;
+  will-change: transform;
+
+  filter:
+    drop-shadow(0 14px 24px rgba(0, 0, 0, 0.6)) drop-shadow(0 0 22px rgba(0, 255, 255, 0.35));
+}
+
+.hero-drift-smoke {
+  position: absolute;
+  left: -18%;
+  bottom: -10%;
+  width: var(--smoke-width);
+  opacity: 0;
+  z-index: 19;
+  filter: blur(6px);
+  will-change: transform, opacity;
+}
+
+/* ========================================= */
+/* STATIC CAR (FINAL POSITION) */
+/* ========================================= */
+
+.hero-right {
+  position: relative;
+  overflow: visible;
+}
+
+.hero-static-car {
+  position: absolute;
+  right: var(--car-right-gap);
+  bottom: var(--road-level);
+  width: var(--car-width);
+  opacity: 0;
+  z-index: 5;
+
+  filter:
+    drop-shadow(0 16px 28px rgba(0, 0, 0, 0.65)) drop-shadow(0 0 20px rgba(0, 255, 255, 0.3));
+}
+
+/* ========================================= */
+/* CONTENT */
+/* ========================================= */
+
+.hero-section-content {
+  position: relative;
+  z-index: 10;
+  opacity: 0;
+}
+
+.hero-hidden {
+  opacity: 0;
+}
+
+.hero-reveal {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* ========================================= */
+/* HUD */
+/* ========================================= */
+
+.hero-hud-container {
+  position: relative;
+  z-index: 2;
+  width: fit-content;
+  margin: 0 auto 2rem;
+}
+
+.hero-hud-title {
+  font-family: "Ethnocentric", "Orbitron", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.hero-hud-line-1 {
+  font-size: clamp(1.3rem, 2.1vw, 2rem);
+  color: #51D4FF;
+  text-shadow: 2px 2px 4px #000;
+  white-space: nowrap;
+}
+
+.hero-hud-line-2 {
+  font-size: clamp(2.4rem, 3.6vw, 3.8rem);
+  color: #51D4FF;
+  text-shadow: 2px 2px 4px #000;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+
+.hero-hud-svg {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0;
+  animation: heroHudFadeIn 0.9s ease forwards;
+}
+
+@keyframes heroHudFadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.hero-hud-svg-left {
+  width: clamp(55px, 9vw, 120px);
+  top: 10px;
+  left: clamp(-130px, -16vw, -160px);
+}
+
+.hero-hud-svg-right {
+  width: clamp(150px, 34vw, 500px);
+  bottom: -38px;
+  right: clamp(-220px, -28vw, -300px);
+}
+
+/* ========================================= */
+/* MAIN GRID */
+/* ========================================= */
+
+.hero-overlay {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 58fr 42fr;
+  align-items: stretch;
+  padding: 0 4% 4rem;
+  gap: 2rem;
+}
+
+.hero-left {
+  max-width: 680px;
+}
+
+.hero-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+/* ========================================= */
+/* TABLET */
+/* ========================================= */
+
+@media (max-width: 1180px) {
+  :root {
+    --car-width: clamp(420px, 55vw, 620px);
+    --smoke-width: clamp(650px, 80vw, 900px);
+    --car-right-gap: 4vw;
+  }
+
+  .hero-overlay {
+    grid-template-columns: 1fr;
+    padding: 0 3rem 3rem;
+  }
+
+  .hero-static-car {
+    position: relative;
+    margin: 2rem auto 0;
+    opacity: 1;
+  }
+
+  .hero-drift-layer {
+    display: none;
+  }
+}
+
+/* ========================================= */
+/* MOBILE */
+/* ========================================= */
+
+@media (max-width: 768px) {
+  .hero-drift-layer {
+    display: none;
+  }
+
+  :root {
+    --car-width: clamp(300px, 80vw, 360px);
+  }
+
+  .hero-static-car {
+    position: relative;
+    margin: 2rem auto 0;
+    display: block;
+    opacity: 1;
+  }
+
+  .hero-overlay {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ========================================= */
+/* SMALL PHONES */
+/* ========================================= */
+
+@media (max-width: 480px) {
+  .hero-hud-line-1 {
+    font-size: 1.1rem;
+    white-space: normal;
+  }
+
+  .hero-hud-line-2 {
+    font-size: 1.7rem;
+    white-space: normal;
+  }
+
+  .hero-hud-svg-left {
+    width: 42px;
+    left: -28px;
+  }
+
+  .hero-hud-svg-right {
+    width: 130px;
+    right: -55px;
+    bottom: -12px;
+  }
+}

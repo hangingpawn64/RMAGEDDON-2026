@@ -1,0 +1,67 @@
+/* Page Transition Wrapper */
+.page-transition-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-transition-content {
+  width: 100%;
+  min-height: 100vh;
+  animation: none;
+  will-change: transform, opacity;
+}
+
+/* ================= EXIT ================= */
+/* Fast, heavy exit — GTA cinematic cut */
+.transition-exit .page-transition-content {
+  animation: pageExit 0.4s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+/* ================= ENTER ================= */
+/* Strong entry with smooth landing */
+.transition-enter .page-transition-content {
+  animation: pageEnter 0.5s cubic-bezier(0.2, 1, 0.3, 1) both;
+}
+
+/* Exit Animation */
+@keyframes pageExit {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(-24px) scale(0.96);
+  }
+}
+
+/* Enter Animation */
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+    transform: translateY(32px) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ================= TEXT ================= */
+.transition-title {
+  font-size: clamp(1.5rem, 8vw, 3.5rem);
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+  line-height: 1.2;
+}
+
+@media (max-width: 480px) {
+  .transition-title {
+    font-size: clamp(1.2rem, 6vw, 2rem);
+  }
+}

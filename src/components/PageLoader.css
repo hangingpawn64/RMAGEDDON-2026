@@ -1,0 +1,67 @@
+/* PageLoader Styles */
+
+.loader-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999999;
+  background: #000;
+  /* fallback */
+}
+
+
+.loader-bar {
+  flex: 1;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.loader-bar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+}
+
+.loader-counter {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 1000000;
+  padding: 0.2em 0.4em;
+  font-family: "Ethnocentric", sans-serif;
+  font-weight: 900;
+  font-size: clamp(3rem, 10vw, 8rem);
+  color: #eee5e6;
+  pointer-events: none;
+}
+
+.loader-bar-double {
+  flex: 1;
+  /* all bar sizes equal */
+}
+
+
+/* Mobile- screns less than425 px */
+@media (max-width: 425px) {
+
+  /* Hide extra bars → keep 3 */
+  .loader-overlay .loader-bar:nth-child(1),
+  .loader-overlay .loader-bar:nth-child(5) {
+    display: none;
+  }
+
+  /* Ensure remaining bars are equal */
+  .loader-overlay .loader-bar {
+    flex: 1;
+    /* all equal width */
+    display: block;
+  }
+
+  /* Make sure middle is NOT dominant */
+  .loader-overlay .loader-bar-double {
+    flex: 1;
+  }
+}

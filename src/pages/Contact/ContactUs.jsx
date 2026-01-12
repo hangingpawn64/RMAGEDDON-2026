@@ -1,0 +1,65 @@
+import { useEffect } from 'react'
+import './ContactUs.css'
+import Card3D from '../../components/Cards'
+import teamData from '../../data/teamData.json'
+import Navbar from '../../components/Navbar'
+import Footer from '../../components/Footer'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+// Helper function to dynamically import images
+const getImagePath = (path) => {
+  if (!path) return null;
+  // Extract filename from path like "/src/assets/image.png"
+  const filename = path.split('/').pop();
+  try {
+    return new URL(`../../assets/${filename}`, import.meta.url).href;
+  } catch (e) {
+    console.error('Error loading image:', path, e);
+    return null;
+  }
+}
+
+const ContactUs = () => {
+
+      // Initialize AOS
+      useEffect(() => {
+          AOS.init({
+              duration: 1000,
+              once: false,
+              mirror: true,
+              easing: 'ease-in-out'
+          });
+          AOS.refresh();
+      }, []);
+return (
+    <>
+      <div className='contact-container'>
+        <div className=" top-0 left-0 w-full z-50 flex justify-center" data-aos="fade-down" data-aos-delay="0">
+          <Navbar />
+        </div>
+        <div className='contact-content-wrapper'>
+          <h1 className='contact-heading-text' data-aos="fade-zoom-in">CONTACT US</h1>
+          <div className='contact-cards-container'>
+            {teamData.teamMembers.map((member) => (
+              <Card3D
+                key={member.id}
+                image={getImagePath(member.image)}
+                name={member.name}
+                role={member.role}
+                instagram={member.instagram}
+                linkedin={member.linkedin}
+                whatsapp={member.whatsapp}
+                characterImage={getImagePath(member.characterImage)}
+                data-aos="fade-up"
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+      <Footer />
+    </>
+  )
+}
+
+export default ContactUs
