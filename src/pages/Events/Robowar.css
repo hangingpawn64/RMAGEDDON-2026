@@ -681,6 +681,7 @@ COMMON EVENT SECTION STYLES
   .robowar-event-section::before {
 
     background-image: url("https://res.cloudinary.com/dmbmdfmhl/image/upload/v1768068592/Group_514617206_etxuzq.png");
+    opacity: 0.6;
     z-index: 1;
     pointer-events: none;
   }
