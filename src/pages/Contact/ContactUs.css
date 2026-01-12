@@ -46,6 +46,17 @@
     }
 }
 
+@media (max-width: 360px) {
+    .contact-heading-text {
+        font-size: 28px;
+        margin-top: 1rem;
+    }
+    
+    .contact-container {
+        padding: 80px 10px 30px;
+    }
+}
+
 .contact-cards-container {
     display: flex;
     flex-wrap: wrap;

@@ -259,4 +259,39 @@
     }
 
 
+
+}
+
+@media (max-width: 330px) {
+    .team-card {
+        width: 240px;
+        height: 360px;
+    }
+
+    .card-front {
+        padding: 24px 16px;
+    }
+
+    .profile-image-container {
+        width: 100px;
+        height: 100px;
+    }
+
+    .member-name {
+        font-size: 18px;
+    }
+
+    .member-role {
+        font-size: 13px;
+    }
+
+    .social-link {
+        width: 44px;
+        height: 44px;
+    }
+    
+    .icon {
+        width: 20px;
+        height: 20px;
+    }
 }
