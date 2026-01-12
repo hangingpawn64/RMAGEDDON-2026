@@ -3,6 +3,9 @@ import footerBg from '../assets/FOOTER 71.png';
 import Socials from './Socials';
 import EnquiryForm from './EnquiryForm';
 import EnquiryButton from './EnquiryButton';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 const Footer = () => {
   const [isEnquiryOpen, setIsEnquiryOpen] = useState(false);
@@ -13,6 +16,16 @@ const Footer = () => {
       behavior: 'smooth'
     });
   };
+
+    useEffect(() => {
+      AOS.init({
+        duration: 1000,
+        once: false,
+        mirror: true,
+        easing: 'ease-in-out'
+      });
+      AOS.refresh();
+    }, []);
 
   return (
 
@@ -30,19 +43,19 @@ const Footer = () => {
           {/* Top Section */}
           <div className="flex flex-col lg:flex-row justify-between items-center gap-6 lg:gap-0 px-2 sm:px-4 w-full">
             {/* Enquiry Button */}
-            <div className="flex-1 flex justify-center lg:justify-start w-full lg:w-auto">
+            <div className="flex-1 flex justify-center lg:justify-start w-full lg:w-auto" data-aos="fade-left" data-aos-delay="300">
               <EnquiryButton onClick={() => setIsEnquiryOpen(true)} />
             </div>
 
             {/* Logo */}
-            <div className="flex-1 flex justify-center w-full lg:w-auto order-first lg:order-0 lg:mb-0">
+            <div className="flex-1 flex justify-center w-full lg:w-auto order-first lg:order-0 lg:mb-0" data-aos="fade-right" data-aos-delay="0">
               <h1 className="text-3xl sm:text-4xl md:text-[48px] font-ethnocentric tracking-widest[0.1em] drop-shadow-[2px_2px_10px_rgba(0,0,0,0.5)] text-center">
                 RNXG
               </h1>
             </div>
 
             {/* Social Icons */}
-            <div className="flex-1 flex justify-center lg:justify-end w-full lg:w-auto">
+            <div className="flex-1 flex justify-center lg:justify-end w-full lg:w-auto" data-aos="fade-right" data-aos-delay="600">
               <Socials />
             </div>
           </div>
@@ -51,7 +64,7 @@ const Footer = () => {
           <div className="flex-1 flex flex-col items-center justify-center relative px-4 sm:px-6 py-3 sm:py-4">
 
             {/* Description */}
-            <div className="text-center max-w-xl lg:max-w-2xl z-10">
+            <div className="text-center max-w-xl lg:max-w-2xl z-10" data-aos="fade-left" data-aos-delay="900">
               <p className="text-[16px] sm:text-[18px] md:text-[20px] leading-relaxed text-white drop-shadow-[1px_1px_5px_rgba(0,0,0)] font-normal font-saira">
                 Robotics for Next Generation provides the best<br className="hidden sm:block" />
                 platform to work on different problem statements and<br className="hidden sm:block" />
@@ -61,6 +74,7 @@ const Footer = () => {
 
             {/* Scroll to Top Button */}
             <button onClick={scrollToTop}
+              data-aos="zoom-in" data-aos-delay="1200"
               className="relative lg:absolute lg:right-10 lg:bottom-6 mt-4 lg:mt-0 w-10 h-10 sm:w-11 sm:h-11 bg-white/10 backdrop-blur-md border-2 border-white/30 rounded-full text-white text-base sm:text-lg flex items-center justify-center hover:bg-white/20 hover:border-white/50 hover:-translate-y-1 hover:shadow-[0_5px_20px_rgba(255,255,255,0.3)] transition-all duration-300">
               <i className="fas fa-arrow-up"></i>
             </button>
