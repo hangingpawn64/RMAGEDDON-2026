@@ -63,7 +63,7 @@ export function PageTransition({ children }) {
             <div
               className="absolute inset-0 bg-black transition-all duration-700 ease-in-out"
               style={{
-                clipPath: "polygon(0 35%, 100% 25%, 100% 75%, 0 65%)",
+                clipPath: "polygon(0 35%, 100% 20%, 100% 80%, 0 65%)",
               }}
             />
             {/* Title Text */}
