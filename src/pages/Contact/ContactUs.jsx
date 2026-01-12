@@ -10,6 +10,12 @@ import 'aos/dist/aos.css';
 // Helper function to dynamically import images
 const getImagePath = (path) => {
   if (!path) return null;
+  
+  // Check if path is an external URL
+  if (path.startsWith('http') || path.startsWith('https')) {
+    return path;
+  }
+
   // Extract filename from path like "/src/assets/image.png"
   const filename = path.split('/').pop();
   try {

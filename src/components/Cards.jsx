@@ -44,7 +44,11 @@ const Card3D = ({ image, name, role, instagram, linkedin, whatsapp, characterIma
         {/* Back of card */}
         <div className="card-back">
           {characterImage && (
-            <img src={characterImage} className="character-image" alt={`${name} character`} />
+            <img 
+              src={characterImage} 
+              className={`character-image ${name === 'Ujwal Mahajan' ? 'scale-up-char' : ''}`} 
+              alt={`${name} character`} 
+            />
           )}
 
           <div className="social-icons social-icons-back">

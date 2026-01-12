@@ -99,6 +99,12 @@
     pointer-events: none;
 }
 
+.scale-up-char {
+    width: 155%;
+    height: 155%;
+    max-width: none;
+}
+
 .social-icons-back {
     position: relative;
     z-index: 2;
