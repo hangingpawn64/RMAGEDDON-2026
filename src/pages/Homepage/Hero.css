@@ -3,7 +3,7 @@
 /* ========================================= */
 
 :root {
-  --car-width: clamp(300px, 30vw, 500px);
+  --car-width: clamp(350px, 35vw, 600px); /* Increased size */
   --smoke-width: clamp(820px, 60vw, 1100px);
   --road-level: 10vh;
   --car-right-gap: 6vw;
@@ -189,7 +189,7 @@
   z-index: 1;
   display: grid;
   grid-template-columns: 58fr 42fr;
-  align-items: stretch;
+  align-items: center; /* Centered vertically */
   padding: 0 4% 4rem;
   gap: 2rem;
 }

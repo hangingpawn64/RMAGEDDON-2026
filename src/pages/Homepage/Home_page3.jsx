@@ -23,7 +23,7 @@ export default function Home_page3() {
         <div className="home3-container">
           <div className="home3-leftside">
             {/* TEXT + BG IMAGE */}
-            <div className="home3-textbg" data-aos="fade-right" data-aos-delay="500">
+            <div className="home3-textbg" data-aos="fade-right" data-aos-delay="200">
               <img
                 src="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766336885/Group_514617188_pvktop.png"
                 alt="Rmageddon"

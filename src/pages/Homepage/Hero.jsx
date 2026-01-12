@@ -149,7 +149,7 @@ export default function Hero() {
           y: 0,
           duration: 0.5,
           ease: "power2.out",
-        }, "-=0.2")
+        }, "+=0")
 
         // Then the Cards/Overlay
         .to(".hero-overlay", {
@@ -157,7 +157,7 @@ export default function Hero() {
           y: 0,
           duration: 0.5,
           ease: "power2.out",
-        }, "-=0.1");
+        }, "+=0");
     }, heroRef);
 
     return () => ctx.revert();

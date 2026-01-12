@@ -1,14 +1,17 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "./Robowar.css";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import WarCarousel from "../../components/WarCarousel.jsx"
 import GameCard from "../../components/Cards/GameCard";
 import AnimatedButton from "../../components/AnimatedButton";
+import TechPopup from "../../components/TechPopup";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const Robowar = () => {
+  const [showPopup, setShowPopup] = useState(false);
+
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -19,18 +22,16 @@ const Robowar = () => {
     AOS.refresh();
   }, []);
 
-  const handleRegister = () => {
-    // Add your registration link or logic here
-    window.open('YOUR_REGISTRATION_LINK', '_blank');
-  };
-
-  const handleRuleBook = () => {
-    // Add your rulebook link or logic here
-    window.open('YOUR_RULEBOOK_LINK', '_blank');
+  const handlePopupTrigger = () => {
+    setShowPopup(true);
+    setTimeout(() => {
+      setShowPopup(false);
+    }, 2000); // Popup stays for 2 seconds
   };
 
   return (
     <>
+      <TechPopup isVisible={showPopup} />
       {/* NAVBAR */}
       <div className="top-0 left-0 w-full z-50 flex justify-center events-navbar-wrapper" data-aos="fade-down" data-aos-delay="0">
         <Navbar />
@@ -67,8 +68,8 @@ const Robowar = () => {
           </div>
 
           <div className="robowar-buttons" data-aos="zoom-in" data-aos-delay="2000">
-            <AnimatedButton text="REGISTER" onClick={handleRegister} />
-            <AnimatedButton text="RULE BOOK" onClick={handleRuleBook} />
+            <AnimatedButton text="REGISTER" onClick={handlePopupTrigger} />
+            <AnimatedButton text="RULE BOOK" onClick={handlePopupTrigger} />
           </div>
               
           </div>
@@ -96,7 +97,8 @@ const Robowar = () => {
             <GameCard
               title="Robo Soccer"
               description="Lead your robots to victory, score goals, and show off your skills in an action-packed Robo Soccer battle."
-              image="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1767184498/images_fuqlhk.jpg"
+              image="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1768246860/bd6ebd0c-eca4-4e18-bc67-b0800c56fba0.png"
+              onAction={handlePopupTrigger}
             />
           </div>
 
@@ -104,7 +106,8 @@ const Robowar = () => {
             <GameCard
               title="Robo Race"
               description="Unleash Speed, Strategy, and Skill! Push Your Robots to the Limit and Cross the Finish Line Victorious!"
-              image="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1767184498/images_fuqlhk.jpg"
+              image="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1768246819/7e76f4fc-b6f8-4ff8-a286-b3319ee68121.png"
+              onAction={handlePopupTrigger}
             />
           </div>
         </div>
@@ -117,7 +120,8 @@ const Robowar = () => {
             <GameCard
               title="Line Follower"
               description="Program Robot's to Follow the Path with Precision and Speed! Conquer the Line Following Challenge"
-              image="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1767184498/images_fuqlhk.jpg"
+              image="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1768246887/8605c591-86e9-49a2-afc0-31782058b71d.png"
+              onAction={handlePopupTrigger}
             />
           </div>
 
@@ -125,7 +129,8 @@ const Robowar = () => {
             <GameCard
               title="Robo Sumo"
               description="Unleash your robots, push opponents out, and dominate the arena in Robo Sumo showdown!"
-              image="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1767184498/images_fuqlhk.jpg"
+              image="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1768246871/de83b2a7-fb6b-435f-a9da-1b5aeb48a27b.png"
+              onAction={handlePopupTrigger}
             />
           </div>
         </div>
