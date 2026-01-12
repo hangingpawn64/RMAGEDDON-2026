@@ -16,16 +16,16 @@ export default function Hero() {
   const staticCarRef = useRef(null);
   const contentRef = useRef(null);
 
-          // Initialize AOS
-          useEffect(() => {
-              AOS.init({
-                  duration: 1000,
-                  once: false,
-                  mirror: true,
-                  easing: 'ease-in-out'
-              });
-              AOS.refresh();
-          }, []);
+  // Initialize AOS
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,
+      mirror: true,
+      easing: 'ease-in-out'
+    });
+    AOS.refresh();
+  }, []);
 
   useEffect(() => {
     const width = window.innerWidth;
@@ -49,6 +49,8 @@ export default function Hero() {
         opacity: 1,
         y: 0,
       });
+      gsap.set(".hero-hud-container", { opacity: 1, y: 0 });
+      gsap.set(".hero-overlay", { opacity: 1, y: 0 });
 
       return;
     }
@@ -71,7 +73,9 @@ export default function Hero() {
       gsap.set(driftCar, { x: START_X, rotation: 0, opacity: 1 });
       gsap.set(smoke, { x: START_X, opacity: 0 });
       gsap.set(staticCar, { opacity: 0 });
-      gsap.set(contentRef.current, { opacity: 0, y: 30 });
+      gsap.set(contentRef.current, { opacity: 1 });
+      gsap.set(".hero-hud-container", { opacity: 0, y: 30 });
+      gsap.set(".hero-overlay", { opacity: 0, y: 30 });
 
       const tl = gsap.timeline({
         scrollTrigger: {
@@ -115,18 +119,14 @@ export default function Hero() {
           ease: "power2.inOut",
         })
 
-        /* 💨 NOW fade smoke AFTER drift is fully complete */
+        /* 💨 Fade smoke while swapping to static car */
         .to(smoke, {
           opacity: 0,
-          duration: 0.8,   // 👈 smooth disappear
+          duration: 0.6,
           ease: "power2.out",
         })
 
-
-        /* ⏸ REST */
-        .to({}, { duration: 0.5 })
-
-        /* 📌 PLACE STATIC CAR */
+        /* 📌 PLACE STATIC CAR AND SWAP IMMEDIATELY */
         .add(() => {
           const driftRect = driftCar.getBoundingClientRect();
           const heroRectNow = hero.getBoundingClientRect();
@@ -136,19 +136,28 @@ export default function Hero() {
             top: driftRect.top - heroRectNow.top,
             position: "absolute",
           });
-        })
+        }, "<") // Start at the same time as smoke fade
 
         /* 🔁 SWAP */
-        .to(driftCar, { opacity: 0, duration: 0.01 })
-        .to(staticCar, { opacity: 1, duration: 0.01 })
+        .to(driftCar, { opacity: 0, duration: 0.1 }, "<")
+        .to(staticCar, { opacity: 1, duration: 0.1 }, "<")
 
-        /* 📄 CONTENT */
-        .to(contentRef.current, {
+        /* 📄 CONTENT - SEQUENTIAL REVEAL */
+        // First the HUD/Heading
+        .to(".hero-hud-container", {
           opacity: 1,
           y: 0,
-          duration: 0.1,
+          duration: 0.5,
           ease: "power2.out",
-        });
+        }, "-=0.2")
+
+        // Then the Cards/Overlay
+        .to(".hero-overlay", {
+          opacity: 1,
+          y: 0,
+          duration: 0.5,
+          ease: "power2.out",
+        }, "-=0.1");
     }, heroRef);
 
     return () => ctx.revert();
@@ -201,7 +210,7 @@ export default function Hero() {
 
         <div className="hero-overlay">
           <div className="hero-left">
-            <div className="hero-cards" data-aos="fade-right">
+            <div className="hero-cards">
               {steps.map(step => (
                 <StepCard key={step.title} {...step} />
               ))}

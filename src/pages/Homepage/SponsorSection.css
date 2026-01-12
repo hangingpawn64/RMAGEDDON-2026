@@ -107,7 +107,7 @@
   bottom: 0;
   right: 100%;
   left: 0;
-  background: rgb(20, 20, 20);
+  background: #2444ad;
   opacity: 0;
   z-index: -1;
   transition: all 0.5s;
