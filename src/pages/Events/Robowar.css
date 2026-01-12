@@ -6,21 +6,6 @@ body.navbar-scroll-locked .robowar-event-section {
   pointer-events: none;
 }
 
-@font-face {
-  font-family: 'Ethnocentric';
-  src: url('../../assets/fonts/Ethnocentric-Regular.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Aldrich';
-  src: url('../../assets/fonts/Aldrich Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
 
 /* ================= MAIN CONTAINER ================= */
 .robowar-container {
@@ -34,7 +19,6 @@ body.navbar-scroll-locked .robowar-event-section {
     padding: 0px 40px;
     color: #ffffff;
     overflow: hidden;
-    /* font-family: "Arial", sans-serif; */
     background-repeat: no-repeat;
     background-size: cover;
     box-sizing: border-box;
@@ -546,7 +530,7 @@ COMMON EVENT SECTION STYLES
   position: absolute;
   inset: 0;
   background-image: url("https://res.cloudinary.com/dmbmdfmhl/image/upload/v1768068603/Group_514617174_n9biwb.png");
-
+ opacity: 0.6;
   /* KEY FIX */
   background-size: 100% 100%;
   background-position: center;
@@ -670,6 +654,8 @@ COMMON EVENT SECTION STYLES
 
   .robowar-event-section::before {
     background-image: url("https://res.cloudinary.com/dmbmdfmhl/image/upload/v1768070044/Group_514617176_ydgccq.png");
+    opacity: 0.6;
+  
   }
 
 
