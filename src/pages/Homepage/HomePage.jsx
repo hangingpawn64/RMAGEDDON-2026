@@ -103,14 +103,20 @@ export default function HomePage() {
                 </div>
 
                 {/* Character - Positioned at bottom */}
-                <img
-                    src="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1767861627/character_s8jvg0.png"
-                    alt="character"
-                    className="home-character-img"
-                    style={{
-                        transform: `translate(${-mousePos.x}px, ${-mousePos.y}px)`
-                    }}
-                />
+                <div 
+                    className="home-character-wrapper"
+                    data-aos="fade-up-right"
+                    data-aos-delay="1500"
+                >
+                    <img
+                        src="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1767861627/character_s8jvg0.png"
+                        alt="character"
+                        className="home-character-img"
+                        style={{
+                            transform: `translate(${-mousePos.x}px, ${-mousePos.y}px)`
+                        }}
+                    />
+                </div>
 
                 {/* Content Wrapper */}
                 <div className="home-content-wrapper relative z-10 min-h-screen flex flex-col items-center justify-start py-2 px-6 lg:px-10 gap-y-2">

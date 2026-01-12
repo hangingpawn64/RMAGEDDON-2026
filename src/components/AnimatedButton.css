@@ -27,7 +27,7 @@
 }
 
 .animated-btn-clip {
-    --color: #E25822;
+    --color: #FF9933;
     position: absolute;
     top: 0;
     left: 0;
@@ -43,7 +43,7 @@
 .animated-btn-arrow {
     position: absolute;
     transition: 0.2s;
-    background-color: #E25822;
+    background-color: #FF9933;
     top: 35%;
     width: 11%;
     height: 30%;
@@ -62,13 +62,13 @@
 }
 
 .animated-btn:hover .animated-btn-rightArrow {
-    background-color: #00FFD1;
+    background-color: #FF0000;
     left: -15%;
     animation: 0.6s ease-in-out both infinite alternate rightArrow8;
 }
 
 .animated-btn:hover .animated-btn-leftArrow {
-    background-color: #00FFD1;
+    background-color: #FF0000;
     left: 103%;
     animation: 0.6s ease-in-out both infinite alternate leftArrow8;
 }
@@ -77,7 +77,7 @@
     position: absolute;
     width: 4em;
     height: 4em;
-    background-color: #E25822;
+    background-color: #FF9933;
     box-shadow: inset 1px 1px 8px #FF6B35;
     transform: scale(1) rotate(45deg);
     transition: 0.2s;
@@ -104,23 +104,23 @@
 }
 
 .animated-btn:hover .animated-btn-leftTop {
-    animation: 0.1s ease-in-out 0.05s both changeColor8,
-        0.2s linear 0.4s both lightEffect8;
+    animation: 0.1s ease-in-out 0.05s both changeColorFire,
+        0.2s linear 0.4s both fireLightEffect;
 }
 
 .animated-btn:hover .animated-btn-rightTop {
-    animation: 0.1s ease-in-out 0.15s both changeColor8,
-        0.2s linear 0.4s both lightEffect8;
+    animation: 0.1s ease-in-out 0.15s both changeColorFire,
+        0.2s linear 0.4s both fireLightEffect;
 }
 
 .animated-btn:hover .animated-btn-rightBottom {
-    animation: 0.1s ease-in-out 0.25s both changeColor8,
-        0.2s linear 0.4s both lightEffect8;
+    animation: 0.1s ease-in-out 0.25s both changeColorFire,
+        0.2s linear 0.4s both fireLightEffect;
 }
 
 .animated-btn:hover .animated-btn-leftBottom {
-    animation: 0.1s ease-in-out 0.35s both changeColor8,
-        0.2s linear 0.4s both lightEffect8;
+    animation: 0.1s ease-in-out 0.35s both changeColorFire,
+        0.2s linear 0.4s both fireLightEffect;
 }
 
 .animated-btn:hover .animated-btn-corner {
@@ -128,8 +128,8 @@
 }
 
 .animated-btn:hover .animated-btn-clip {
-    animation: 0.2s ease-in-out 0.55s both cyanLight8;
-    --color: #00FFD1;
+    animation: 0.2s ease-in-out 0.55s both fireGlow;
+    --color: #FF0000;
 }
 
 .animated-btn:hover {
@@ -137,31 +137,31 @@
     font-size: clamp(0.65rem, 1.5vw, 1.01rem);
 }
 
-@keyframes changeColor8 {
+@keyframes changeColorFire {
     from {
-        background-color: #FF6B35;
+        background-color: #FF9933;
     }
 
     to {
-        background-color: #00FFD1;
+        background-color: #FF0000;
     }
 }
 
-@keyframes lightEffect8 {
+@keyframes fireLightEffect {
     from {
-        box-shadow: 1px 1px 5px #00FFD1;
+        box-shadow: 1px 1px 5px #FFD700;
     }
 
     to {
-        box-shadow: 0 0 2px #00FFD1;
+        box-shadow: 0 0 2px #FF0000;
     }
 }
 
-@keyframes cyanLight8 {
+@keyframes fireGlow {
     from {}
 
     to {
-        box-shadow: inset 0px 0px 32px #00FFD1;
+        box-shadow: inset 0px 0px 32px #FF0000, 0 0 20px #FFD700;
     }
 }
 
