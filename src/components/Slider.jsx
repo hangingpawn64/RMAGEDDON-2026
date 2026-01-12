@@ -8,17 +8,21 @@ const HorizontalSlider = ({ className }) => {
   const originalSlides = [
     {
       image:
-        "https://res.cloudinary.com/dmbmdfmhl/image/upload/v1765978972/sponsors.jpg",
+        "/Images/theroboticsindia_logo.jpeg",
       text: "",
     },
     {
       image:
-        "https://res.cloudinary.com/dmbmdfmhl/image/upload/v1765978972/sponsors.jpg",
+        "/Images/theroboticsindia_logo.jpeg",
       text: "",
     },
     {
       image:
-        "https://res.cloudinary.com/dmbmdfmhl/image/upload/v1765978972/sponsors.jpg",
+        "/Images/theroboticsindia_logo.jpeg",
+      text: "",
+    },
+    {
+      image: "/Images/theroboticsindia_logo.jpeg",
       text: "",
     },
 
