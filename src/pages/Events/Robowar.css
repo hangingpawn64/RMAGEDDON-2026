@@ -43,14 +43,18 @@ body.navbar-scroll-locked .robowar-event-section {
     margin-top: 6.5rem;
     justify-content: center;
 
-    /* Glassmorphism */
-    background: rgba(255, 255, 255, 0.04);
-    backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    /* Glassmorphism - Dark Clear Ice */
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.03), rgba(0, 0, 0, 0.2));
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    border-left: 1px solid rgba(255, 255, 255, 0.25);
     border-radius: 24px;
     padding: 3rem;
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    box-shadow: 
+        0 8px 32px 0 rgba(0, 0, 0, 0.5),
+        inset 0 0 10px rgba(255, 255, 255, 0.02);
 }
 .robowar-header {
   position: relative;
