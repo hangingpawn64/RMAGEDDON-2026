@@ -20,7 +20,7 @@ const Footer = () => {
     useEffect(() => {
       AOS.init({
         duration: 1000,
-        once: false,
+        once: true,
         mirror: true,
         easing: 'ease-in-out'
       });
@@ -64,7 +64,7 @@ const Footer = () => {
           <div className="flex-1 flex flex-col items-center justify-center relative px-4 sm:px-6 py-3 sm:py-4">
 
             {/* Description */}
-            <div className="text-center max-w-xl lg:max-w-2xl z-10" data-aos="fade-left" data-aos-delay="900">
+            <div className="text-center max-w-xl lg:max-w-2xl z-10" data-aos="fade-up" data-aos-delay="900">
               <p className="text-[16px] sm:text-[18px] md:text-[20px] leading-relaxed text-white drop-shadow-[1px_1px_5px_rgba(0,0,0)] font-normal font-saira">
                 Robotics for Next Generation provides the best<br className="hidden sm:block" />
                 platform to work on different problem statements and<br className="hidden sm:block" />
@@ -74,7 +74,7 @@ const Footer = () => {
 
             {/* Scroll to Top Button */}
             <button onClick={scrollToTop}
-              data-aos="zoom-in" data-aos-delay="1200"
+              data-aos="fade-up" data-aos-delay="1200"
               className="relative lg:absolute lg:right-10 lg:bottom-6 mt-4 lg:mt-0 w-10 h-10 sm:w-11 sm:h-11 bg-white/10 backdrop-blur-md border-2 border-white/30 rounded-full text-white text-base sm:text-lg flex items-center justify-center hover:bg-white/20 hover:border-white/50 hover:-translate-y-1 hover:shadow-[0_5px_20px_rgba(255,255,255,0.3)] transition-all duration-300">
               <i className="fas fa-arrow-up"></i>
             </button>

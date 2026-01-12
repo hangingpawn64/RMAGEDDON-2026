@@ -8,7 +8,7 @@ export default function Home_page3() {
         useEffect(() => {
             AOS.init({
                 duration: 1000,
-                once: false,
+                once: true,
                 mirror: true,
                 easing: 'ease-in-out'
             });
@@ -47,7 +47,7 @@ export default function Home_page3() {
             </div>
 
             {/* MAIN IMAGE */}
-            <div className="home3-leftimg" data-aos="fade-up" data-aos-delay="1200">
+            <div className="home3-leftimg" data-aos="fade-up" data-aos-delay="8000">
               <img
                 src="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766339444/31-312191_grand-theft-auto-v-game-free-png-gta_2_urzmnt.png"
                 alt="GTA"
@@ -58,7 +58,7 @@ export default function Home_page3() {
 
 
           <div className="home3-rightside">
-            <div className="home3-right-up" data-aos="fade-down" data-aos-delay="800">
+            <div className="home3-right-up" data-aos="fade-down" data-aos-delay="700">
               <img
                 src="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766933652/ChatGPT_Image_Dec_28_2025_07_01_20_PM_1_u3hcr7.png"
                 alt=""
@@ -66,7 +66,7 @@ export default function Home_page3() {
             </div>
 
 
-            <div className="home3-right-low" data-aos="fade-left" data-aos-delay="1000">
+            <div className="home3-right-low" data-aos="fade-left" data-aos-delay="500">
               {/* CERTIFICATE */}
               <div className="home3-rightimg1">
                 <img

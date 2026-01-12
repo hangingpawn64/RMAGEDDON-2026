@@ -12,7 +12,7 @@ const SponsorSection = () => {
   useEffect(() => {
     AOS.init({
       duration: 1000,
-      once: false,
+      once: true,
       mirror: true,
       easing: 'ease-in-out'
     });
@@ -51,13 +51,13 @@ const SponsorSection = () => {
 
         <div className="sponsor-section-left-down">
           <div className="sponsor-section-down-head">
-            <div className="sponsor-section-title" data-aos="fade-right" data-aos-delay="600">
+            <div className="sponsor-section-title" data-aos="fade-right" data-aos-delay="400">
               <p>OUR SPONSOR</p>
               <span className="sponsor-section-spon-underline"></span>
             </div>
           </div>
 
-          <div className="sponsor-section-glass" data-aos="fade-right" data-aos-delay="900">
+          <div className="sponsor-section-glass" data-aos="fade-right" data-aos-delay="500">
             <div className="sponsor-section-desc">
               <p>
                 Powered by our sponsors fueling innovation, robotic excellence,
@@ -68,7 +68,7 @@ const SponsorSection = () => {
             </div>
           </div>
 
-          <div className="sponsor-section-arrow" data-aos="fade-right" data-aos-delay="900">
+          <div className="sponsor-section-arrow" data-aos="fade-right" data-aos-delay="600">
             <img
               src="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766338541/Group_514617189_1_emshd0.png"
               alt="arrow"

@@ -20,7 +20,7 @@ export default function Hero() {
   useEffect(() => {
     AOS.init({
       duration: 1000,
-      once: false,
+      once: true,
       mirror: true,
       easing: 'ease-in-out'
     });
@@ -149,7 +149,7 @@ export default function Hero() {
           y: 0,
           duration: 0.5,
           ease: "power2.out",
-        }, "+=0")
+        }, 0.5)
 
         // Then the Cards/Overlay
         .to(".hero-overlay", {
@@ -157,7 +157,7 @@ export default function Hero() {
           y: 0,
           duration: 0.5,
           ease: "power2.out",
-        }, "+=0");
+        }, 0.8);
     }, heroRef);
 
     return () => ctx.revert();

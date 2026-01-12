@@ -15,7 +15,7 @@ const Robowar = () => {
   useEffect(() => {
     AOS.init({
       duration: 1000,
-      once: false,
+      once: true,
       mirror: true,
       easing: 'ease-in-out'
     });
