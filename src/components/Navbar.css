@@ -315,7 +315,7 @@ body.navbar-scroll-locked {
 /* ======================================================
    MOBILE (≤425px)
 ====================================================== */
-@media (max-width: 425px) {
+@media (max-width: 500px) {
 
   .navbar-container {
     height: var(--navbar-height-mobile);
