@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 // import bgVideo from '../../assets/videos/bgvideo.mp4';
-import bgVideo from '/homeBG.jpeg';
+// import bgVideo from '/homeBG.jpeg';
 import "./HomePage.css";
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
@@ -88,7 +88,7 @@ export default function HomePage() {
             >
                 {/* Background Image */}
                 <img
-                    src={bgVideo}
+                    src={"https://res.cloudinary.com/dqm1ixpcb/image/upload/v1768334099/homeBG_evsawk.jpg"}
                     alt="Background"
                     className="home-bg-image absolute inset-0 h-full w-full object-cover opacity-95"
                     aria-hidden="true"
@@ -203,7 +203,7 @@ export default function HomePage() {
                                 }}
                             >
                                 <a href="https://maps.app.goo.gl/t1SdmXCSgqNS2Fjf9" target="_blank" rel="noopener noreferrer">
-                                    <img src="/map.png" alt="map" className="home-map-img" />
+                                    <img src="https://res.cloudinary.com/dqm1ixpcb/image/upload/v1768334472/map_p4lywo.png" alt="map" className="home-map-img" />
                                 </a>
                             </div>
                         </div>

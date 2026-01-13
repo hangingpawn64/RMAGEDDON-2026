@@ -2,7 +2,7 @@
   display: flex;
   width: 100%;
   min-height: 100vh;
-  background-image: url("../../assets/sponsersbg1.jpeg");
+  background-image: url("https://res.cloudinary.com/dqm1ixpcb/image/upload/v1768331212/sponsersbg1_frz3vm.jpg");
   /* opacity: 0.8; Removed to fix dimmed text */
   background-size: cover;
   background-position: center;

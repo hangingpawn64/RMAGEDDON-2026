@@ -80,7 +80,7 @@ export default function Hero() {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: hero,
-          start: "top 80%",
+          start: "top 90%",
           once: true,
         },
       });

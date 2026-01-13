@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import footerBg from '../assets/FOOTER 71.png';
+// import footerBg from '../assets/FOOTER 71.png';
 import Socials from './Socials';
 import EnquiryForm from './EnquiryForm';
 import EnquiryButton from './EnquiryButton';
@@ -33,7 +33,7 @@ const Footer = () => {
       <EnquiryForm isOpen={isEnquiryOpen} onClose={() => setIsEnquiryOpen(false)} />
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <img src={footerBg} alt="Footer Background" className="w-full h-full object-cover object-center" />
+        <img src={"https://res.cloudinary.com/dqm1ixpcb/image/upload/v1768333303/FOOTER_71_gtn0oy.png"} alt="Footer Background" className="w-full h-full object-cover object-center" />
       </div>
 
       {/* Main Content Container with Border */}

@@ -1,0 +1,24 @@
+#Homepage
+1.character img
+2.Center: Logo & Character 
+3.Mobile bg
+4.Sponsers-img(unsure) 
+5.Sponsers bg
+
+#Accomodation
+1.Background
+2.Left and right characters
+
+#Contact-us 
+1.Background
+2. Heads profile pics
+
+#Event
+already done
+ 
+ #Loader
+ done
+
+ #slider & #vertical_slider
+ 
+

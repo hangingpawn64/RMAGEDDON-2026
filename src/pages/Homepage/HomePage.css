@@ -395,7 +395,7 @@
     }
 
     .home-hero-section {
-        background-image: url('/mobile-bg.png');
+        background-image: url('https://res.cloudinary.com/dqm1ixpcb/image/upload/v1768330828/mobile-bg_v2yxgz.png');
         /* Placeholder for static background */
         background-size: cover;
         background-position: center;

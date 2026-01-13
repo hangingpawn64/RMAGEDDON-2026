@@ -8,21 +8,21 @@ const HorizontalSlider = ({ className }) => {
   const originalSlides = [
     {
       image:
-        "/Images/theroboticsindia_logo.jpeg",
+        "https://res.cloudinary.com/dqm1ixpcb/image/upload/v1768332543/theroboticsindia_logo_ji9eaz.jpg",
       text: "",
     },
     {
       image:
-        "/Images/theroboticsindia_logo.jpeg",
+        "https://res.cloudinary.com/dqm1ixpcb/image/upload/v1768332543/theroboticsindia_logo_ji9eaz.jpg",
       text: "",
     },
     {
       image:
-        "/Images/theroboticsindia_logo.jpeg",
+        "https://res.cloudinary.com/dqm1ixpcb/image/upload/v1768332543/theroboticsindia_logo_ji9eaz.jpg",
       text: "",
     },
     {
-      image: "/Images/theroboticsindia_logo.jpeg",
+      image: "https://res.cloudinary.com/dqm1ixpcb/image/upload/v1768332543/theroboticsindia_logo_ji9eaz.jpg",
       text: "",
     },
 
