@@ -1,5 +1,5 @@
 @media (min-width: 769px) {
-    body {
+    *, body, a, button, input, textarea, select {
         cursor: none !important;
     }
 }
