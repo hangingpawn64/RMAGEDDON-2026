@@ -7,7 +7,8 @@ const TargetCursor = ({
   spinDuration = 2,
   hideDefaultCursor = true,
   hoverDuration = 0.2,
-  parallaxOn = true
+  parallaxOn = true,
+  variant = 'default'
 }) => {
   const cursorRef = useRef(null);
   const cornersRef = useRef(null);
@@ -328,7 +329,7 @@ const TargetCursor = ({
   }
 
   return (
-    <div ref={cursorRef} className="target-cursor-wrapper">
+    <div ref={cursorRef} className={`target-cursor-wrapper ${variant}`}>
       <div ref={dotRef} className="target-cursor-dot" />
       <div className="target-cursor-corner corner-tl" />
       <div className="target-cursor-corner corner-tr" />

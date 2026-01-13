@@ -12,7 +12,7 @@
     color: #51D4FF;
     text-shadow: 2px 2px 4px #000;
     letter-spacing: 4px;
-    font-family: 'Ethnocentric';
+    font-family: 'ethnocentric', sans-serif;
 }
 
 .home-glass-panel {
@@ -274,7 +274,8 @@
 
 .home-text-red {
     color: #E32525;
-
+    font-family: 'FasterStroker', sans-serif;
+    font-weight: 400; /* Adjust if needed */
 }
 
 /* Bottom Section */
@@ -310,7 +311,7 @@
 }
 
 .home-mission-title {
-    font-family: "Ethnocentric";
+    font-family: "FasterStroker", sans-serif;
     font-weight: 800;
     font-size: clamp(1.5rem, 4vw, 2.5rem);
     color: #fff;
@@ -320,8 +321,27 @@
     filter: drop-shadow(0 0 30px rgba(31, 106, 131, 0.8));
 }
 
+/* Add custom font */
+@font-face {
+    font-family: 'CyberSpace';
+    src: url('/cs_regular.ttf') format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FasterStroker';
+    src: url('/FasterStroker.otf') format('opentype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'BlenderProBolt';
+    src: url('/blenderprobolt.ttf') format('truetype');
+    font-display: swap;
+}
+
 .home-mission-desc {
-    font-family: "Saira Semi Condensed";
+    font-family: "BlenderProBolt";
     color: rgba(255, 255, 255);
     font-size: clamp(0.9rem, 1.5vw, 1.25rem);
     font-weight: 600;

@@ -9,6 +9,7 @@ import {
   createBrowserRouter,
   RouterProvider,
   useOutlet,
+  useLocation,
 } from "react-router-dom";
 
 import HomePage from "./pages/Homepage/HomePage";
@@ -28,6 +29,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 ================================ */
 const Layout = () => {
   const currentOutlet = useOutlet();
+  const location = useLocation();
+  const isEventsPage = location.pathname === "/events";
 
   useEffect(() => {
     // Enable manual body styling if needed
@@ -69,6 +72,7 @@ const Layout = () => {
         hideDefaultCursor={true}
         spinDuration={4}
         parallaxOn={true} 
+        variant={isEventsPage ? "events" : "default"}
       />
       <PageTransition>
         {currentOutlet}

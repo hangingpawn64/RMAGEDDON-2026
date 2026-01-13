@@ -59,3 +59,14 @@
   border-right: none;
   border-top: none;
 }
+
+/* ================= EVENTS VARIANT (FIREY RED) ================= */
+.target-cursor-wrapper.events .target-cursor-dot {
+  background: #ff2d2d;
+  box-shadow: 0 0 5px #ff2d2d;
+}
+
+.target-cursor-wrapper.events .target-cursor-corner {
+  border-color: #ff2d2d;
+  filter: drop-shadow(1px 0 0 #000) drop-shadow(-1px 0 0 #000) drop-shadow(0 1px 0 #000) drop-shadow(0 -1px 0 #000) drop-shadow(0 0 4px #ff2d2d);
+}

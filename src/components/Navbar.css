@@ -183,6 +183,11 @@ body.navbar-scroll-locked {
   transition: color 0.3s ease;
 }
 
+.navbar-links-list a:hover,
+.navbar-links-list a.active {
+  color: #51D4FF;
+}
+
 
 
 .navbar-links-list a::after {
@@ -203,14 +208,20 @@ body.navbar-scroll-locked {
     opacity 0.3s ease;
 }
 
-/* ACTIVE */
-.navbar-links-list a.active::after {
+/* HOVER ONLY (No underline on active) */
+.navbar-links-list a:hover::after {
   transform: translateX(-50%) scaleX(1);
   opacity: 1;
+  background: #51d4ff; /* Default Blue */
 }
 
 /* EVENTS PAGE COLOR */
-.navbar-container.navbar-events-mode .navbar-links-list a.active::after {
+.navbar-container.navbar-events-mode .navbar-links-list a:hover,
+.navbar-container.navbar-events-mode .navbar-links-list a.active {
+  color: #ff2d2d;
+}
+
+.navbar-container.navbar-events-mode .navbar-links-list a:hover::after {
   background: #ff2d2d;
 }
 
