@@ -180,6 +180,12 @@
   height: auto;
   transform: translateY(-40px) scale(1.1);
   transform-origin: center;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.home3-right-up img:hover {
+  transform: translateY(-40px) scale(1.15);
+  filter: drop-shadow(0 0 15px rgba(81, 212, 255, 0.6));
 }
 
 

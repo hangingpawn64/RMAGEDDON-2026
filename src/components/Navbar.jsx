@@ -39,19 +39,11 @@ const Navbar = () => {
 
         {/* CONTENT */}
         <div className="navbar-content-wrapper">
-          <a 
-            href="https://www.rnxg.co.in" 
-            target="_blank" 
-            rel="noopener noreferrer"
+          <img
+            src="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1768055060/rnxg_logo_oimsz0.png"
             className="navbar-logo"
-            style={{ display: "block" }} // Ensure it behaves like the img did for positioning
-          >
-            <img
-              src="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1768055060/rnxg_logo_oimsz0.png"
-              alt="logo"
-              style={{ width: "100%", height: "auto" }} // Ensure img fills the anchor which now has the class
-            />
-          </a>
+            alt="logo"
+          />
 
           <div className="navbar-links-left">
             <ul className="navbar-links-list">

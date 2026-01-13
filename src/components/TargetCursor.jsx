@@ -17,6 +17,7 @@ const TargetCursor = ({
 
   const isActiveRef = useRef(false);
   const targetCornerPositionsRef = useRef(null);
+  const activeTargetBoundsRef = useRef(null);
   const tickerFnRef = useRef(null);
   const activeStrengthRef = useRef(0);
 
@@ -102,6 +103,16 @@ const TargetCursor = ({
 
       const cursorX = gsap.getProperty(cursorRef.current, 'x');
       const cursorY = gsap.getProperty(cursorRef.current, 'y');
+
+      // Safety: pointer must stay near target
+      if (activeTargetBoundsRef.current && currentLeaveHandler) {
+          const { left, right, top, bottom } = activeTargetBoundsRef.current;
+          const buffer = 50; 
+          if (cursorX < left - buffer || cursorX > right + buffer || cursorY < top - buffer || cursorY > bottom + buffer) {
+              currentLeaveHandler();
+              return;
+          }
+      }
 
       const corners = Array.from(cornersRef.current);
       corners.forEach((corner, i) => {
@@ -197,6 +208,8 @@ const TargetCursor = ({
       gsap.set(cursorRef.current, { rotation: 0 });
 
       const rect = target.getBoundingClientRect();
+      activeTargetBoundsRef.current = rect;
+
       const { borderWidth, cornerSize } = constants;
       const cursorX = gsap.getProperty(cursorRef.current, 'x');
       const cursorY = gsap.getProperty(cursorRef.current, 'y');

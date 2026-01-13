@@ -15,7 +15,7 @@ export default function PageLoader({ onComplete }) {
     /* =============================
        PERFECT ORDERED COUNTER
     ============================== */
-    const duration = 3500; // must match loader fade timing
+    const duration = 2500; // must match loader fade timing
     const startTime = performance.now();
 
     function updateCounter(now) {
@@ -38,7 +38,7 @@ export default function PageLoader({ onComplete }) {
     ============================== */
 
     gsap.to(".loader-counter", {
-      delay: 3.5,
+      delay: 2.5,
       opacity: 0,
       duration: 0.25,
     });
