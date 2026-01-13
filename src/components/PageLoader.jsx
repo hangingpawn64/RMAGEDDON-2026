@@ -67,27 +67,27 @@ export default function PageLoader({ onComplete }) {
       <div className="loader-overlay">
         {/* Bar 1 */}
         <div className="loader-bar">
-          <img src="/Images/1.jpg" alt="" />
+          <img src="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1767863355/1_jhjzik.jpg" alt="" />
         </div>
 
         {/* Bar 2 */}
         <div className="loader-bar">
-          <img src="/Images/3.jpg" alt="" />
+          <img src="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1767863352/3_smhorp.jpg" alt="" />
         </div>
 
         {/* Bar 3 (DOUBLE WIDTH) */}
         <div className="loader-bar loader-bar-double">
-          <img src="/Images/5.jpg" alt="" />
+          <img src="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1767863356/5_fagwz9.jpg" alt="" />
         </div>
 
         {/* Bar 4 */}
         <div className="loader-bar">
-          <img src="/Images/7.jpg" alt="" />
+          <img src="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1767863353/7_s63aqq.jpg" alt="" />
         </div>
 
         {/* Bar 5 */}
         <div className="loader-bar">
-          <img src="/Images/9.png" alt="" />
+          <img src="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1767861616/9_cpqfe4.jpg" alt="" />
         </div>
       </div>
 
