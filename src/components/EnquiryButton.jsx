@@ -75,8 +75,8 @@ const StyledWrapper = styled.div`
     padding: 0.8em 1.5em;
     background-image: linear-gradient(
       135deg,
-      rgba(230, 230, 230, 1),
-      rgba(180, 180, 180, 1)
+      rgba(255, 255, 255, 1),
+      rgba(230, 230, 230, 1)
     );
     transition:
       box-shadow 300ms ease,
@@ -88,13 +88,13 @@ const StyledWrapper = styled.div`
     clip-path: inset(0 0 0 0 round 100em);
     box-shadow:
           /* 1 */
-      0 0 0 0 inset rgba(5, 5, 5, 0.1),
-      /* 2 */ -0.05em -0.05em 0.05em 0 inset rgba(5, 5, 5, 0.25),
-      /* 3 */ 0 0 0 0 inset rgba(5, 5, 5, 0.1),
-      /* 4 */ 0 0 0.05em 0.2em inset rgba(255, 255, 255, 0.25),
+      0 0 0 0 inset rgba(5, 5, 5, 0.05),
+      /* 2 */ -0.05em -0.05em 0.05em 0 inset rgba(5, 5, 5, 0.15),
+      /* 3 */ 0 0 0 0 inset rgba(5, 5, 5, 0.03),
+      /* 4 */ 0 0 0.05em 0.2em inset rgba(255, 255, 255, 0.4),
       /* 5 */ 0.025em 0.05em 0.1em 0 inset rgba(255, 255, 255, 1),
-      /* 6 */ 0.12em 0.12em 0.12em inset rgba(255, 255, 255, 0.25),
-      /* 7 */ -0.075em -0.25em 0.25em 0.1em inset rgba(5, 5, 5, 0.25);
+      /* 6 */ 0.12em 0.12em 0.12em inset rgba(255, 255, 255, 0.4),
+      /* 7 */ -0.075em -0.25em 0.25em 0.1em inset rgba(5, 5, 5, 0.1);
   }
 
   .button:hover .button-inner {
