@@ -76,7 +76,7 @@ const StyledWrapper = styled.div`
     background-image: linear-gradient(
       135deg,
       rgba(255, 255, 255, 1),
-      rgba(210, 210, 210, 1)
+      rgba(204, 204, 204, 1)
     );
     transition:
       box-shadow 300ms ease,
