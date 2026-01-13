@@ -213,7 +213,7 @@ export default function HomePage() {
                                 <span className="home-text-red">Mission Start :</span> Build, Battle, Dominate
                             </h2>
                             <p className="home-mission-desc">
-                                Gear Up, Crew! RMAGEDDON 2025 Drops You Right Into A High-Stakes Robotics Showdown.
+                                Gear Up, Crew! RMAGEDDON 2026 Drops You Right Into A High-Stakes Robotics Showdown.
                                 Assemble Your Squad, Upgrade Your Bot, And Rise Through The Ranks Of Los Bot-Santos.
                                 Earn Respect, Claim Titles, And Rule The Streets With Engineering Mastery.
                             </p>

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 
-import CrosshairCursor from "./components/Crosshair";
+import TargetCursor from "./components/TargetCursor";
 import PageLoader from "./components/PageLoader";
 import { PageTransition } from "./components/PageTransition";
 
@@ -64,7 +64,12 @@ const Layout = () => {
 
   return (
     <>
-      <CrosshairCursor />
+      <TargetCursor 
+        targetSelector="a, button, input, textarea, .cursor-target, .pointer, .hover-target"
+        hideDefaultCursor={true}
+        spinDuration={4}
+        parallaxOn={true} 
+      />
       <PageTransition>
         {currentOutlet}
       </PageTransition>

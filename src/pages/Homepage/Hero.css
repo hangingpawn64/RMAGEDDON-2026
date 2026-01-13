@@ -251,8 +251,17 @@
     opacity: 1;
   }
 
+  .hero-hud-container {
+    max-width: 90%;
+  }
+
   .hero-overlay {
     grid-template-columns: 1fr;
+  }
+
+  .hero-left {
+    margin: 0 auto;
+    width: 100%;
   }
 }
 

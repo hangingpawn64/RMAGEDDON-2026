@@ -60,7 +60,7 @@ const Robowar = () => {
 
             <div className="robowar-content-bottom" data-aos="fade-right" data-aos-delay="1500">
               <p>
-                Last year, RoboWars made history as Marathwada's first RoboWars
+                Last year, RMAGEDDON made history as Marathwada's first RoboWars
                 event. This year, the battlefield opens again your chance to test
                 your robot, prove your skills, and make your mark.
               </p>
