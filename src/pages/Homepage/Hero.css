@@ -254,6 +254,11 @@
   .hero-overlay {
     grid-template-columns: 1fr;
   }
+
+  .hero-left {
+    margin: 0 auto;
+    width: 100%;
+  }
 }
 
 /* ========================================= */

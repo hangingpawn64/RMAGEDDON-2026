@@ -1,5 +1,7 @@
-body {
-    cursor: none !important;
+@media (min-width: 769px) {
+    body {
+        cursor: none !important;
+    }
 }
 
 /* Cursor container */
@@ -14,6 +16,15 @@ body {
     transform: translate(-50%, -50%) scale(1);
     pointer-events: none;
     z-index: 9999;
+}
+
+@media (max-width: 768px) {
+    .crosshair, .spark, .shell {
+        display: none !important;
+    }
+    body {
+        cursor: auto !important;
+    }
 }
 
 .crosshair.recoil {
