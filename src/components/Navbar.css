@@ -37,10 +37,10 @@ body.navbar-scroll-locked {
   --navbar-height-mobile: 64px;
   --navbar-height-xs: 56px;
 
-  --logo-size-desktop: 64px;
-  --logo-size-tablet: 52px;
-  --logo-size-mobile: 48px;
-  --logo-size-xs: 42px;
+  --logo-size-desktop: 52px;
+  --logo-size-tablet: 46px;
+  --logo-size-mobile: 38px;
+  --logo-size-xs: 36px;
 
   --logo-left-gap-desktop: 32px;
   --logo-left-gap-mobile: 16px;
