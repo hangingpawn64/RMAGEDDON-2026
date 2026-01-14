@@ -93,7 +93,7 @@ body.navbar-scroll-locked {
 }
 
 .navbar-events-bg {
-  background-image: url("/public/eventsnavfull.png");
+  background-image: url("https://res.cloudinary.com/dqm1ixpcb/image/upload/v1768375796/eventsnavfull_e9lnvq.png");
 }
 
 .navbar-visible {
@@ -359,7 +359,7 @@ body.navbar-scroll-locked .navbar-hamburger-wrapper {
   }
 
   .navbar-container.navbar-events-mode {
-    background: url("/public/eventsnavmobile.png") center/cover no-repeat;
+    background: url("https://res.cloudinary.com/dqm1ixpcb/image/upload/v1768375761/eventsnavmobile_uavtx5.png") center/cover no-repeat;
   }
 }
 /* ======================================================
