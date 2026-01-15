@@ -1,19 +1,19 @@
-import {React, useEffect }from "react";
+import { React, useEffect } from "react";
 import "./Home_page3.css";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 export default function Home_page3() {
-        // Initialize AOS
-        useEffect(() => {
-            AOS.init({
-                duration: 1000,
-                once: true,
-                mirror: true,
-                easing: 'ease-in-out'
-            });
-            AOS.refresh();
-        }, []);
+  // Initialize AOS
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+      mirror: true,
+      easing: 'ease-in-out'
+    });
+    AOS.refresh();
+  }, []);
   return (
     <div className="home3-bg">
       <div className="home3-overlay">

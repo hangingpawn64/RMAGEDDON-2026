@@ -36,7 +36,7 @@ const SponsorSection = () => {
             </div>
           </div>
 
-          <div className="sponsor-section-glass" data-aos="fade-right" data-aos-delay="300">
+          <div className="sponsor-section-glass" data-aos="fade-right" data-aos-delay="200">
             <div className="sponsor-section-desc">
               <p>
                 Members of the RNXG, regardless of their fields, collaborate as a
@@ -51,13 +51,13 @@ const SponsorSection = () => {
 
         <div className="sponsor-section-left-down">
           <div className="sponsor-section-down-head">
-            <div className="sponsor-section-title" data-aos="fade-right" data-aos-delay="400">
+            <div className="sponsor-section-title" data-aos="fade-right" data-aos-delay="300">
               <p>OUR SPONSOR</p>
               <span className="sponsor-section-spon-underline"></span>
             </div>
           </div>
 
-          <div className="sponsor-section-glass" data-aos="fade-right" data-aos-delay="500">
+          <div className="sponsor-section-glass" data-aos="fade-right" data-aos-delay="400">
             <div className="sponsor-section-desc">
               <p>
                 Powered by our sponsors fueling innovation, robotic excellence,
@@ -68,7 +68,7 @@ const SponsorSection = () => {
             </div>
           </div>
 
-          <div className="sponsor-section-arrow" data-aos="fade-right" data-aos-delay="600">
+          <div className="sponsor-section-arrow" data-aos="fade-right" data-aos-delay="500">
             <img
               src="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766338541/Group_514617189_1_emshd0.png"
               alt="arrow"
@@ -87,12 +87,12 @@ const SponsorSection = () => {
         />
 
         {/* Desktop */}
-        <div className="sponsor-section-slider-vertical" data-aos="zoom-in-left" data-aos-delay="1200">
+        <div className="sponsor-section-slider-vertical" data-aos="zoom-in-left" data-aos-delay="700">
           <VerticalSlider />
         </div>
 
         {/* Mobile */}
-        <div className="sponsor-section-slider-horizontal" data-aos="zoom-in-left" data-aos-delay="1200">
+        <div className="sponsor-section-slider-horizontal" data-aos="zoom-in-left" data-aos-delay="600">
           <Slider />
         </div>
       </div>

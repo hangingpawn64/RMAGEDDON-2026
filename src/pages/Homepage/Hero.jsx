@@ -211,8 +211,14 @@ export default function Hero() {
         <div className="hero-overlay">
           <div className="hero-left">
             <div className="hero-cards">
-              {steps.map(step => (
-                <StepCard key={step.title} {...step} />
+              {steps.map((step, index) => (
+                <div
+                  key={step.title}
+                  data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
+                  data-aos-delay={index * 100}
+                >
+                  <StepCard {...step} />
+                </div>
               ))}
             </div>
           </div>

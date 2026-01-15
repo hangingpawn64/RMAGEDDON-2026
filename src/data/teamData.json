@@ -4,29 +4,30 @@
       "id": 1,
       "name": "Ujwal Mahajan",
       "role": "Event Coordinator",
-      "image": "https://res.cloudinary.com/dmbmdfmhl/image/upload/v1768247089/ba4cf688-6199-4249-a026-685f84ecc0d0.png",
+      "image": "https://res.cloudinary.com/ddcuqfkyt/image/upload/v1768498804/ujwalda1_qyeypg.jpg",
       "characterImage": "https://res.cloudinary.com/dqm1ixpcb/image/upload/v1768331894/ujwaldaGTA_bizpvi.png",
       "instagram": "https://www.instagram.com/ujwalll_?igsh=NW1wb3ByNGhuMGRw",
       "linkedin": "https://www.linkedin.com/in/ujwal-mahajan-841710r",
-      "whatsapp": "https://wa.me/9422140315"
+      "whatsapp": "https://wa.me/919422140315"
     },
     {
       "id": 2,
       "name": "Mukul Bagad",
       "role": "Event Coordinator",
-      "image": "https://res.cloudinary.com/dqm1ixpcb/image/upload/v1768331941/mukulda_ho2qwo.jpg",
+      "image": "https://res.cloudinary.com/ddcuqfkyt/image/upload/v1768498186/mukuldada_qkzphy.jpg",
       "characterImage": "https://res.cloudinary.com/dqm1ixpcb/image/upload/v1768331971/mukuldaGTA_j1kz5y.png",
-      "whatsapp": "https://wa.me/8799801627"
+      "whatsapp": "https://wa.me/918799801627"
     },
     {
       "id": 3,
       "name": "Ruchie Patil",
       "role": "PRC Manager",
-      "image": "https://res.cloudinary.com/dmbmdfmhl/image/upload/v1768247792/WhatsApp_Image_2026-01-11_at_12.21.15_AM_axwcyr.jpg",
-      "characterImage": "",
+      "image": "https://res.cloudinary.com/ddcuqfkyt/image/upload/v1768501899/WhatsApp_Image_2026-01-15_at_23.54.14_attom1.jpg",
+      "characterImage": "https://res.cloudinary.com/ddcuqfkyt/image/upload/v1768502478/Gemini_Generated_Image_gb525cgb525cgb52-removebg-preview_tlpevu.png",
       "instagram": "https://instagram.com",
       "linkedin": "https://linkedin.com",
-      "whatsapp": "https://wa.me/1234567890"
+      "whatsapp": "https://wa.me/91234567890"
     }
+    
   ]
 }

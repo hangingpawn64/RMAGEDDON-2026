@@ -67,11 +67,11 @@ const Layout = () => {
 
   return (
     <>
-      <TargetCursor 
+      <TargetCursor
         targetSelector="a, button, input, textarea, .cursor-target, .pointer, .hover-target"
         hideDefaultCursor={true}
         spinDuration={4}
-        parallaxOn={true} 
+        parallaxOn={true}
         variant={isEventsPage ? "events" : "default"}
       />
       <PageTransition>

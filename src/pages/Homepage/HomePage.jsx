@@ -103,7 +103,7 @@ export default function HomePage() {
                 </div>
 
                 {/* Character - Positioned at bottom */}
-                <div 
+                <div
                     className="home-character-wrapper"
                     data-aos="fade-up-right"
                     data-aos-delay="1500"
@@ -186,7 +186,7 @@ export default function HomePage() {
                             </div>
                             <div className="home-info-row">
                                 <span className="home-info-label">PRIZE POOL:</span>
-                                <span className="home-info-value home-text-cyan">Rs.3,00,000+</span>
+                                <span className="home-info-value home-text-cyan">TBA</span>
                             </div>
                         </div>
 

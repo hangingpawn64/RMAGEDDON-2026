@@ -10,13 +10,13 @@ import 'aos/dist/aos.css';
 // Helper function to dynamically import images
 const getImagePath = (path) => {
   if (!path) return null;
-  
-  // Check if path is an external URL
-  if (path.startsWith('http') || path.startsWith('https')) {
+
+  // Check if path is an external URL or a root-relative path (public folder)
+  if (path.startsWith('http') || path.startsWith('https') || path.startsWith('/')) {
     return path;
   }
 
-  // Extract filename from path like "/src/assets/image.png"
+  // Extract filename from path like "image.png"
   const filename = path.split('/').pop();
   try {
     return new URL(`../../assets/${filename}`, import.meta.url).href;
@@ -28,17 +28,17 @@ const getImagePath = (path) => {
 
 const ContactUs = () => {
 
-      // Initialize AOS
-      useEffect(() => {
-          AOS.init({
-              duration: 1000,
-              once: true,
-              mirror: true,
-              easing: 'ease-in-out'
-          });
-          AOS.refresh();
-      }, []);
-return (
+  // Initialize AOS
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+      mirror: true,
+      easing: 'ease-in-out'
+    });
+    AOS.refresh();
+  }, []);
+  return (
     <>
       <div className='contact-container'>
         <div className="absolute top-0 left-0 w-full z-50 flex justify-center" data-aos="fade-down" data-aos-delay="0">

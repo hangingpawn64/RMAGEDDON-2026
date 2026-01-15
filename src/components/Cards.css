@@ -184,7 +184,7 @@
 /* Social Icons */
 .social-icons {
     display: flex;
-    gap: 20px;
+    gap: 24px;
     margin-top: 10px;
     position: relative;
     z-index: 1;
@@ -193,12 +193,12 @@
 .social-icons-front {
     display: flex;
     justify-content: center;
-    margin-top: 15px;
+    margin-top: 20px;
 }
 
 .social-link {
-    width: 48px;
-    height: 48px;
+    width: 60px;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -214,8 +214,8 @@
 }
 
 .icon {
-    width: 24px;
-    height: 24px;
+    width: 32px;
+    height: 32px;
     fill: #51D4FF;
     transition: fill 0.3s ease;
 }
@@ -249,13 +249,13 @@
     }
 
     .social-link {
-        width: 52px;
-        height: 52px;
+        width: 56px;
+        height: 56px;
     }
 
     .icon {
-        width: 32px;
-        height: 32px;
+        width: 30px;
+        height: 30px;
     }
 
 
@@ -286,12 +286,12 @@
     }
 
     .social-link {
-        width: 44px;
-        height: 44px;
+        width: 48px;
+        height: 48px;
     }
-    
+
     .icon {
-        width: 32px;
-        height: 32px;
+        width: 28px;
+        height: 28px;
     }
 }

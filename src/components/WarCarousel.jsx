@@ -8,10 +8,11 @@ import "./WarCarousel.css"; // namespaced CSS shown below
 
 const HorizontalSlider = ({ className = "" }) => {
   const slides = [
-    { image: "https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766921651/download_v1dt8z.jpg" },
-    { image: "https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766921651/download_v1dt8z.jpg" },
-    { image: "https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766921651/download_v1dt8z.jpg" },
-    { image: "https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766921651/download_v1dt8z.jpg" },
+    { image: "https://res.cloudinary.com/ddcuqfkyt/image/upload/v1768501596/20250223_212158_2_zwlftq.jpg" },
+    { image: "https://res.cloudinary.com/ddcuqfkyt/image/upload/v1768501596/20250223_211449_1_cwlyc8.jpg" },
+    { image: "https://res.cloudinary.com/ddcuqfkyt/image/upload/v1768502010/robowar1_vfsuix.jpg" },
+    { image: "https://res.cloudinary.com/ddcuqfkyt/image/upload/v1768499479/WhatsApp_Image_2026-01-15_at_18.19.12_1_gnufdc.jpg" },
+    { image: "https://res.cloudinary.com/ddcuqfkyt/image/upload/v1768502230/WhatsApp_Image_2026-01-16_at_00.06.30_hhsgl4.jpg" },
   ];
 
   const [activeIndex, setActiveIndex] = useState(0);

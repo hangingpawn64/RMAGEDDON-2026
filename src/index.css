@@ -12,8 +12,8 @@
 
 @font-face {
   font-family: 'Ethnocentric';
-  /* Name your font */
   src: url('/Ethnocentric-Regular.woff2') format('woff2');
+  font-display: swap;
 }
 
 @font-face {
@@ -21,6 +21,24 @@
   src: url('/Aldrich-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CyberSpace';
+  src: url('/cs_regular.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FasterStroker';
+  src: url('/Faster Stroker.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'BlenderProBolt';
+  src: url('/blenderprobolt.ttf') format('truetype');
   font-display: swap;
 }
 
