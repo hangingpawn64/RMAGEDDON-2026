@@ -40,7 +40,7 @@ export default function Home_page3() {
                     Exciting Prizes, Certificates after completion and a ton of excitement.
                   </li>
                   <li>
-                    By participating in the competition, familiarize yourself with SCI-FI realm.
+                    By participating in the competition, familiarize yourself with the GTA world.
                   </li>
                 </ul>
               </div>
