@@ -41,37 +41,37 @@ const Robowar = () => {
       <section className="robowar-container">
         <div className="robowar-left">
           <div className="robowar-left-content">
-        
-          <div className="robowar-header" data-aos="zoom-in" data-aos-delay="500">
-            <p className="robowar-title">ROBOWAR</p>
-            <img
-              src="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1768074254/Group_514617166_ohluoe.png"
-              alt="Robowar Title"
-            />
-          </div>
 
-          <div className="robowar-content">
-            <div className="robowar-content-top" data-aos="fade-right" data-aos-delay="1000">
-              <p>
-                Enter the world of Robo Wars, where power meets precision,
-                strategy, and innovation rules the battlefield
-              </p>
+            <div className="robowar-header" data-aos="zoom-in" data-aos-delay="500">
+              <p className="robowar-title">ROBOWAR</p>
+              <img
+                src="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1768074254/Group_514617166_ohluoe.png"
+                alt="Robowar Title"
+              />
             </div>
 
-            <div className="robowar-content-bottom" data-aos="fade-right" data-aos-delay="1500">
-              <p>
-                Last year, RMAGEDDON made history as Marathwada's first RoboWars
-                event. This year, the battlefield opens again your chance to test
-                your robot, prove your skills, and make your mark.
-              </p>
-            </div>
-          </div>
+            <div className="robowar-content">
+              <div className="robowar-content-top" data-aos="fade-right" data-aos-delay="1000">
+                <p>
+                  Enter the world of Robo Wars, where power meets precision,
+                  strategy, and innovation rules the battlefield
+                </p>
+              </div>
 
-          <div className="robowar-buttons" data-aos="zoom-in" data-aos-delay="2000">
-            <AnimatedButton text="REGISTER" onClick={handlePopupTrigger} />
-            <AnimatedButton text="RULE BOOK" onClick={handlePopupTrigger} />
-          </div>
-              
+              <div className="robowar-content-bottom" data-aos="fade-right" data-aos-delay="1500">
+                <p>
+                  Last year, RMAGEDDON made history as Marathwada's first RoboWars
+                  event. This year, the battlefield opens again your chance to test
+                  your robot, prove your skills, and make your mark.
+                </p>
+              </div>
+            </div>
+
+            <div className="robowar-buttons" data-aos="zoom-in" data-aos-delay="2000">
+              <AnimatedButton text="REGISTER" onClick={handlePopupTrigger} />
+              <AnimatedButton text="RULE BOOK" onClick={handlePopupTrigger} />
+            </div>
+
           </div>
         </div>
 
@@ -93,20 +93,19 @@ const Robowar = () => {
       <section className="robowar-event-section robowar-bg-section-2">
         <div className="robowar-event-container">
 
-          <div className="robowar-event-cards" data-aos="fade-right">
-            <GameCard
-              title="Robo Soccer"
-              description="Lead your robots to victory, score goals, and show off your skills in an action-packed Robo Soccer battle."
-              image="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1768246860/bd6ebd0c-eca4-4e18-bc67-b0800c56fba0.png"
-              onAction={handlePopupTrigger}
-            />
-          </div>
-
           <div className="robowar-event-cards" data-aos="fade-left">
             <GameCard
               title="Robo Race"
               description="Unleash Speed, Strategy, and Skill! Push Your Robots to the Limit and Cross the Finish Line Victorious!"
               image="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1768246819/7e76f4fc-b6f8-4ff8-a286-b3319ee68121.png"
+              onAction={handlePopupTrigger}
+            />
+          </div>
+          <div className="robowar-event-cards" data-aos="fade-right">
+            <GameCard
+              title="Robo Soccer"
+              description="Lead your robots to victory, score goals, and show off your skills in an action-packed Robo Soccer battle."
+              image="https://res.cloudinary.com/ddcuqfkyt/image/upload/v1768583356/robosoccer_scmc08.jpg"
               onAction={handlePopupTrigger}
             />
           </div>
@@ -116,20 +115,19 @@ const Robowar = () => {
       {/* ================= SECTION 3 ================= */}
       <section className="robowar-event-section robowar-bg-section-3">
         <div className="robowar-event-container">
-          <div className="robowar-event-cards" data-aos="fade-right">
-            <GameCard
-              title="Line Follower"
-              description="Program Robot's to Follow the Path with Precision and Speed! Conquer the Line Following Challenge"
-              image="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1768246887/8605c591-86e9-49a2-afc0-31782058b71d.png"
-              onAction={handlePopupTrigger}
-            />
-          </div>
-
           <div className="robowar-event-cards" data-aos="fade-left">
             <GameCard
               title="Robo Sumo"
               description="Unleash your robots, push opponents out, and dominate the arena in Robo Sumo showdown!"
               image="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1768246871/de83b2a7-fb6b-435f-a9da-1b5aeb48a27b.png"
+              onAction={handlePopupTrigger}
+            />
+          </div>
+          <div className="robowar-event-cards" data-aos="fade-right">
+            <GameCard
+              title="Line Follower"
+              description="Program Robot's to Follow the Path with Precision and Speed! Conquer the Line Following Challenge"
+              image="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1768246887/8605c591-86e9-49a2-afc0-31782058b71d.png"
               onAction={handlePopupTrigger}
             />
           </div>
