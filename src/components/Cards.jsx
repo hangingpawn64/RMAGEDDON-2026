@@ -4,11 +4,11 @@ import "./Cards.css";
 const Card3D = ({ image, name, role, instagram, linkedin, whatsapp, characterImage }) => {
   // Helper to ensure whatsapp link is correct format
   const getWhatsAppLink = (input) => {
-      if (!input) return null;
-      if (input.startsWith('http')) return input;
-      // Remove any non-numeric chars if it's just a number string just in case
-      const cleanNumber = input.replace(/\D/g, '');
-      return `https://wa.me/${cleanNumber}`;
+    if (!input) return null;
+    if (input.startsWith('http')) return input;
+    // Remove any non-numeric chars if it's just a number string just in case
+    const cleanNumber = input.replace(/\D/g, '');
+    return `https://wa.me/${cleanNumber}`;
   };
 
   const formattedWhatsApp = getWhatsAppLink(whatsapp);
@@ -55,10 +55,10 @@ const Card3D = ({ image, name, role, instagram, linkedin, whatsapp, characterIma
         {/* Back of card */}
         <div className="card-back">
           {characterImage && (
-            <img 
-              src={characterImage} 
-              className={`character-image ${name === 'Ujwal Mahajan' ? 'scale-up-char' : ''}`} 
-              alt={`${name} character`} 
+            <img
+              src={characterImage}
+              className={`character-image ${name === 'Ujwal Mahajan' ? 'scale-up-char' : ''}`}
+              alt={`${name} character`}
             />
           )}
 

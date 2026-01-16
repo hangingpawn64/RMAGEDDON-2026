@@ -8,7 +8,7 @@
   align-items: center;
   border: 4px solid rgba(20, 18, 18, 0.844);
 
- 
+
   box-sizing: border-box;
   background: rgba(255, 255, 255, 0.05);
 
@@ -41,7 +41,7 @@
   width: 279px;
   height: 194px;
   max-width: 100%;
-  object-fit: cover;
+  object-fit: contain;
   overflow: hidden;
   /* opacity: 0.85; */
   transition: transform 0.35s ease, box-shadow 0.35s ease, opacity 0.35s ease;
@@ -49,7 +49,7 @@
   box-sizing: border-box;
   /* border-radius: 5vh; */
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-  
+
 }
 
 /* active effect */
