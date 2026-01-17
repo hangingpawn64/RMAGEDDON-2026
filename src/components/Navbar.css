@@ -1,3 +1,4 @@
+
 /* new change */
 .navbar-mobile-close {
   position: fixed;
@@ -11,7 +12,6 @@
   font-size: 32px;
   cursor: pointer;
 }
-
 /* ======================================================
    GLOBAL & RESET
 ====================================================== */
@@ -83,18 +83,17 @@ body.navbar-scroll-locked {
   height: var(--navbar-height-desktop);
   transform: translateX(-50%);
   background-repeat: no-repeat;
-  background-size: auto 100%;
-  background-position: center;
+  background-size: 100% 100%;
   opacity: 0;
   transition: opacity 0.4s ease;
 }
 
 .navbar-default-bg {
-  background-image: url("https://res.cloudinary.com/ddcuqfkyt/image/upload/v1768498186/homenav_rg7oxg.png");
+  background-image: url("https://res.cloudinary.com/dmbmdfmhl/image/upload/v1768055126/mainnav_dfhkly.png");
 }
 
 .navbar-events-bg {
-  background-image: url("https://res.cloudinary.com/ddcuqfkyt/image/upload/v1768498186/eventnavfull_zursvz.png");
+  background-image: url("https://res.cloudinary.com/dqm1ixpcb/image/upload/v1768375796/eventsnavfull_e9lnvq.png");
 }
 
 .navbar-visible {
@@ -213,8 +212,7 @@ body.navbar-scroll-locked {
 .navbar-links-list a:hover::after {
   transform: translateX(-50%) scaleX(1);
   opacity: 1;
-  background: #51d4ff;
-  /* Default Blue */
+  background: #51d4ff; /* Default Blue */
 }
 
 /* EVENTS PAGE COLOR */
@@ -250,7 +248,6 @@ body.navbar-scroll-locked .navbar-hamburger-wrapper {
 .navbar-mobile-close {
   z-index: 1100;
 }
-
 /* ================= MOBILE MENU OVERLAY ================= */
 .navbar-mobile-menu {
   position: fixed;
@@ -264,16 +261,15 @@ body.navbar-scroll-locked .navbar-hamburger-wrapper {
 
   /* 🔥 CONTROL VERTICAL POSITION HERE */
   justify-content: flex-start;
-  padding-top: 140px;
-  /* ⬅️ MOVE MENU UP/DOWN */
+  padding-top: 140px;  /* ⬅️ MOVE MENU UP/DOWN */
 
   opacity: 0;
   transform: translateY(-20px);
   pointer-events: none;
 
-  transition:
-    opacity 0.35s ease,
-    transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+background: rgba(0, 0, 0, 0.5); 
+backdrop-filter: blur(18px) saturate(140%);
+ -webkit-backdrop-filter: blur(18px) saturate(140%);
 
   z-index: 2000;
 }
@@ -296,8 +292,7 @@ body.navbar-scroll-locked .navbar-hamburger-wrapper {
 /* MENU LINKS */
 .navbar-mobile-menu li {
   list-style: none;
-  margin: 12px 0;
-  /* ⬅️ spacing */
+   margin: 12px 0;   /* ⬅️ spacing */
 
   text-align: center;
 }
@@ -344,7 +339,7 @@ body.navbar-scroll-locked .navbar-hamburger-wrapper {
     min-width: 100vw;
 
     background-size: auto 100%;
-
+ 
     background-position: center;
   }
 
@@ -357,18 +352,16 @@ body.navbar-scroll-locked .navbar-hamburger-wrapper {
     background: transparent;
   }
 }
-
 @media (max-width: 500px) {
-
+  
   .navbar-container:not(.navbar-events-mode) {
-    background: url("https://res.cloudinary.com/ddcuqfkyt/image/upload/v1768505458/mobilenav_eakwv4.png") center/cover no-repeat;
+    background: url("https://res.cloudinary.com/dmbmdfmhl/image/upload/v1768055125/mainnav_mobile_kxscnh.png") center/cover no-repeat;
   }
 
   .navbar-container.navbar-events-mode {
-    background: url("https://res.cloudinary.com/ddcuqfkyt/image/upload/v1768498186/eventsnavmobile_ylmmjh.png") center/cover no-repeat;
+    background: url("https://res.cloudinary.com/dqm1ixpcb/image/upload/v1768375761/eventsnavmobile_uavtx5.png") center/cover no-repeat;
   }
 }
-
 /* ======================================================
    MOBILE (≤425px)
 ====================================================== */
@@ -406,7 +399,6 @@ body.navbar-scroll-locked .navbar-hamburger-wrapper {
     width: var(--logo-size-xs);
   }
 }
-
 /* ================= FIX HAMBURGER MENU ================= */
 
 /* Disable navbar interaction when menu open */
@@ -433,3 +425,4 @@ body.navbar-scroll-locked .navbar-hamburger-wrapper {
 .navbar-mobile-close {
   z-index: 1100;
 }
+
