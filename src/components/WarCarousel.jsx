@@ -8,8 +8,8 @@ import "./WarCarousel.css"; // namespaced CSS shown below
 
 const HorizontalSlider = ({ className = "" }) => {
   const slides = [
-    { image: "https://res.cloudinary.com/ddcuqfkyt/image/upload/v1768501596/20250223_212158_2_zwlftq.jpg" },
-    { image: "https://res.cloudinary.com/ddcuqfkyt/image/upload/v1768501596/20250223_211449_1_cwlyc8.jpg" },
+    { image: "https://res.cloudinary.com/ddcuqfkyt/image/upload/v1768684277/WhatsApp_Image_2026-01-17_at_15.19.56_vrkktz.jpg" },
+    { image: "https://res.cloudinary.com/ddcuqfkyt/image/upload/v1768684040/WhatsApp_Image_2026-01-17_at_15.15.33_vlj6ek.jpg" },
     { image: "https://res.cloudinary.com/ddcuqfkyt/image/upload/v1768502010/robowar1_vfsuix.jpg" },
     { image: "https://res.cloudinary.com/ddcuqfkyt/image/upload/v1768499479/WhatsApp_Image_2026-01-15_at_18.19.12_1_gnufdc.jpg" },
     { image: "https://res.cloudinary.com/ddcuqfkyt/image/upload/v1768502230/WhatsApp_Image_2026-01-16_at_00.06.30_hhsgl4.jpg" },

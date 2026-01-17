@@ -166,8 +166,8 @@ body.navbar-scroll-locked .robowar-event-section {
 }
 
 .robowar-carousel {
-  max-width: 280px;
-  scale: 1.20;
+  max-width: 340px;
+  scale: 1.25;
 
 }
 
@@ -280,8 +280,8 @@ body.navbar-scroll-locked .robowar-event-section {
   }
 
   .robowar-carousel {
-    scale: 1.07;
-    max-width: 310px;
+    scale: 1.1;
+    max-width: 360px;
   }
 
 
@@ -344,7 +344,7 @@ body.navbar-scroll-locked .robowar-event-section {
 
   .robowar-carousel {
     scale: 1;
-    max-width: 317px;
+    max-width: 360px;
   }
 }
 
