@@ -22,3 +22,8 @@ already done
  #slider & #vertical_slider
  
 
+  /* 🔥 CONTROL VERTICAL POSITION HERE */
+  justify-content: flex-start;
+  padding-top: 140px;
+  /* ⬅️ MOVE MENU UP/DOWN */
+
