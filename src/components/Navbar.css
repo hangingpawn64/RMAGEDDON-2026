@@ -303,6 +303,7 @@ backdrop-filter: blur(18px) saturate(140%);
   letter-spacing: 0.14em;
   color: #ffffff;
   text-decoration: none;
+   font-family: 'Montserrat', sans-serif; /* change this */
 }
 
 /* ================= CLOSE BUTTON ================= */

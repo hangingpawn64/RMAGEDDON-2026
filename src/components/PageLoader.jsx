@@ -82,7 +82,7 @@ export default function PageLoader({ onComplete }) {
 
         {/* Bar 4 */}
         <div className="loader-bar">
-          <img src="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1767863353/7_s63aqq.jpg" alt="" />
+          <img src="https://res.cloudinary.com/dqm1ixpcb/image/upload/v1768898591/7_wzyxov.jpg" alt="" />
         </div>
 
         {/* Bar 5 */}
