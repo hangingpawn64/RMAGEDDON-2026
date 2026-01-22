@@ -61,7 +61,7 @@ const EnquiryForm = ({ isOpen, onClose }) => {
         try {
             // Google Apps Script Web App URL
             // Replace this with your actual deployed Google Apps Script URL
-            const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz_AS03BegMQn2AZ3GGmlb_64ogaDXOFUP2rBsaLNlnyEXPd_SX7RjZc47MNMXGOcxV/exec';
+            const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx2gYw6VnBJGizUmgeH0dgYDS8CjycozViALvevFUz5iR9JKdYp7cQ2NK67adoz0GGC/exec';
 
             // Send data to Google Sheets via Google Apps Script
             const response = await fetch(GOOGLE_SCRIPT_URL, {
