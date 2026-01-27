@@ -103,7 +103,7 @@ const Robowar = () => {
           </div>
           <div className="robowar-event-cards" data-aos="fade-right">
             <GameCard
-              title="Demolitio Strike"
+              title="Demolition Strike"
               description="Lead your robots to victory, score goals, and show off your skills in an action-packed Robo Soccer battle."
               image="https://res.cloudinary.com/ddcuqfkyt/image/upload/v1768583356/robosoccer_scmc08.jpg"
               onAction={handlePopupTrigger}
