@@ -52,7 +52,7 @@ const SponsorSection = () => {
         <div className="sponsor-section-left-down">
           <div className="sponsor-section-down-head">
             <div className="sponsor-section-title" data-aos="fade-right" data-aos-delay="300">
-              <p>OUR SPONSOR</p>
+              <p>OUR SPONSORS</p>
               <span className="sponsor-section-spon-underline"></span>
             </div>
           </div>
