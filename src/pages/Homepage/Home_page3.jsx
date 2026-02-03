@@ -76,7 +76,7 @@ export default function Home_page3() {
                 <div className="home3-right-text">
                   <div className="home3-innertext"><p>CASH PRIZES</p></div>
                   <div className="home3-subtext certificate">
-                    <p>  Cash prize up to x lakh</p>
+                    <p>  Cash prize up to 2 lakh</p>
                   </div>
                 </div>
               </div>

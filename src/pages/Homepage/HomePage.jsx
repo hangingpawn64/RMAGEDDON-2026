@@ -186,7 +186,7 @@ export default function HomePage() {
                             </div>
                             <div className="home-info-row">
                                 <span className="home-info-label">PRIZE POOL:</span>
-                                <span className="home-info-value home-text-cyan">TBA</span>
+                                <span className="home-info-value home-text-cyan">upto 2 Lakhs</span>
                             </div>
                         </div>
 
