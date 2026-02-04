@@ -1,7 +1,7 @@
 import React from "react";
 import "./GameCard.css";
 
-const Card = ({ title, description, image, onAction }) => {
+const Card = ({ title, description, image, onRegister, onRuleBook }) => {
   return (
     <div className="card-item">
       <div className="card-item-img-shadow">
@@ -13,14 +13,14 @@ const Card = ({ title, description, image, onAction }) => {
         <p>{description}</p>
 
         <div className="card-item-button-shadow">
-          <div className="card-item-button" onClick={onAction}>
+          <div className="card-item-button" onClick={onRegister}>
             <span></span>
             <span></span>
             <span></span>
             <span></span>
             Register
           </div>
-          <div className="card-item-button" onClick={onAction}>
+          <div className="card-item-button" onClick={onRuleBook}>
             <span></span>
             <span></span>
             <span></span>

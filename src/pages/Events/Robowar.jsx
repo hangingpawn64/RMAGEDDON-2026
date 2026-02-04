@@ -6,11 +6,27 @@ import WarCarousel from "../../components/WarCarousel.jsx"
 import GameCard from "../../components/Cards/GameCard";
 import AnimatedButton from "../../components/AnimatedButton";
 import TechPopup from "../../components/TechPopup";
+import RuleBookModal from "../../components/RuleBookModal";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const Robowar = () => {
   const [showPopup, setShowPopup] = useState(false);
+  const [showRulebook, setShowRulebook] = useState(false);
+  const [activeRulebookUrl, setActiveRulebookUrl] = useState("");
+
+  // Rulebook URLs
+  // TODO: Update these with the actual Google Drive Preview Links for each game
+  const MAIN_RULEBOOK = "https://drive.google.com/file/d/1ehTTUnlXbh6bNt8RRQ3Cnh_l9fmZjPPe/preview";
+  const VINEWOOD_VELOCITY_RULEBOOK = "https://drive.google.com/file/d/1ehTTUnlXbh6bNt8RRQ3Cnh_l9fmZjPPe/preview";
+  const DEMOLITION_STRIKE_RULEBOOK = "https://drive.google.com/file/d/1ehTTUnlXbh6bNt8RRQ3Cnh_l9fmZjPPe/preview";
+  const TORQUE_CARTEL_RULEBOOK = "https://drive.google.com/file/d/1ehTTUnlXbh6bNt8RRQ3Cnh_l9fmZjPPe/preview";
+  const TRACK_THEFT_AUTO_RULEBOOK = "https://drive.google.com/file/d/1ehTTUnlXbh6bNt8RRQ3Cnh_l9fmZjPPe/preview";
+
+  const handleOpenRulebook = (url) => {
+    setActiveRulebookUrl(url);
+    setShowRulebook(true);
+  };
 
   useEffect(() => {
     AOS.init({
@@ -32,6 +48,11 @@ const Robowar = () => {
   return (
     <>
       <TechPopup isVisible={showPopup} />
+      <RuleBookModal
+        isOpen={showRulebook}
+        onClose={() => setShowRulebook(false)}
+        pdfUrl={activeRulebookUrl}
+      />
       {/* NAVBAR */}
       <div className="top-0 left-0 w-full z-50 flex justify-center events-navbar-wrapper" data-aos="fade-down" data-aos-delay="0">
         <Navbar />
@@ -69,7 +90,7 @@ const Robowar = () => {
 
             <div className="robowar-buttons" data-aos="zoom-in" data-aos-delay="2000">
               <AnimatedButton text="REGISTER" onClick={handlePopupTrigger} />
-              <AnimatedButton text="RULE BOOK" onClick={handlePopupTrigger} />
+              <AnimatedButton text="RULE BOOK" onClick={() => handleOpenRulebook(MAIN_RULEBOOK)} />
             </div>
 
           </div>
@@ -98,7 +119,8 @@ const Robowar = () => {
               title="Vinewood Velocity"
               description="Unleash Speed, Strategy, and Skill! Push Your Robots to the Limit and Cross the Finish Line Victorious!"
               image="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1768246819/7e76f4fc-b6f8-4ff8-a286-b3319ee68121.png"
-              onAction={handlePopupTrigger}
+              onRegister={handlePopupTrigger}
+              onRuleBook={() => handleOpenRulebook(VINEWOOD_VELOCITY_RULEBOOK)}
             />
           </div>
           <div className="robowar-event-cards" data-aos="fade-right">
@@ -106,7 +128,8 @@ const Robowar = () => {
               title="Demolition Strike"
               description="Lead your robots to victory, score goals, and show off your skills in an action-packed Robo Soccer battle."
               image="https://res.cloudinary.com/ddcuqfkyt/image/upload/v1768583356/robosoccer_scmc08.jpg"
-              onAction={handlePopupTrigger}
+              onRegister={handlePopupTrigger}
+              onRuleBook={() => handleOpenRulebook(DEMOLITION_STRIKE_RULEBOOK)}
             />
           </div>
         </div>
@@ -120,7 +143,8 @@ const Robowar = () => {
               title="Torque Cartel"
               description="Unleash your robots, push opponents out, and dominate the arena in Robo Sumo showdown!"
               image="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1768246871/de83b2a7-fb6b-435f-a9da-1b5aeb48a27b.png"
-              onAction={handlePopupTrigger}
+              onRegister={handlePopupTrigger}
+              onRuleBook={() => handleOpenRulebook(TORQUE_CARTEL_RULEBOOK)}
             />
           </div>
           <div className="robowar-event-cards" data-aos="fade-right">
@@ -128,7 +152,8 @@ const Robowar = () => {
               title="Track Theft Auto"
               description="Program Robot's to Follow the Path with Precision and Speed! Conquer the Line Following Challenge"
               image="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1768246887/8605c591-86e9-49a2-afc0-31782058b71d.png"
-              onAction={handlePopupTrigger}
+              onRegister={handlePopupTrigger}
+              onRuleBook={() => handleOpenRulebook(TRACK_THEFT_AUTO_RULEBOOK)}
             />
           </div>
         </div>

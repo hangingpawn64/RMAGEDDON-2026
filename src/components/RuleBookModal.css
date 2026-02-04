@@ -1,0 +1,132 @@
+.rulebook-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.rulebook-modal-content {
+    position: relative;
+    width: 90%;
+    height: 90%;
+    max-width: 1000px;
+
+    /* Glassmorphism Effect */
+    background: rgba(40, 40, 40, 0.45);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.rulebook-close-button:hover {
+    color: #FF0000;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.rulebook-actions {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.rulebook-btn {
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(4px);
+}
+
+.rulebook-close-button {
+    width: 40px;
+    height: 40px;
+    font-size: 2rem;
+    line-height: 1;
+    border-radius: 50%;
+    padding: 0;
+}
+
+.rulebook-download-button {
+    height: 40px;
+    padding: 0 15px;
+    font-family: var(--font-orbitron, sans-serif);
+    /* Using variable from index.css if available, else fallback */
+    font-size: 0.9rem;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    /* For anchor tags */
+}
+
+.rulebook-download-button:hover {
+    background: rgba(255, 0, 0, 0.8);
+    border-color: #FF0000;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+
+.rulebook-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.rulebook-pdf-container {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    background: #000;
+}
+
+.rulebook-iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.rulebook-placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #888;
+    font-size: 1.2rem;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .rulebook-modal-content {
+        width: 95%;
+        height: 80%;
+    }
+}
