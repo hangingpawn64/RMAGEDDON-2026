@@ -16,12 +16,11 @@ const Robowar = () => {
   const [activeRulebookUrl, setActiveRulebookUrl] = useState("");
 
   // Rulebook URLs
-  // TODO: Update these with the actual Google Drive Preview Links for each game
-  const MAIN_RULEBOOK = "https://drive.google.com/file/d/1ehTTUnlXbh6bNt8RRQ3Cnh_l9fmZjPPe/preview";
-  const VINEWOOD_VELOCITY_RULEBOOK = "https://drive.google.com/file/d/1ehTTUnlXbh6bNt8RRQ3Cnh_l9fmZjPPe/preview";
-  const DEMOLITION_STRIKE_RULEBOOK = "https://drive.google.com/file/d/1ehTTUnlXbh6bNt8RRQ3Cnh_l9fmZjPPe/preview";
-  const TORQUE_CARTEL_RULEBOOK = "https://drive.google.com/file/d/1ehTTUnlXbh6bNt8RRQ3Cnh_l9fmZjPPe/preview";
-  const TRACK_THEFT_AUTO_RULEBOOK = "https://drive.google.com/file/d/1ehTTUnlXbh6bNt8RRQ3Cnh_l9fmZjPPe/preview";
+  const MAIN_RULEBOOK = "";
+  const VINEWOOD_VELOCITY_RULEBOOK = "";
+  const DEMOLITION_STRIKE_RULEBOOK = "";
+  const TORQUE_CARTEL_RULEBOOK = "";
+  const TRACK_THEFT_AUTO_RULEBOOK = "";
 
   const handleOpenRulebook = (url) => {
     setActiveRulebookUrl(url);
