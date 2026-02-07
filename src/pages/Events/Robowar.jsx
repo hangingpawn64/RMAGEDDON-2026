@@ -22,11 +22,27 @@ const Robowar = () => {
   const TORQUE_CARTEL_RULEBOOK = "https://drive.google.com/file/d/1Eel_lYcYNKC7U23TALcBelMFVF5r4Iul/view?usp=sharing";
   const TRACK_THEFT_AUTO_RULEBOOK = "https://drive.google.com/file/d/1uPQhoKEWV-FwjGO2qAOsGeqpfs5QzCWG/view?usp=sharing";
 
+  // Register URLs
+  const ROBOWAR_8KG_REGISTER_URL = "https://unstop.com/p/robowar-8kg-rmageddon-2026-shri-guru-gobind-singhji-institute-of-engineering-and-technology-sggsiet-nanded-1636771";
+  const ROBOWAR_16KG_REGISTER_URL = "https://unstop.com/p/robowar-16kg-rmageddon-2026-shri-guru-gobind-singhji-institute-of-engineering-and-technology-sggsiet-nanded-1636806";
+  const VINEWOOD_VELOCITY_REGISTER_URL = "https://unstop.com/p/vinewood-velocity-rmageddon-2026-shri-guru-gobind-singhji-institute-of-engineering-and-technology-sggsiet-nanded-1636817";
+  const DEMOLITION_STRIKE_REGISTER_URL = "https://unstop.com/p/track-theft-auto-line-follower-robot-rmageddon-2026-shri-guru-gobind-singhji-institute-of-engineering-and-technology-s-1636822";
+  const TORQUE_CARTEL_REGISTER_URL = "https://unstop.com/o/NalouD1?lb=cOmODb4Q&utm_medium=Share&utm_source=rnxgsgg5892&utm_campaign=Competitions";
+  const TRACK_THEFT_AUTO_REGISTER_URL = "https://unstop.com/o/06LaXDo?lb=cOmODb4Q&utm_medium=Share&utm_source=rnxgsgg5892&utm_campaign=Competitions";
+
   const handleOpenRulebook = (url) => {
     // setActiveRulebookUrl(url);
     // setShowRulebook(true);
     if (url) {
       window.open(url, '_blank');
+    }
+  };
+
+  const handleRegister = (url) => {
+    if (url) {
+      window.open(url, '_blank');
+    } else {
+      handlePopupTrigger();
     }
   };
 
@@ -66,7 +82,7 @@ const Robowar = () => {
           <div className="robowar-left-content">
 
             <div className="robowar-header" data-aos="zoom-in" data-aos-delay="500">
-              <p className="robowar-title">ROBOWAR</p>
+              <p className="robowar-title">ROBOWARS</p>
               <img
                 src="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1768074254/Group_514617166_ohluoe.png"
                 alt="Robowar Title"
@@ -91,7 +107,8 @@ const Robowar = () => {
             </div>
 
             <div className="robowar-buttons" data-aos="zoom-in" data-aos-delay="2000">
-              <AnimatedButton text="REGISTER" onClick={handlePopupTrigger} />
+              <AnimatedButton text="REGISTER (8KG)" onClick={() => handleRegister(ROBOWAR_8KG_REGISTER_URL)} />
+              <AnimatedButton text="REGISTER (16KG)" onClick={() => handleRegister(ROBOWAR_16KG_REGISTER_URL)} />
               <AnimatedButton text="RULE BOOK" onClick={() => handleOpenRulebook(MAIN_RULEBOOK)} />
             </div>
 
@@ -121,7 +138,7 @@ const Robowar = () => {
               title="Vinewood Velocity"
               description="Unleash Speed, Strategy, and Skill! Push Your Robots to the Limit and Cross the Finish Line Victorious!"
               image="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1768246819/7e76f4fc-b6f8-4ff8-a286-b3319ee68121.png"
-              onRegister={handlePopupTrigger}
+              onRegister={() => handleRegister(VINEWOOD_VELOCITY_REGISTER_URL)}
               onRuleBook={() => handleOpenRulebook(VINEWOOD_VELOCITY_RULEBOOK)}
             />
           </div>
@@ -130,7 +147,7 @@ const Robowar = () => {
               title="Demolition Strike"
               description="Lead your robots to victory, score goals, and show off your skills in an action-packed Robo Soccer battle."
               image="https://res.cloudinary.com/ddcuqfkyt/image/upload/v1768583356/robosoccer_scmc08.jpg"
-              onRegister={handlePopupTrigger}
+              onRegister={() => handleRegister(DEMOLITION_STRIKE_REGISTER_URL)}
               onRuleBook={() => handleOpenRulebook(DEMOLITION_STRIKE_RULEBOOK)}
             />
           </div>
@@ -145,7 +162,7 @@ const Robowar = () => {
               title="Torque Cartel"
               description="Unleash your robots, push opponents out, and dominate the arena in Robo Sumo showdown!"
               image="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1768246871/de83b2a7-fb6b-435f-a9da-1b5aeb48a27b.png"
-              onRegister={handlePopupTrigger}
+              onRegister={() => handleRegister(TORQUE_CARTEL_REGISTER_URL)}
               onRuleBook={() => handleOpenRulebook(TORQUE_CARTEL_RULEBOOK)}
             />
           </div>
@@ -154,7 +171,7 @@ const Robowar = () => {
               title="Track Theft Auto"
               description="Program Robot's to Follow the Path with Precision and Speed! Conquer the Line Following Challenge"
               image="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1768246887/8605c591-86e9-49a2-afc0-31782058b71d.png"
-              onRegister={handlePopupTrigger}
+              onRegister={() => handleRegister(TRACK_THEFT_AUTO_REGISTER_URL)}
               onRuleBook={() => handleOpenRulebook(TRACK_THEFT_AUTO_RULEBOOK)}
             />
           </div>

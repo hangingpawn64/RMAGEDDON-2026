@@ -233,7 +233,7 @@
 /* Info Box */
 .home-info-container {
     width: 100%;
-    max-width: 25rem;
+    max-width: 30rem;
     min-height: 11rem;
     display: flex;
     flex-direction: column;
