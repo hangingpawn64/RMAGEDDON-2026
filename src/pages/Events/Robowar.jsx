@@ -16,15 +16,18 @@ const Robowar = () => {
   const [activeRulebookUrl, setActiveRulebookUrl] = useState("");
 
   // Rulebook URLs
-  const MAIN_RULEBOOK = "";
-  const VINEWOOD_VELOCITY_RULEBOOK = "";
-  const DEMOLITION_STRIKE_RULEBOOK = "";
-  const TORQUE_CARTEL_RULEBOOK = "";
-  const TRACK_THEFT_AUTO_RULEBOOK = "";
+  const MAIN_RULEBOOK = "https://drive.google.com/file/d/10aYKbRyuOlBNa00jmpv27rsoMPsWTg1U/view?usp=sharing";
+  const VINEWOOD_VELOCITY_RULEBOOK = "https://drive.google.com/file/d/1zZ02Rbqcb4HaBCf3NezAtNHsC2vNqbH7/view?usp=sharing";
+  const DEMOLITION_STRIKE_RULEBOOK = "https://drive.google.com/file/d/13D2qiTbhcJnxHmaO-Lc1vhDnFeYEuf_L/view?usp=sharing";
+  const TORQUE_CARTEL_RULEBOOK = "https://drive.google.com/file/d/1Eel_lYcYNKC7U23TALcBelMFVF5r4Iul/view?usp=sharing";
+  const TRACK_THEFT_AUTO_RULEBOOK = "https://drive.google.com/file/d/1uPQhoKEWV-FwjGO2qAOsGeqpfs5QzCWG/view?usp=sharing";
 
   const handleOpenRulebook = (url) => {
-    setActiveRulebookUrl(url);
-    setShowRulebook(true);
+    // setActiveRulebookUrl(url);
+    // setShowRulebook(true);
+    if (url) {
+      window.open(url, '_blank');
+    }
   };
 
   useEffect(() => {
@@ -47,11 +50,11 @@ const Robowar = () => {
   return (
     <>
       <TechPopup isVisible={showPopup} />
-      <RuleBookModal
+      {/* <RuleBookModal
         isOpen={showRulebook}
         onClose={() => setShowRulebook(false)}
         pdfUrl={activeRulebookUrl}
-      />
+      /> */}
       {/* NAVBAR */}
       <div className="top-0 left-0 w-full z-50 flex justify-center events-navbar-wrapper" data-aos="fade-down" data-aos-delay="0">
         <Navbar />
