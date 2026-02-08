@@ -26,9 +26,9 @@ const Robowar = () => {
   const ROBOWAR_8KG_REGISTER_URL = "https://unstop.com/p/robowar-8kg-rmageddon-2026-shri-guru-gobind-singhji-institute-of-engineering-and-technology-sggsiet-nanded-1636771";
   const ROBOWAR_16KG_REGISTER_URL = "https://unstop.com/p/robowar-16kg-rmageddon-2026-shri-guru-gobind-singhji-institute-of-engineering-and-technology-sggsiet-nanded-1636806";
   const VINEWOOD_VELOCITY_REGISTER_URL = "https://unstop.com/p/vinewood-velocity-rmageddon-2026-shri-guru-gobind-singhji-institute-of-engineering-and-technology-sggsiet-nanded-1636817";
-  const DEMOLITION_STRIKE_REGISTER_URL = "https://unstop.com/p/track-theft-auto-line-follower-robot-rmageddon-2026-shri-guru-gobind-singhji-institute-of-engineering-and-technology-s-1636822";
+  const DEMOLITION_STRIKE_REGISTER_URL = "https://unstop.com/p/demolition-strike-robosoccer-rmageddon-2026-shri-guru-gobind-singhji-institute-of-engineering-and-technology-sggsiet-n-1636808?lb=cOmODb4Q&utm_medium=Share&utm_source=rnxgsgg5892&utm_campaign=Competitions";
   const TORQUE_CARTEL_REGISTER_URL = "https://unstop.com/o/NalouD1?lb=cOmODb4Q&utm_medium=Share&utm_source=rnxgsgg5892&utm_campaign=Competitions";
-  const TRACK_THEFT_AUTO_REGISTER_URL = "https://unstop.com/o/06LaXDo?lb=cOmODb4Q&utm_medium=Share&utm_source=rnxgsgg5892&utm_campaign=Competitions";
+  const TRACK_THEFT_AUTO_REGISTER_URL = "https://unstop.com/p/track-theft-auto-line-follower-robot-rmageddon-2026-shri-guru-gobind-singhji-institute-of-engineering-and-technology-s-1636822";
 
   const handleOpenRulebook = (url) => {
     // setActiveRulebookUrl(url);
