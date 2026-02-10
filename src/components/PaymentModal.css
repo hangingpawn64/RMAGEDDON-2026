@@ -240,6 +240,34 @@
     background: linear-gradient(45deg, #004080, #0066cc);
 }
 
+.payment-buttons-row {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.payment-google-form-button {
+    background: linear-gradient(45deg, #1a7a2e, #28a745);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: var(--font-orbitron, 'Orbitron', sans-serif);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.4);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.payment-google-form-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(40, 167, 69, 0.6);
+    background: linear-gradient(45deg, #218838, #34ce57);
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;

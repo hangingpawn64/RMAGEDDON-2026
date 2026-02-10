@@ -4,8 +4,14 @@ import './PaymentModal.css';
 const PaymentModal = ({ isOpen, onClose }) => {
     if (!isOpen) return null;
 
+    const GOOGLE_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSfT9ZCYHnnxA1WUGkg32iiwtxrOIfyN-0O4LR7QLiJQ-f7cXw/viewform?usp=sharing&ouid=106605480803419039664';
+
     const handleSbiCollectRedirect = () => {
         window.open('https://www.onlinesbi.sbi/sbicollect/icollecthome.htm', '_blank');
+    };
+
+    const handleGoogleFormRedirect = () => {
+        window.open(GOOGLE_FORM_URL, '_blank');
     };
 
     return (
@@ -118,10 +124,15 @@ const PaymentModal = ({ isOpen, onClose }) => {
                     </p>
 
                     <div className="payment-action-area">
-                        <p className="payment-action-text">👇 Click the button below to proceed to SBI Collect</p>
-                        <button className="payment-sbi-button" onClick={handleSbiCollectRedirect}>
-                            Proceed to SBI Collect
-                        </button>
+                        <p className="payment-action-text">👇 Click the buttons below to proceed</p>
+                        <div className="payment-buttons-row">
+                            <button className="payment-sbi-button" onClick={handleSbiCollectRedirect}>
+                                Proceed to SBI Collect
+                            </button>
+                            <button className="payment-google-form-button" onClick={handleGoogleFormRedirect}>
+                                Submit Google Form
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
