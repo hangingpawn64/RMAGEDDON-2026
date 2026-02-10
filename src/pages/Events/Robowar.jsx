@@ -7,12 +7,14 @@ import GameCard from "../../components/Cards/GameCard";
 import AnimatedButton from "../../components/AnimatedButton";
 import TechPopup from "../../components/TechPopup";
 import RuleBookModal from "../../components/RuleBookModal";
+import PaymentModal from "../../components/PaymentModal";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const Robowar = () => {
   const [showPopup, setShowPopup] = useState(false);
   const [showRulebook, setShowRulebook] = useState(false);
+  const [showPaymentModal, setShowPaymentModal] = useState(false);
   const [activeRulebookUrl, setActiveRulebookUrl] = useState("");
 
   // Rulebook URLs
@@ -22,7 +24,7 @@ const Robowar = () => {
   const TORQUE_CARTEL_RULEBOOK = "https://drive.google.com/file/d/14R-L9P8vwwwBeD0kZTovfpRGzXmdEFS7/view?usp=sharing";
   const TRACK_THEFT_AUTO_RULEBOOK = "https://drive.google.com/file/d/1uPQhoKEWV-FwjGO2qAOsGeqpfs5QzCWG/view?usp=sharing";
 
-  // Register URLs
+  // Register URLs (Kept for reference, but currently using SBI Collect Payment Modal)
   const ROBOWAR_8KG_REGISTER_URL = "https://unstop.com/p/robowar-8kg-rmageddon-2026-shri-guru-gobind-singhji-institute-of-engineering-and-technology-sggsiet-nanded-1636771";
   const ROBOWAR_16KG_REGISTER_URL = "https://unstop.com/p/robowar-16kg-rmageddon-2026-shri-guru-gobind-singhji-institute-of-engineering-and-technology-sggsiet-nanded-1636806";
   const VINEWOOD_VELOCITY_REGISTER_URL = "https://unstop.com/p/vinewood-velocity-rmageddon-2026-shri-guru-gobind-singhji-institute-of-engineering-and-technology-sggsiet-nanded-1636817";
@@ -39,11 +41,15 @@ const Robowar = () => {
   };
 
   const handleRegister = (url) => {
-    if (url) {
-      window.open(url, '_blank');
-    } else {
-      handlePopupTrigger();
-    }
+    // Always open Payment Modal for now as per new instructions
+    setShowPaymentModal(true);
+
+    // Original logic:
+    // if (url) {
+    //   window.open(url, '_blank');
+    // } else {
+    //   handlePopupTrigger();
+    // }
   };
 
   useEffect(() => {
@@ -66,6 +72,10 @@ const Robowar = () => {
   return (
     <>
       <TechPopup isVisible={showPopup} />
+      <PaymentModal
+        isOpen={showPaymentModal}
+        onClose={() => setShowPaymentModal(false)}
+      />
       {/* <RuleBookModal
         isOpen={showRulebook}
         onClose={() => setShowRulebook(false)}
