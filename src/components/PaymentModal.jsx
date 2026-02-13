@@ -20,6 +20,61 @@ const PaymentModal = ({ isOpen, onClose }) => {
                 <button className="payment-close-button" onClick={onClose}>&times;</button>
 
                 <div className="payment-content-scroll">
+                    <div className=".
+                    .
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    .
+                    
+                    3
+                    
+                    33
+                    
+                    .
+                    "></div>
                     <h2 className="payment-title">💳 Payment Process – RMAGEDDON 2026</h2>
 
                     <div className="payment-fees-section">
@@ -66,7 +121,6 @@ const PaymentModal = ({ isOpen, onClose }) => {
                             </tbody>
                         </table>
                     </div>
-
 
                     <p className="payment-alert">
                         All game registrations for RMAGEDDON 2026 must be completed only through SBI Collect.

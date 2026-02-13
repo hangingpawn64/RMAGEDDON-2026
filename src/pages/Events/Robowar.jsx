@@ -100,6 +100,9 @@ const Robowar = () => {
             </div>
 
             <div className="robowar-content">
+              <div className="robowar-prize-container" data-aos="zoom-in" data-aos-delay="1250">
+                <p className="robowar-prize-value">GRAND PRIZE POOL: 80,000Rs</p>
+              </div>
               <div className="robowar-content-top" data-aos="fade-right" data-aos-delay="1000">
                 <p>
                   Enter the world of Robo Wars, where power meets precision,
@@ -148,6 +151,9 @@ const Robowar = () => {
               title="Vinewood Velocity"
               description="Unleash Speed, Strategy, and Skill! Push Your Robots to the Limit and Cross the Finish Line Victorious!"
               image="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1768246819/7e76f4fc-b6f8-4ff8-a286-b3319ee68121.png"
+              prizePool="24,000"
+              winnerPrize="15,000"
+              runnerUpPrize="9,000"
               onRegister={() => handleRegister(VINEWOOD_VELOCITY_REGISTER_URL)}
               onRuleBook={() => handleOpenRulebook(VINEWOOD_VELOCITY_RULEBOOK)}
             />
@@ -157,6 +163,9 @@ const Robowar = () => {
               title="Demolition Strike"
               description="Lead your robots to victory, score goals, and show off your skills in an action-packed Robo Soccer battle."
               image="https://res.cloudinary.com/ddcuqfkyt/image/upload/v1768583356/robosoccer_scmc08.jpg"
+              prizePool="22,000"
+              winnerPrize="14,000"
+              runnerUpPrize="8,000"
               onRegister={() => handleRegister(DEMOLITION_STRIKE_REGISTER_URL)}
               onRuleBook={() => handleOpenRulebook(DEMOLITION_STRIKE_RULEBOOK)}
             />
@@ -172,6 +181,9 @@ const Robowar = () => {
               title="Torque Cartel"
               description="Unleash your robots, push opponents out, and dominate the arena in Robo Sumo showdown!"
               image="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1768246871/de83b2a7-fb6b-435f-a9da-1b5aeb48a27b.png"
+              prizePool="16,000"
+              winnerPrize="6,000"
+              runnerUpPrize="16,000"
               onRegister={() => handleRegister(TORQUE_CARTEL_REGISTER_URL)}
               onRuleBook={() => handleOpenRulebook(TORQUE_CARTEL_RULEBOOK)}
             />
@@ -181,6 +193,9 @@ const Robowar = () => {
               title="Track Theft Auto"
               description="Program Robot's to Follow the Path with Precision and Speed! Conquer the Line Following Challenge"
               image="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1768246887/8605c591-86e9-49a2-afc0-31782058b71d.png"
+              prizePool="11,000"
+              winnerPrize="6,000"
+              runnerUpPrize="17,000"
               onRegister={() => handleRegister(TRACK_THEFT_AUTO_REGISTER_URL)}
               onRuleBook={() => handleOpenRulebook(TRACK_THEFT_AUTO_RULEBOOK)}
             />

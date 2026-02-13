@@ -1,16 +1,16 @@
 .card-item {
   scale: 1.1;
   background: linear-gradient(240deg, rgba(0, 0, 0, 1) 0%, rgba(36, 36, 36, 1) 100%);
-  width: 300px;
+  width: 360px;
   clip-path: polygon(0 0,
-      200px 0,
-      210px 10px,
-      280px 10px,
-      290px 0,
+      240px 0,
+      250px 10px,
+      340px 10px,
+      350px 0,
       100% 0,
       100% 150px,
-      290px 160px,
-      290px 300px,
+      350px 160px,
+      350px 300px,
       100% 310px,
       100% calc(100% - 30px),
       calc(100% - 30px) 100%,
@@ -64,6 +64,98 @@
   text-align: center;
 }
 
+/* ====== PRIZE SECTION ====== */
+.card-prize-section {
+  width: 100%;
+  margin: 8px 0 4px;
+  padding: 10px 0 6px;
+  border-top: 1px solid rgba(255, 75, 51, 0.25);
+  border-bottom: 1px solid rgba(255, 75, 51, 0.25);
+}
+
+.card-prize-pool {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  margin-bottom: 8px;
+}
+
+.card-prize-pool-label {
+  font-family: 'Aldrich', sans-serif;
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+}
+
+.card-prize-pool-value {
+  font-family: 'Ethnocentric', sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+  background: linear-gradient(180deg, #ffffff 0%, #ffcc00 40%, #ff6600 75%, #ff3300 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 6px rgba(255, 69, 0, 0.5));
+  animation: prize-glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes prize-glow {
+  from {
+    filter: drop-shadow(0 0 1px rgba(255, 69, 0, 0.3));
+  }
+
+  to {
+    filter: drop-shadow(0 0 2px rgba(255, 140, 0, 0.6));
+  }
+}
+
+.card-prize-breakdown {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.card-prize-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: rgba(255, 75, 51, 0.06);
+  border: 1px solid rgba(255, 75, 51, 0.15);
+  min-width: 90px;
+}
+
+.card-prize-icon {
+  font-size: 16px;
+  line-height: 1;
+}
+
+.card-prize-label {
+  font-family: 'Aldrich', sans-serif;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  color: rgba(255, 255, 255, 0.45);
+  text-transform: uppercase;
+}
+
+.card-prize-value {
+  font-family: 'Aldrich', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #FF4B33;
+}
+
+.card-prize-winner .card-prize-value {
+  color: #ffcc00;
+}
+
+.card-prize-runner .card-prize-value {
+  color: #c0c0c0;
+}
 
 
 .card-item-button-shadow {
@@ -71,12 +163,12 @@
   transition: all 0.2s ease-in;
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: nowrap;
-  gap: 10px;
+  gap: 20px;
   flex-direction: row;
-  width: 15rem;
-  height: 3rem;
-  margin-bottom: 10px;
+  width: 100%;
+  margin: 12px 0 14px;
 }
 
 .card-item-button-shadow:hover {
@@ -202,16 +294,16 @@
   .card-item {
     scale: 0.95;
     background: linear-gradient(240deg, rgba(0, 0, 0, 1) 0%, rgba(36, 36, 36, 1) 100%);
-    width: 300px;
+    width: 360px;
     clip-path: polygon(0 0,
-        200px 0,
-        210px 10px,
-        280px 10px,
-        290px 0,
+        240px 0,
+        250px 10px,
+        340px 10px,
+        350px 0,
         100% 0,
         100% 150px,
-        290px 160px,
-        290px 300px,
+        350px 160px,
+        350px 300px,
         100% 310px,
         100% calc(100% - 30px),
         calc(100% - 30px) 100%,
@@ -231,16 +323,16 @@
   .card-item {
     scale: 0.9;
     background: linear-gradient(240deg, rgba(0, 0, 0, 1) 0%, rgba(36, 36, 36, 1) 100%);
-    width: 300px;
+    width: 360px;
     clip-path: polygon(0 0,
-        200px 0,
-        210px 10px,
-        280px 10px,
-        290px 0,
+        240px 0,
+        250px 10px,
+        340px 10px,
+        350px 0,
         100% 0,
         100% 150px,
-        290px 160px,
-        290px 300px,
+        350px 160px,
+        350px 300px,
         100% 310px,
         100% calc(100% - 30px),
         calc(100% - 30px) 100%,
@@ -261,16 +353,16 @@
   .card-item {
     scale: 0.74;
     background: linear-gradient(240deg, rgba(0, 0, 0, 1) 0%, rgba(36, 36, 36, 1) 100%);
-    width: 300px;
+    width: 360px;
     clip-path: polygon(0 0,
-        200px 0,
-        210px 10px,
-        280px 10px,
-        290px 0,
+        240px 0,
+        250px 10px,
+        340px 10px,
+        350px 0,
         100% 0,
         100% 150px,
-        290px 160px,
-        290px 300px,
+        350px 160px,
+        350px 300px,
         100% 310px,
         100% calc(100% - 30px),
         calc(100% - 30px) 100%,
