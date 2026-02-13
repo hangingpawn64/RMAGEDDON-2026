@@ -19,7 +19,7 @@ const Robowar = () => {
 
   // Rulebook URLs
   const MAIN_RULEBOOK = "https://drive.google.com/file/d/10aYKbRyuOlBNa00jmpv27rsoMPsWTg1U/view?usp=sharing";
-  const VINEWOOD_VELOCITY_RULEBOOK = "https://drive.google.com/file/d/1zZ02Rbqcb4HaBCf3NezAtNHsC2vNqbH7/view?usp=sharing";
+  const VINEWOOD_VELOCITY_RULEBOOK = "https://drive.google.com/file/d/1gm6KX3WGSPQiVfrOYT4Rrcs4vdDyJTEE/view?usp=drivesdk";
   const DEMOLITION_STRIKE_RULEBOOK = "https://drive.google.com/file/d/13D2qiTbhcJnxHmaO-Lc1vhDnFeYEuf_L/view?usp=sharing";
   const TORQUE_CARTEL_RULEBOOK = "https://drive.google.com/file/d/14R-L9P8vwwwBeD0kZTovfpRGzXmdEFS7/view?usp=sharing";
   const TRACK_THEFT_AUTO_RULEBOOK = "https://drive.google.com/file/d/1uPQhoKEWV-FwjGO2qAOsGeqpfs5QzCWG/view?usp=sharing";
