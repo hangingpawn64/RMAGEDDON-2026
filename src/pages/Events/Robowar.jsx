@@ -193,9 +193,9 @@ const Robowar = () => {
               title="Track Theft Auto"
               description="Program Robot's to Follow the Path with Precision and Speed! Conquer the Line Following Challenge"
               image="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1768246887/8605c591-86e9-49a2-afc0-31782058b71d.png"
-              prizePool="11,000"
-              winnerPrize="6,000"
-              runnerUpPrize="17,000"
+              prizePool="17,000"
+              winnerPrize="11,000"
+              runnerUpPrize="6,000"
               onRegister={() => handleRegister(TRACK_THEFT_AUTO_REGISTER_URL)}
               onRuleBook={() => handleOpenRulebook(TRACK_THEFT_AUTO_RULEBOOK)}
             />
