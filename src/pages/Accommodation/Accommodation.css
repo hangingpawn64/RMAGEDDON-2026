@@ -10,6 +10,8 @@ body {
   background-size: cover;
   background-position: center;
   position: relative;
+  overflow: hidden;
+  /* Prevent scrollbars if content is within bounds */
 }
 
 .accom-overlay {
@@ -18,30 +20,114 @@ body {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-.accom-accommodation {
+.accom-container {
   position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  padding-top: 60px;
+  /* Adjust for Navbar */
+  box-sizing: border-box;
+}
+
+.accom-accommodation {
+  position: relative;
+  /* Changed from absolute */
   font-size: 64px;
   font-weight: 800;
   color: #51D4FF;
   text-shadow: 2px 2px 4px #000;
   text-align: center;
   font-family: "Ethnocentric", sans-serif;
+  margin-bottom: 2rem;
 }
 
-.accom-soon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 4rem;
+.accom-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  width: 85%;
+  max-width: 1200px;
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid #51D4FF;
+  border-radius: 20px;
+  padding: 2.5rem;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 30px rgba(81, 212, 255, 0.2);
+}
+
+.accom-info-card {
+  flex: 1;
   color: white;
-  font-weight: bold;
-  text-shadow: 2px 2px 4px #000;
-  text-align: center;
+  text-align: left;
+}
+
+.accom-subtitle {
   font-family: "Ethnocentric", sans-serif;
+  font-size: 1.8rem;
+  color: #51D4FF;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.accom-text {
+  font-family: 'Aldrich', sans-serif;
+  /* Fallback */
+  font-size: 1.2rem;
+  margin-bottom: 1.2rem;
+  line-height: 1.6;
+}
+
+.highlight {
+  color: #FFD700;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.location-name {
+  color: #51D4FF;
+  font-weight: bold;
+}
+
+.accom-btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 12px 25px;
+  background: linear-gradient(45deg, #007bff, #51D4FF);
+  color: white;
+  text-decoration: none;
+  font-family: "Ethnocentric", sans-serif;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.accom-btn:hover {
+  background: transparent;
+  border-color: #51D4FF;
+  color: #51D4FF;
+  box-shadow: 0 0 15px #51D4FF;
+  transform: translateY(-2px);
+}
+
+.accom-map-container {
+  flex: 1;
+  height: 350px;
+  border-radius: 15px;
+  overflow: hidden;
+  border: 2px solid #51D4FF;
+  box-shadow: 0 0 15px rgba(81, 212, 255, 0.3);
 }
 
 .accom-left {
@@ -53,6 +139,10 @@ body {
   position: absolute;
   bottom: 0;
   left: 0;
+  z-index: 1;
+  /* Below content */
+  pointer-events: none;
+  /* Let clicks pass through */
 }
 
 .accom-right {
@@ -64,75 +154,78 @@ body {
   position: absolute;
   bottom: 0;
   right: 0;
+  z-index: 1;
+  /* Below content */
+  pointer-events: none;
 }
 
 /* Responsive Design */
-/* Tablets */
 @media (max-width: 1024px) {
+  .accom-content {
+    flex-direction: column-reverse;
+    /* Put map on top or adjust? Let's keep normal order but column */
+    flex-direction: column;
+    padding: 2rem;
+    gap: 2rem;
+    overflow-y: auto;
+    /* Allow scrolling if content is tall */
+    max-height: 80vh;
+    /* Ensure it fits in viewport */
+  }
+
   .accom-accommodation {
     font-size: 3rem;
+    margin-bottom: 1rem;
   }
 
-  .accom-soon {
-    font-size: 4.3rem;
+  .accom-map-container {
+    width: 100%;
+    height: 300px;
   }
 
-  .accom-left {
-    width: 230px;
-    height: 210px;
-  }
-
+  .accom-left,
   .accom-right {
-    width: 210px;
-    height: 270px;
+    opacity: 0.5;
+    /* Fade out decorative images on smaller screens */
   }
 }
 
-/* Mobile */
 @media (max-width: 768px) {
+  .accom-container {
+    padding-top: 100px;
+    /* fixed top padding */
+    justify-content: flex-start;
+    /* align directly from top instead of center */
+  }
+
   .accom-accommodation {
-    font-size: 3rem;
-    top: 30%;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    /* reduce margin */
   }
 
-  .accom-soon {
-    font-size: 3.2rem;
-    top: 55%;
+  .accom-content {
+    width: 95%;
+    padding: 1.5rem;
   }
 
-  .accom-left {
-    width: 270px;
-    height: 230px;
+  .accom-subtitle {
+    font-size: 1.4rem;
   }
 
-  .accom-right {
-    width: 210px;
-    height: 280px;
+  .accom-text {
+    font-size: 1rem;
   }
 }
 
-
-
-
-/* Small Mobile */
 @media (max-width: 480px) {
   .accom-accommodation {
-    font-size: 1.55rem;
-    top: 30%;
+    font-size: 1.8rem;
   }
 
-  .accom-soon {
-    font-size: 2rem;
-    top: 50%;
-  }
-
-  .accom-left {
-    width: 200px;
-    height: 150px;
-  }
-
-  .accom-right {
-    width: 140px;
-    height: 190px;
+  .accom-btn {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
   }
 }
