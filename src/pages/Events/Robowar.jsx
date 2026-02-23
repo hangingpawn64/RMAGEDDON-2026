@@ -181,9 +181,9 @@ const Robowar = () => {
               title="Torque Cartel"
               description="Unleash your robots, push opponents out, and dominate the arena in Robo Sumo showdown!"
               image="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1768246871/de83b2a7-fb6b-435f-a9da-1b5aeb48a27b.png"
-              prizePool="16,000"
-              winnerPrize="10,000"
-              runnerUpPrize="6,000"
+              prizePool="20,000"
+              winnerPrize="12,000"
+              runnerUpPrize="8,000"
               onRegister={() => handleRegister(TORQUE_CARTEL_REGISTER_URL)}
               onRuleBook={() => handleOpenRulebook(TORQUE_CARTEL_RULEBOOK)}
             />
