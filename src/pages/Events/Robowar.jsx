@@ -22,7 +22,7 @@ const Robowar = () => {
   const VINEWOOD_VELOCITY_RULEBOOK = "https://drive.google.com/file/d/1gm6KX3WGSPQiVfrOYT4Rrcs4vdDyJTEE/view?usp=drivesdk";
   const DEMOLITION_STRIKE_RULEBOOK = "https://drive.google.com/file/d/13D2qiTbhcJnxHmaO-Lc1vhDnFeYEuf_L/view?usp=sharing";
   const TORQUE_CARTEL_RULEBOOK = "https://drive.google.com/file/d/14R-L9P8vwwwBeD0kZTovfpRGzXmdEFS7/view?usp=sharing";
-  const TRACK_THEFT_AUTO_RULEBOOK = "https://drive.google.com/file/d/1uPQhoKEWV-FwjGO2qAOsGeqpfs5QzCWG/view?usp=sharing";
+  const TRACK_THEFT_AUTO_RULEBOOK = "https://drive.google.com/file/d/12jzetr0OU-A0rz4_Iuvqez4g-xQEQX4K/view?usp=drivesdk";
 
   // Register URLs (Kept for reference, but currently using SBI Collect Payment Modal)
   const ROBOWAR_8KG_REGISTER_URL = "https://unstop.com/p/robowar-8kg-rmageddon-2026-shri-guru-gobind-singhji-institute-of-engineering-and-technology-sggsiet-nanded-1636771";
