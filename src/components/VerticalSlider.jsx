@@ -10,17 +10,26 @@ const VerticalSlider = () => {
     {
       image:
         "https://res.cloudinary.com/dqm1ixpcb/image/upload/v1768332543/theroboticsindia_logo_ji9eaz.jpg",
-      text: "",
+      text: "The Robotics India",
+      link: "https://www.theroboticsindia.com",
+    },
+    {
+      image:
+        "https://res.cloudinary.com/ddcuqfkyt/image/upload/v1771956696/SPONSOR_1.jpg_empbcp.jpg",
+      text: "Bridgestone Select",
+      link: "https://tyreshop.bridgestone.co.in/near-me/nanded/deglour-naka/bridgestone-select-baba-tyres-in-deglour-naka-nanded--5fr3Ea/home",
     },
     {
       image:
         "https://res.cloudinary.com/dqm1ixpcb/image/upload/v1768332543/theroboticsindia_logo_ji9eaz.jpg",
-      text: "",
+      text: "The Robotics India",
+      link: "https://www.theroboticsindia.com",
     },
     {
       image:
-        "https://res.cloudinary.com/dqm1ixpcb/image/upload/v1768332543/theroboticsindia_logo_ji9eaz.jpg",
-      text: "",
+        "https://res.cloudinary.com/ddcuqfkyt/image/upload/v1771956696/SPONSOR_1.jpg_empbcp.jpg",
+      text: "Bridgestone Select",
+      link: "https://tyreshop.bridgestone.co.in/near-me/nanded/deglour-naka/bridgestone-select-baba-tyres-in-deglour-naka-nanded--5fr3Ea/home", 
     },
 
   ];
@@ -55,7 +64,9 @@ const VerticalSlider = () => {
             className={`vertical-slider-item ${activeIndex === index % baseSlides.length ? "vertical-slider-active" : ""
               }`}
           >
-            <img src={slide.image} alt={slide.text} />
+            <a href={slide.link} target="_blank" rel="noopener noreferrer">
+              <img src={slide.image} alt={slide.text} />
+            </a>
             <div className="vertical-slider-text">{slide.text}</div>
           </SwiperSlide>
         ))}
