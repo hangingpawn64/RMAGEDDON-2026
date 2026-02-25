@@ -34,7 +34,7 @@ const VerticalSlider = () => {
     {
       image:
         "https://res.cloudinary.com/ddcuqfkyt/image/upload/v1772046605/Untitled-1_kczphw.png",
-      text: "Baba Petroleum",
+      text: "Baba Petrol Pump",
       link: "https://maps.app.goo.gl/gYAiPMuKA4H9s87N9", 
     },
     
