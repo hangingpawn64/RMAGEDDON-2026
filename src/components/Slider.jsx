@@ -14,7 +14,7 @@ const HorizontalSlider = ({ className }) => {
     },
     {
       image:
-        "https://res.cloudinary.com/ddcuqfkyt/image/upload/v1771956696/SPONSOR_1.jpg_empbcp.jpg",
+        "https://res.cloudinary.com/ddcuqfkyt/image/upload/v1772048227/Untitled-1-01_1_1_st9soa.png",
       text: "Baba Tyres and Motors",
       link: "https://tyreshop.bridgestone.co.in/near-me/nanded/deglour-naka/bridgestone-select-baba-tyres-in-deglour-naka-nanded--5fr3Ea/home",
     },
