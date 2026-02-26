@@ -36,6 +36,12 @@ const HorizontalSlider = ({ className }) => {
       text: "Baba Petrol pump",
       link: "https://maps.app.goo.gl/gYAiPMuKA4H9s87N9", 
     },
+    {
+      image:
+        "https://res.cloudinary.com/ddcuqfkyt/image/upload/v1772125052/WhatsApp_Image_2026-02-26_at_18.11.40_1_1_mrqgqd.jpg",
+      text:"Shri DattaKrupa Enterprises",
+      link: "https://maps.app.goo.gl/NMRDRd5g2WDHCKrz5", 
+    },
 
   ];
 
@@ -53,7 +59,7 @@ const HorizontalSlider = ({ className }) => {
         loopAdditionalSlides={2}
         centeredSlides={true}
         autoplay={{
-          delay: 1300,
+          delay: 1100,
           disableOnInteraction: false,
         }}
         onSlideChange={(swiper) =>
